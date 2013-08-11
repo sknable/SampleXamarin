@@ -1,0 +1,2678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.soda.apropos.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CIMSystemService" targetNamespace="http://ws.soda.apropos.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://1279c748.ngrok.com:80/SODA/CIMSystemService?xsd=1" namespace="http://ws.soda.apropos.com/" />
+    </xsd:schema>
+  </types>
+  <message name="log">
+    <part name="parameters" element="tns:log" />
+  </message>
+  <message name="logResponse">
+    <part name="parameters" element="tns:logResponse" />
+  </message>
+  <message name="getSessionTimeout">
+    <part name="parameters" element="tns:getSessionTimeout" />
+  </message>
+  <message name="getSessionTimeoutResponse">
+    <part name="parameters" element="tns:getSessionTimeoutResponse" />
+  </message>
+  <message name="setSessionTimeout">
+    <part name="parameters" element="tns:setSessionTimeout" />
+  </message>
+  <message name="setSessionTimeoutResponse">
+    <part name="parameters" element="tns:setSessionTimeoutResponse" />
+  </message>
+  <message name="login">
+    <part name="parameters" element="tns:login" />
+  </message>
+  <message name="loginResponse">
+    <part name="parameters" element="tns:loginResponse" />
+  </message>
+  <message name="loginAgent">
+    <part name="parameters" element="tns:loginAgent" />
+  </message>
+  <message name="loginAgentResponse">
+    <part name="parameters" element="tns:loginAgentResponse" />
+  </message>
+  <message name="logout">
+    <part name="parameters" element="tns:logout" />
+  </message>
+  <message name="logoutResponse">
+    <part name="parameters" element="tns:logoutResponse" />
+  </message>
+  <message name="changePassword">
+    <part name="parameters" element="tns:changePassword" />
+  </message>
+  <message name="changePasswordResponse">
+    <part name="parameters" element="tns:changePasswordResponse" />
+  </message>
+  <message name="auxLog">
+    <part name="parameters" element="tns:auxLog" />
+  </message>
+  <message name="auxLogResponse">
+    <part name="parameters" element="tns:auxLogResponse" />
+  </message>
+  <message name="keepAlive">
+    <part name="parameters" element="tns:keepAlive" />
+  </message>
+  <message name="keepAliveResponse">
+    <part name="parameters" element="tns:keepAliveResponse" />
+  </message>
+  <message name="addAlarm">
+    <part name="parameters" element="tns:addAlarm" />
+  </message>
+  <message name="addAlarmResponse">
+    <part name="parameters" element="tns:addAlarmResponse" />
+  </message>
+  <message name="changeAlarm">
+    <part name="parameters" element="tns:changeAlarm" />
+  </message>
+  <message name="changeAlarmResponse">
+    <part name="parameters" element="tns:changeAlarmResponse" />
+  </message>
+  <message name="deleteAlarm">
+    <part name="parameters" element="tns:deleteAlarm" />
+  </message>
+  <message name="deleteAlarmResponse">
+    <part name="parameters" element="tns:deleteAlarmResponse" />
+  </message>
+  <message name="getAlarms">
+    <part name="parameters" element="tns:getAlarms" />
+  </message>
+  <message name="getAlarmsResponse">
+    <part name="parameters" element="tns:getAlarmsResponse" />
+  </message>
+  <message name="getUserApplicationSettingValues">
+    <part name="parameters" element="tns:getUserApplicationSettingValues" />
+  </message>
+  <message name="getUserApplicationSettingValuesResponse">
+    <part name="parameters" element="tns:getUserApplicationSettingValuesResponse" />
+  </message>
+  <message name="setUserApplicationSettingValue">
+    <part name="parameters" element="tns:setUserApplicationSettingValue" />
+  </message>
+  <message name="setUserApplicationSettingValueResponse">
+    <part name="parameters" element="tns:setUserApplicationSettingValueResponse" />
+  </message>
+  <message name="getMainActions">
+    <part name="parameters" element="tns:getMainActions" />
+  </message>
+  <message name="getMainActionsResponse">
+    <part name="parameters" element="tns:getMainActionsResponse" />
+  </message>
+  <message name="getEvents">
+    <part name="parameters" element="tns:getEvents" />
+  </message>
+  <message name="getEventsResponse">
+    <part name="parameters" element="tns:getEventsResponse" />
+  </message>
+  <message name="getAvailableColumnsForView">
+    <part name="parameters" element="tns:getAvailableColumnsForView" />
+  </message>
+  <message name="getAvailableColumnsForViewResponse">
+    <part name="parameters" element="tns:getAvailableColumnsForViewResponse" />
+  </message>
+  <message name="subscribeToView">
+    <part name="parameters" element="tns:subscribeToView" />
+  </message>
+  <message name="subscribeToViewResponse">
+    <part name="parameters" element="tns:subscribeToViewResponse" />
+  </message>
+  <message name="subscribeToViewAux">
+    <part name="parameters" element="tns:subscribeToViewAux" />
+  </message>
+  <message name="subscribeToViewAuxResponse">
+    <part name="parameters" element="tns:subscribeToViewAuxResponse" />
+  </message>
+  <message name="scrollView">
+    <part name="parameters" element="tns:scrollView" />
+  </message>
+  <message name="scrollViewResponse">
+    <part name="parameters" element="tns:scrollViewResponse" />
+  </message>
+  <message name="unsubscribeToView">
+    <part name="parameters" element="tns:unsubscribeToView" />
+  </message>
+  <message name="unsubscribeToViewResponse">
+    <part name="parameters" element="tns:unsubscribeToViewResponse" />
+  </message>
+  <message name="modifyViewMetaData">
+    <part name="parameters" element="tns:modifyViewMetaData" />
+  </message>
+  <message name="modifyViewMetaDataResponse">
+    <part name="parameters" element="tns:modifyViewMetaDataResponse" />
+  </message>
+  <message name="getAgentState">
+    <part name="parameters" element="tns:getAgentState" />
+  </message>
+  <message name="getAgentStateResponse">
+    <part name="parameters" element="tns:getAgentStateResponse" />
+  </message>
+  <message name="changeAvailability">
+    <part name="parameters" element="tns:changeAvailability" />
+  </message>
+  <message name="changeAvailabilityResponse">
+    <part name="parameters" element="tns:changeAvailabilityResponse" />
+  </message>
+  <message name="getPropertyPermissions">
+    <part name="parameters" element="tns:getPropertyPermissions" />
+  </message>
+  <message name="getPropertyPermissionsResponse">
+    <part name="parameters" element="tns:getPropertyPermissionsResponse" />
+  </message>
+  <message name="setPropertyValue">
+    <part name="parameters" element="tns:setPropertyValue" />
+  </message>
+  <message name="setPropertyValueResponse">
+    <part name="parameters" element="tns:setPropertyValueResponse" />
+  </message>
+  <message name="setPropertiesValue">
+    <part name="parameters" element="tns:setPropertiesValue" />
+  </message>
+  <message name="setPropertiesValueResponse">
+    <part name="parameters" element="tns:setPropertiesValueResponse" />
+  </message>
+  <message name="takeNextInteraction">
+    <part name="parameters" element="tns:takeNextInteraction" />
+  </message>
+  <message name="takeNextInteractionResponse">
+    <part name="parameters" element="tns:takeNextInteractionResponse" />
+  </message>
+  <message name="createTakenInteraction">
+    <part name="parameters" element="tns:createTakenInteraction" />
+  </message>
+  <message name="createTakenInteractionResponse">
+    <part name="parameters" element="tns:createTakenInteractionResponse" />
+  </message>
+  <message name="retryMediaTransfer">
+    <part name="parameters" element="tns:retryMediaTransfer" />
+  </message>
+  <message name="retryMediaTransferResponse">
+    <part name="parameters" element="tns:retryMediaTransferResponse" />
+  </message>
+  <message name="getActiveParticipations">
+    <part name="parameters" element="tns:getActiveParticipations" />
+  </message>
+  <message name="getActiveParticipationsResponse">
+    <part name="parameters" element="tns:getActiveParticipationsResponse" />
+  </message>
+  <message name="getCurrentParticipation">
+    <part name="parameters" element="tns:getCurrentParticipation" />
+  </message>
+  <message name="getCurrentParticipationResponse">
+    <part name="parameters" element="tns:getCurrentParticipationResponse" />
+  </message>
+  <message name="setCurrentParticipation">
+    <part name="parameters" element="tns:setCurrentParticipation" />
+  </message>
+  <message name="setCurrentParticipationResponse">
+    <part name="parameters" element="tns:setCurrentParticipationResponse" />
+  </message>
+  <message name="getInteractionActions">
+    <part name="parameters" element="tns:getInteractionActions" />
+  </message>
+  <message name="getInteractionActionsResponse">
+    <part name="parameters" element="tns:getInteractionActionsResponse" />
+  </message>
+  <message name="createFollowupTakenInteraction">
+    <part name="parameters" element="tns:createFollowupTakenInteraction" />
+  </message>
+  <message name="createFollowupTakenInteractionResponse">
+    <part name="parameters" element="tns:createFollowupTakenInteractionResponse" />
+  </message>
+  <message name="takeInteraction">
+    <part name="parameters" element="tns:takeInteraction" />
+  </message>
+  <message name="takeInteractionResponse">
+    <part name="parameters" element="tns:takeInteractionResponse" />
+  </message>
+  <message name="previewInteraction">
+    <part name="parameters" element="tns:previewInteraction" />
+  </message>
+  <message name="previewInteractionResponse">
+    <part name="parameters" element="tns:previewInteractionResponse" />
+  </message>
+  <message name="takePreview">
+    <part name="parameters" element="tns:takePreview" />
+  </message>
+  <message name="takePreviewResponse">
+    <part name="parameters" element="tns:takePreviewResponse" />
+  </message>
+  <message name="cancelPreview">
+    <part name="parameters" element="tns:cancelPreview" />
+  </message>
+  <message name="cancelPreviewResponse">
+    <part name="parameters" element="tns:cancelPreviewResponse" />
+  </message>
+  <message name="getWrapupCodes">
+    <part name="parameters" element="tns:getWrapupCodes" />
+  </message>
+  <message name="getWrapupCodesResponse">
+    <part name="parameters" element="tns:getWrapupCodesResponse" />
+  </message>
+  <message name="finishParticipation">
+    <part name="parameters" element="tns:finishParticipation" />
+  </message>
+  <message name="finishParticipationResponse">
+    <part name="parameters" element="tns:finishParticipationResponse" />
+  </message>
+  <message name="finishParticipationFromAuxSession">
+    <part name="parameters" element="tns:finishParticipationFromAuxSession" />
+  </message>
+  <message name="finishParticipationFromAuxSessionResponse">
+    <part name="parameters" element="tns:finishParticipationFromAuxSessionResponse" />
+  </message>
+  <message name="requeueInteraction">
+    <part name="parameters" element="tns:requeueInteraction" />
+  </message>
+  <message name="requeueInteractionResponse">
+    <part name="parameters" element="tns:requeueInteractionResponse" />
+  </message>
+  <message name="overrideRequeueNode">
+    <part name="parameters" element="tns:overrideRequeueNode" />
+  </message>
+  <message name="overrideRequeueNodeResponse">
+    <part name="parameters" element="tns:overrideRequeueNodeResponse" />
+  </message>
+  <message name="getContactActions">
+    <part name="parameters" element="tns:getContactActions" />
+  </message>
+  <message name="getContactActionsResponse">
+    <part name="parameters" element="tns:getContactActionsResponse" />
+  </message>
+  <message name="getLinkStatus">
+    <part name="parameters" element="tns:getLinkStatus" />
+  </message>
+  <message name="getLinkStatusResponse">
+    <part name="parameters" element="tns:getLinkStatusResponse" />
+  </message>
+  <message name="placeCallToNumber">
+    <part name="parameters" element="tns:placeCallToNumber" />
+  </message>
+  <message name="placeCallToNumberResponse">
+    <part name="parameters" element="tns:placeCallToNumberResponse" />
+  </message>
+  <message name="placeCallToContact">
+    <part name="parameters" element="tns:placeCallToContact" />
+  </message>
+  <message name="placeCallToContactResponse">
+    <part name="parameters" element="tns:placeCallToContactResponse" />
+  </message>
+  <message name="answerCall">
+    <part name="parameters" element="tns:answerCall" />
+  </message>
+  <message name="answerCallResponse">
+    <part name="parameters" element="tns:answerCallResponse" />
+  </message>
+  <message name="disconnectCall">
+    <part name="parameters" element="tns:disconnectCall" />
+  </message>
+  <message name="disconnectCallResponse">
+    <part name="parameters" element="tns:disconnectCallResponse" />
+  </message>
+  <message name="holdCall">
+    <part name="parameters" element="tns:holdCall" />
+  </message>
+  <message name="holdCallResponse">
+    <part name="parameters" element="tns:holdCallResponse" />
+  </message>
+  <message name="retrieveCall">
+    <part name="parameters" element="tns:retrieveCall" />
+  </message>
+  <message name="retrieveCallResponse">
+    <part name="parameters" element="tns:retrieveCallResponse" />
+  </message>
+  <message name="startTransferToNumber">
+    <part name="parameters" element="tns:startTransferToNumber" />
+  </message>
+  <message name="startTransferToNumberResponse">
+    <part name="parameters" element="tns:startTransferToNumberResponse" />
+  </message>
+  <message name="startTransferToContact">
+    <part name="parameters" element="tns:startTransferToContact" />
+  </message>
+  <message name="startTransferToContactResponse">
+    <part name="parameters" element="tns:startTransferToContactResponse" />
+  </message>
+  <message name="startConferenceWithNumber">
+    <part name="parameters" element="tns:startConferenceWithNumber" />
+  </message>
+  <message name="startConferenceWithNumberResponse">
+    <part name="parameters" element="tns:startConferenceWithNumberResponse" />
+  </message>
+  <message name="startConferenceWithContact">
+    <part name="parameters" element="tns:startConferenceWithContact" />
+  </message>
+  <message name="startConferenceWithContactResponse">
+    <part name="parameters" element="tns:startConferenceWithContactResponse" />
+  </message>
+  <message name="solicitConsultation">
+    <part name="parameters" element="tns:solicitConsultation" />
+  </message>
+  <message name="solicitConsultationResponse">
+    <part name="parameters" element="tns:solicitConsultationResponse" />
+  </message>
+  <message name="withdrawConsultationSolicitation">
+    <part name="parameters" element="tns:withdrawConsultationSolicitation" />
+  </message>
+  <message name="withdrawConsultationSolicitationResponse">
+    <part name="parameters" element="tns:withdrawConsultationSolicitationResponse" />
+  </message>
+  <message name="acceptConsultationOffer">
+    <part name="parameters" element="tns:acceptConsultationOffer" />
+  </message>
+  <message name="acceptConsultationOfferResponse">
+    <part name="parameters" element="tns:acceptConsultationOfferResponse" />
+  </message>
+  <message name="cancelConsultation">
+    <part name="parameters" element="tns:cancelConsultation" />
+  </message>
+  <message name="cancelConsultationResponse">
+    <part name="parameters" element="tns:cancelConsultationResponse" />
+  </message>
+  <message name="completeTransfer">
+    <part name="parameters" element="tns:completeTransfer" />
+  </message>
+  <message name="completeTransferResponse">
+    <part name="parameters" element="tns:completeTransferResponse" />
+  </message>
+  <message name="completeConference">
+    <part name="parameters" element="tns:completeConference" />
+  </message>
+  <message name="completeConferenceResponse">
+    <part name="parameters" element="tns:completeConferenceResponse" />
+  </message>
+  <message name="sendDigits">
+    <part name="parameters" element="tns:sendDigits" />
+  </message>
+  <message name="sendDigitsResponse">
+    <part name="parameters" element="tns:sendDigitsResponse" />
+  </message>
+  <message name="swapCall">
+    <part name="parameters" element="tns:swapCall" />
+  </message>
+  <message name="swapCallResponse">
+    <part name="parameters" element="tns:swapCallResponse" />
+  </message>
+  <message name="redialCall">
+    <part name="parameters" element="tns:redialCall" />
+  </message>
+  <message name="redialCallResponse">
+    <part name="parameters" element="tns:redialCallResponse" />
+  </message>
+  <message name="flagCallForRecording">
+    <part name="parameters" element="tns:flagCallForRecording" />
+  </message>
+  <message name="flagCallForRecordingResponse">
+    <part name="parameters" element="tns:flagCallForRecordingResponse" />
+  </message>
+  <message name="singleStepTransfer">
+    <part name="parameters" element="tns:singleStepTransfer" />
+  </message>
+  <message name="singleStepTransferResponse">
+    <part name="parameters" element="tns:singleStepTransferResponse" />
+  </message>
+  <message name="getCallData">
+    <part name="parameters" element="tns:getCallData" />
+  </message>
+  <message name="getCallDataResponse">
+    <part name="parameters" element="tns:getCallDataResponse" />
+  </message>
+  <message name="transferToSurveyPort">
+    <part name="parameters" element="tns:transferToSurveyPort" />
+  </message>
+  <message name="transferToSurveyPortResponse">
+    <part name="parameters" element="tns:transferToSurveyPortResponse" />
+  </message>
+  <message name="getFileUploadReference">
+    <part name="parameters" element="tns:getFileUploadReference" />
+  </message>
+  <message name="getFileUploadReferenceResponse">
+    <part name="parameters" element="tns:getFileUploadReferenceResponse" />
+  </message>
+  <message name="getAllowedEmailFromAddresses">
+    <part name="parameters" element="tns:getAllowedEmailFromAddresses" />
+  </message>
+  <message name="getAllowedEmailFromAddressesResponse">
+    <part name="parameters" element="tns:getAllowedEmailFromAddressesResponse" />
+  </message>
+  <message name="validateEmailAddress">
+    <part name="parameters" element="tns:validateEmailAddress" />
+  </message>
+  <message name="validateEmailAddressResponse">
+    <part name="parameters" element="tns:validateEmailAddressResponse" />
+  </message>
+  <message name="attachFileToEmail">
+    <part name="parameters" element="tns:attachFileToEmail" />
+  </message>
+  <message name="attachFileToEmailResponse">
+    <part name="parameters" element="tns:attachFileToEmailResponse" />
+  </message>
+  <message name="detachFileFromEmail">
+    <part name="parameters" element="tns:detachFileFromEmail" />
+  </message>
+  <message name="detachFileFromEmailResponse">
+    <part name="parameters" element="tns:detachFileFromEmailResponse" />
+  </message>
+  <message name="addEmailRecipient">
+    <part name="parameters" element="tns:addEmailRecipient" />
+  </message>
+  <message name="addEmailRecipientResponse">
+    <part name="parameters" element="tns:addEmailRecipientResponse" />
+  </message>
+  <message name="removeEmailRecipient">
+    <part name="parameters" element="tns:removeEmailRecipient" />
+  </message>
+  <message name="removeEmailRecipientResponse">
+    <part name="parameters" element="tns:removeEmailRecipientResponse" />
+  </message>
+  <message name="setEmailSubject">
+    <part name="parameters" element="tns:setEmailSubject" />
+  </message>
+  <message name="setEmailSubjectResponse">
+    <part name="parameters" element="tns:setEmailSubjectResponse" />
+  </message>
+  <message name="setEmailSender">
+    <part name="parameters" element="tns:setEmailSender" />
+  </message>
+  <message name="setEmailSenderResponse">
+    <part name="parameters" element="tns:setEmailSenderResponse" />
+  </message>
+  <message name="setEmailBody">
+    <part name="parameters" element="tns:setEmailBody" />
+  </message>
+  <message name="setEmailBodyResponse">
+    <part name="parameters" element="tns:setEmailBodyResponse" />
+  </message>
+  <message name="sendEmail">
+    <part name="parameters" element="tns:sendEmail" />
+  </message>
+  <message name="sendEmailResponse">
+    <part name="parameters" element="tns:sendEmailResponse" />
+  </message>
+  <message name="getEmailPrintURL">
+    <part name="parameters" element="tns:getEmailPrintURL" />
+  </message>
+  <message name="getEmailPrintURLResponse">
+    <part name="parameters" element="tns:getEmailPrintURLResponse" />
+  </message>
+  <message name="sendWebChatCustomerMessage">
+    <part name="parameters" element="tns:sendWebChatCustomerMessage" />
+  </message>
+  <message name="sendWebChatCustomerMessageResponse">
+    <part name="parameters" element="tns:sendWebChatCustomerMessageResponse" />
+  </message>
+  <message name="sendWebChatWhisperMessage">
+    <part name="parameters" element="tns:sendWebChatWhisperMessage" />
+  </message>
+  <message name="sendWebChatWhisperMessageResponse">
+    <part name="parameters" element="tns:sendWebChatWhisperMessageResponse" />
+  </message>
+  <message name="sendWebChatAgentStartedTyping">
+    <part name="parameters" element="tns:sendWebChatAgentStartedTyping" />
+  </message>
+  <message name="sendWebChatAgentStartedTypingResponse">
+    <part name="parameters" element="tns:sendWebChatAgentStartedTypingResponse" />
+  </message>
+  <message name="sendWebChatAgentStoppedTyping">
+    <part name="parameters" element="tns:sendWebChatAgentStoppedTyping" />
+  </message>
+  <message name="sendWebChatAgentStoppedTypingResponse">
+    <part name="parameters" element="tns:sendWebChatAgentStoppedTypingResponse" />
+  </message>
+  <message name="disconnectWebChat">
+    <part name="parameters" element="tns:disconnectWebChat" />
+  </message>
+  <message name="disconnectWebChatResponse">
+    <part name="parameters" element="tns:disconnectWebChatResponse" />
+  </message>
+  <message name="setListenedToVoicemail">
+    <part name="parameters" element="tns:setListenedToVoicemail" />
+  </message>
+  <message name="setListenedToVoicemailResponse">
+    <part name="parameters" element="tns:setListenedToVoicemailResponse" />
+  </message>
+  <message name="createPersonalResponseLibrary">
+    <part name="parameters" element="tns:createPersonalResponseLibrary" />
+  </message>
+  <message name="createPersonalResponseLibraryResponse">
+    <part name="parameters" element="tns:createPersonalResponseLibraryResponse" />
+  </message>
+  <message name="deletePersonalResponseLibrary">
+    <part name="parameters" element="tns:deletePersonalResponseLibrary" />
+  </message>
+  <message name="deletePersonalResponseLibraryResponse">
+    <part name="parameters" element="tns:deletePersonalResponseLibraryResponse" />
+  </message>
+  <message name="createPersonalResponseItem">
+    <part name="parameters" element="tns:createPersonalResponseItem" />
+  </message>
+  <message name="createPersonalResponseItemResponse">
+    <part name="parameters" element="tns:createPersonalResponseItemResponse" />
+  </message>
+  <message name="deletePersonalResponseItem">
+    <part name="parameters" element="tns:deletePersonalResponseItem" />
+  </message>
+  <message name="deletePersonalResponseItemResponse">
+    <part name="parameters" element="tns:deletePersonalResponseItemResponse" />
+  </message>
+  <message name="modifyPersonalResponseItem">
+    <part name="parameters" element="tns:modifyPersonalResponseItem" />
+  </message>
+  <message name="modifyPersonalResponseItemResponse">
+    <part name="parameters" element="tns:modifyPersonalResponseItemResponse" />
+  </message>
+  <message name="renamePersonalResponseLibrary">
+    <part name="parameters" element="tns:renamePersonalResponseLibrary" />
+  </message>
+  <message name="renamePersonalResponseLibraryResponse">
+    <part name="parameters" element="tns:renamePersonalResponseLibraryResponse" />
+  </message>
+  <message name="createPersonalAddressBook">
+    <part name="parameters" element="tns:createPersonalAddressBook" />
+  </message>
+  <message name="createPersonalAddressBookResponse">
+    <part name="parameters" element="tns:createPersonalAddressBookResponse" />
+  </message>
+  <message name="renamePersonalAddressBook">
+    <part name="parameters" element="tns:renamePersonalAddressBook" />
+  </message>
+  <message name="renamePersonalAddressBookResponse">
+    <part name="parameters" element="tns:renamePersonalAddressBookResponse" />
+  </message>
+  <message name="deletePersonalAddressBook">
+    <part name="parameters" element="tns:deletePersonalAddressBook" />
+  </message>
+  <message name="deletePersonalAddressBookResponse">
+    <part name="parameters" element="tns:deletePersonalAddressBookResponse" />
+  </message>
+  <message name="createPersonalContact">
+    <part name="parameters" element="tns:createPersonalContact" />
+  </message>
+  <message name="createPersonalContactResponse">
+    <part name="parameters" element="tns:createPersonalContactResponse" />
+  </message>
+  <message name="deletePersonalContact">
+    <part name="parameters" element="tns:deletePersonalContact" />
+  </message>
+  <message name="deletePersonalContactResponse">
+    <part name="parameters" element="tns:deletePersonalContactResponse" />
+  </message>
+  <message name="modifyPersonalContact">
+    <part name="parameters" element="tns:modifyPersonalContact" />
+  </message>
+  <message name="modifyPersonalContactResponse">
+    <part name="parameters" element="tns:modifyPersonalContactResponse" />
+  </message>
+  <message name="addWordToPersonalSpellingDictionary">
+    <part name="parameters" element="tns:addWordToPersonalSpellingDictionary" />
+  </message>
+  <message name="addWordToPersonalSpellingDictionaryResponse">
+    <part name="parameters" element="tns:addWordToPersonalSpellingDictionaryResponse" />
+  </message>
+  <message name="removeWordFromPersonalSpellingDictionary">
+    <part name="parameters" element="tns:removeWordFromPersonalSpellingDictionary" />
+  </message>
+  <message name="removeWordFromPersonalSpellingDictionaryResponse">
+    <part name="parameters" element="tns:removeWordFromPersonalSpellingDictionaryResponse" />
+  </message>
+  <message name="getDictionaryReferences">
+    <part name="parameters" element="tns:getDictionaryReferences" />
+  </message>
+  <message name="getDictionaryReferencesResponse">
+    <part name="parameters" element="tns:getDictionaryReferencesResponse" />
+  </message>
+  <message name="getUserHelpMessages">
+    <part name="parameters" element="tns:getUserHelpMessages" />
+  </message>
+  <message name="getUserHelpMessagesResponse">
+    <part name="parameters" element="tns:getUserHelpMessagesResponse" />
+  </message>
+  <message name="createUserHelpMessage">
+    <part name="parameters" element="tns:createUserHelpMessage" />
+  </message>
+  <message name="createUserHelpMessageResponse">
+    <part name="parameters" element="tns:createUserHelpMessageResponse" />
+  </message>
+  <message name="getHelpProviders">
+    <part name="parameters" element="tns:getHelpProviders" />
+  </message>
+  <message name="getHelpProvidersResponse">
+    <part name="parameters" element="tns:getHelpProvidersResponse" />
+  </message>
+  <message name="postHelpRequest">
+    <part name="parameters" element="tns:postHelpRequest" />
+  </message>
+  <message name="postHelpRequestResponse">
+    <part name="parameters" element="tns:postHelpRequestResponse" />
+  </message>
+  <message name="closeHelpRequestAsAgent">
+    <part name="parameters" element="tns:closeHelpRequestAsAgent" />
+  </message>
+  <message name="closeHelpRequestAsAgentResponse">
+    <part name="parameters" element="tns:closeHelpRequestAsAgentResponse" />
+  </message>
+  <message name="deleteReceivedSupervisorMessage">
+    <part name="parameters" element="tns:deleteReceivedSupervisorMessage" />
+  </message>
+  <message name="deleteReceivedSupervisorMessageResponse">
+    <part name="parameters" element="tns:deleteReceivedSupervisorMessageResponse" />
+  </message>
+  <message name="getActiveCallParticipation">
+    <part name="parameters" element="tns:getActiveCallParticipation" />
+  </message>
+  <message name="getActiveCallParticipationResponse">
+    <part name="parameters" element="tns:getActiveCallParticipationResponse" />
+  </message>
+  <message name="sendResponderRequest">
+    <part name="parameters" element="tns:sendResponderRequest" />
+  </message>
+  <message name="sendResponderRequestResponse">
+    <part name="parameters" element="tns:sendResponderRequestResponse" />
+  </message>
+  <message name="sendResponderResponse">
+    <part name="parameters" element="tns:sendResponderResponse" />
+  </message>
+  <message name="sendResponderResponseResponse">
+    <part name="parameters" element="tns:sendResponderResponseResponse" />
+  </message>
+  <message name="getAPIVersion">
+    <part name="parameters" element="tns:getAPIVersion" />
+  </message>
+  <message name="getAPIVersionResponse">
+    <part name="parameters" element="tns:getAPIVersionResponse" />
+  </message>
+  <message name="reportInactiveDuration">
+    <part name="parameters" element="tns:reportInactiveDuration" />
+  </message>
+  <message name="reportInactiveDurationResponse">
+    <part name="parameters" element="tns:reportInactiveDurationResponse" />
+  </message>
+  <message name="getAuxiliarySessionId">
+    <part name="parameters" element="tns:getAuxiliarySessionId" />
+  </message>
+  <message name="getAuxiliarySessionIdResponse">
+    <part name="parameters" element="tns:getAuxiliarySessionIdResponse" />
+  </message>
+  <message name="attachToSession">
+    <part name="parameters" element="tns:attachToSession" />
+  </message>
+  <message name="attachToSessionResponse">
+    <part name="parameters" element="tns:attachToSessionResponse" />
+  </message>
+  <message name="detachFromSession">
+    <part name="parameters" element="tns:detachFromSession" />
+  </message>
+  <message name="detachFromSessionResponse">
+    <part name="parameters" element="tns:detachFromSessionResponse" />
+  </message>
+  <message name="subscribeToEvents">
+    <part name="parameters" element="tns:subscribeToEvents" />
+  </message>
+  <message name="subscribeToEventsResponse">
+    <part name="parameters" element="tns:subscribeToEventsResponse" />
+  </message>
+  <message name="getAuxSessionEvents">
+    <part name="parameters" element="tns:getAuxSessionEvents" />
+  </message>
+  <message name="getAuxSessionEventsResponse">
+    <part name="parameters" element="tns:getAuxSessionEventsResponse" />
+  </message>
+  <message name="reportAuxSessionError">
+    <part name="parameters" element="tns:reportAuxSessionError" />
+  </message>
+  <message name="reportAuxSessionErrorResponse">
+    <part name="parameters" element="tns:reportAuxSessionErrorResponse" />
+  </message>
+  <message name="requestAuxSessionAction">
+    <part name="parameters" element="tns:requestAuxSessionAction" />
+  </message>
+  <message name="requestAuxSessionActionResponse">
+    <part name="parameters" element="tns:requestAuxSessionActionResponse" />
+  </message>
+  <message name="auxSessionActionCompleted">
+    <part name="parameters" element="tns:auxSessionActionCompleted" />
+  </message>
+  <message name="auxSessionActionCompletedResponse">
+    <part name="parameters" element="tns:auxSessionActionCompletedResponse" />
+  </message>
+  <message name="changePrimarySessionState">
+    <part name="parameters" element="tns:changePrimarySessionState" />
+  </message>
+  <message name="changePrimarySessionStateResponse">
+    <part name="parameters" element="tns:changePrimarySessionStateResponse" />
+  </message>
+  <message name="getScriptingHostFiles">
+    <part name="parameters" element="tns:getScriptingHostFiles" />
+  </message>
+  <message name="getScriptingHostFilesResponse">
+    <part name="parameters" element="tns:getScriptingHostFilesResponse" />
+  </message>
+  <message name="attachWrapupCodes">
+    <part name="parameters" element="tns:attachWrapupCodes" />
+  </message>
+  <message name="attachWrapupCodesResponse">
+    <part name="parameters" element="tns:attachWrapupCodesResponse" />
+  </message>
+  <message name="transferTargetValidated">
+    <part name="parameters" element="tns:transferTargetValidated" />
+  </message>
+  <message name="transferTargetValidatedResponse">
+    <part name="parameters" element="tns:transferTargetValidatedResponse" />
+  </message>
+  <message name="phoneNumberValidated">
+    <part name="parameters" element="tns:phoneNumberValidated" />
+  </message>
+  <message name="phoneNumberValidatedResponse">
+    <part name="parameters" element="tns:phoneNumberValidatedResponse" />
+  </message>
+  <message name="phoneNumberModified">
+    <part name="parameters" element="tns:phoneNumberModified" />
+  </message>
+  <message name="phoneNumberModifiedResponse">
+    <part name="parameters" element="tns:phoneNumberModifiedResponse" />
+  </message>
+  <message name="wrapupCompleted">
+    <part name="parameters" element="tns:wrapupCompleted" />
+  </message>
+  <message name="wrapupCompletedResponse">
+    <part name="parameters" element="tns:wrapupCompletedResponse" />
+  </message>
+  <message name="propertyValidated">
+    <part name="parameters" element="tns:propertyValidated" />
+  </message>
+  <message name="propertyValidatedResponse">
+    <part name="parameters" element="tns:propertyValidatedResponse" />
+  </message>
+  <message name="modalDialogPopped">
+    <part name="parameters" element="tns:modalDialogPopped" />
+  </message>
+  <message name="modalDialogPoppedResponse">
+    <part name="parameters" element="tns:modalDialogPoppedResponse" />
+  </message>
+  <message name="registerCustomActions">
+    <part name="parameters" element="tns:registerCustomActions" />
+  </message>
+  <message name="registerCustomActionsResponse">
+    <part name="parameters" element="tns:registerCustomActionsResponse" />
+  </message>
+  <message name="customMainActionFired">
+    <part name="parameters" element="tns:customMainActionFired" />
+  </message>
+  <message name="customMainActionFiredResponse">
+    <part name="parameters" element="tns:customMainActionFiredResponse" />
+  </message>
+  <message name="customInteractionActionFired">
+    <part name="parameters" element="tns:customInteractionActionFired" />
+  </message>
+  <message name="customInteractionActionFiredResponse">
+    <part name="parameters" element="tns:customInteractionActionFiredResponse" />
+  </message>
+  <message name="customMediaActionFired">
+    <part name="parameters" element="tns:customMediaActionFired" />
+  </message>
+  <message name="customMediaActionFiredResponse">
+    <part name="parameters" element="tns:customMediaActionFiredResponse" />
+  </message>
+  <message name="getInteractionVaultHostName">
+    <part name="parameters" element="tns:getInteractionVaultHostName" />
+  </message>
+  <message name="getInteractionVaultHostNameResponse">
+    <part name="parameters" element="tns:getInteractionVaultHostNameResponse" />
+  </message>
+  <message name="getSystemValueAsString">
+    <part name="parameters" element="tns:getSystemValueAsString" />
+  </message>
+  <message name="getSystemValueAsStringResponse">
+    <part name="parameters" element="tns:getSystemValueAsStringResponse" />
+  </message>
+  <message name="addUserDefinedSound">
+    <part name="parameters" element="tns:addUserDefinedSound" />
+  </message>
+  <message name="addUserDefinedSoundResponse">
+    <part name="parameters" element="tns:addUserDefinedSoundResponse" />
+  </message>
+  <message name="playSoundOnClient">
+    <part name="parameters" element="tns:playSoundOnClient" />
+  </message>
+  <message name="playSoundOnClientResponse">
+    <part name="parameters" element="tns:playSoundOnClientResponse" />
+  </message>
+  <message name="setUnavailableReasons">
+    <part name="parameters" element="tns:setUnavailableReasons" />
+  </message>
+  <message name="setUnavailableReasonsResponse">
+    <part name="parameters" element="tns:setUnavailableReasonsResponse" />
+  </message>
+  <portType name="CIMSystemService">
+    <operation name="log">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/logRequest" message="tns:log" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/logResponse" message="tns:logResponse" />
+    </operation>
+    <operation name="getSessionTimeout">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getSessionTimeoutRequest" message="tns:getSessionTimeout" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getSessionTimeoutResponse" message="tns:getSessionTimeoutResponse" />
+    </operation>
+    <operation name="setSessionTimeout">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setSessionTimeoutRequest" message="tns:setSessionTimeout" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setSessionTimeoutResponse" message="tns:setSessionTimeoutResponse" />
+    </operation>
+    <operation name="login">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/loginRequest" message="tns:login" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/loginResponse" message="tns:loginResponse" />
+    </operation>
+    <operation name="loginAgent">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/loginAgentRequest" message="tns:loginAgent" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/loginAgentResponse" message="tns:loginAgentResponse" />
+    </operation>
+    <operation name="logout">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/logoutRequest" message="tns:logout" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/logoutResponse" message="tns:logoutResponse" />
+    </operation>
+    <operation name="changePassword">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/changePasswordRequest" message="tns:changePassword" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/changePasswordResponse" message="tns:changePasswordResponse" />
+    </operation>
+    <operation name="auxLog">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/auxLogRequest" message="tns:auxLog" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/auxLogResponse" message="tns:auxLogResponse" />
+    </operation>
+    <operation name="keepAlive">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/keepAliveRequest" message="tns:keepAlive" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/keepAliveResponse" message="tns:keepAliveResponse" />
+    </operation>
+    <operation name="addAlarm">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/addAlarmRequest" message="tns:addAlarm" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/addAlarmResponse" message="tns:addAlarmResponse" />
+    </operation>
+    <operation name="changeAlarm">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/changeAlarmRequest" message="tns:changeAlarm" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/changeAlarmResponse" message="tns:changeAlarmResponse" />
+    </operation>
+    <operation name="deleteAlarm">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deleteAlarmRequest" message="tns:deleteAlarm" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deleteAlarmResponse" message="tns:deleteAlarmResponse" />
+    </operation>
+    <operation name="getAlarms">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAlarmsRequest" message="tns:getAlarms" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAlarmsResponse" message="tns:getAlarmsResponse" />
+    </operation>
+    <operation name="getUserApplicationSettingValues">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getUserApplicationSettingValuesRequest" message="tns:getUserApplicationSettingValues" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getUserApplicationSettingValuesResponse" message="tns:getUserApplicationSettingValuesResponse" />
+    </operation>
+    <operation name="setUserApplicationSettingValue">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setUserApplicationSettingValueRequest" message="tns:setUserApplicationSettingValue" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setUserApplicationSettingValueResponse" message="tns:setUserApplicationSettingValueResponse" />
+    </operation>
+    <operation name="getMainActions">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getMainActionsRequest" message="tns:getMainActions" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getMainActionsResponse" message="tns:getMainActionsResponse" />
+    </operation>
+    <operation name="getEvents">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getEventsRequest" message="tns:getEvents" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getEventsResponse" message="tns:getEventsResponse" />
+    </operation>
+    <operation name="getAvailableColumnsForView">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAvailableColumnsForViewRequest" message="tns:getAvailableColumnsForView" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAvailableColumnsForViewResponse" message="tns:getAvailableColumnsForViewResponse" />
+    </operation>
+    <operation name="subscribeToView">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/subscribeToViewRequest" message="tns:subscribeToView" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/subscribeToViewResponse" message="tns:subscribeToViewResponse" />
+    </operation>
+    <operation name="subscribeToViewAux">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/subscribeToViewAuxRequest" message="tns:subscribeToViewAux" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/subscribeToViewAuxResponse" message="tns:subscribeToViewAuxResponse" />
+    </operation>
+    <operation name="scrollView">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/scrollViewRequest" message="tns:scrollView" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/scrollViewResponse" message="tns:scrollViewResponse" />
+    </operation>
+    <operation name="unsubscribeToView">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/unsubscribeToViewRequest" message="tns:unsubscribeToView" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/unsubscribeToViewResponse" message="tns:unsubscribeToViewResponse" />
+    </operation>
+    <operation name="modifyViewMetaData">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/modifyViewMetaDataRequest" message="tns:modifyViewMetaData" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/modifyViewMetaDataResponse" message="tns:modifyViewMetaDataResponse" />
+    </operation>
+    <operation name="getAgentState">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAgentStateRequest" message="tns:getAgentState" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAgentStateResponse" message="tns:getAgentStateResponse" />
+    </operation>
+    <operation name="changeAvailability">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/changeAvailabilityRequest" message="tns:changeAvailability" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/changeAvailabilityResponse" message="tns:changeAvailabilityResponse" />
+    </operation>
+    <operation name="getPropertyPermissions">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getPropertyPermissionsRequest" message="tns:getPropertyPermissions" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getPropertyPermissionsResponse" message="tns:getPropertyPermissionsResponse" />
+    </operation>
+    <operation name="setPropertyValue">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setPropertyValueRequest" message="tns:setPropertyValue" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setPropertyValueResponse" message="tns:setPropertyValueResponse" />
+    </operation>
+    <operation name="setPropertiesValue">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setPropertiesValueRequest" message="tns:setPropertiesValue" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setPropertiesValueResponse" message="tns:setPropertiesValueResponse" />
+    </operation>
+    <operation name="takeNextInteraction">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/takeNextInteractionRequest" message="tns:takeNextInteraction" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/takeNextInteractionResponse" message="tns:takeNextInteractionResponse" />
+    </operation>
+    <operation name="createTakenInteraction">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createTakenInteractionRequest" message="tns:createTakenInteraction" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createTakenInteractionResponse" message="tns:createTakenInteractionResponse" />
+    </operation>
+    <operation name="retryMediaTransfer">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/retryMediaTransferRequest" message="tns:retryMediaTransfer" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/retryMediaTransferResponse" message="tns:retryMediaTransferResponse" />
+    </operation>
+    <operation name="getActiveParticipations">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getActiveParticipationsRequest" message="tns:getActiveParticipations" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getActiveParticipationsResponse" message="tns:getActiveParticipationsResponse" />
+    </operation>
+    <operation name="getCurrentParticipation">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getCurrentParticipationRequest" message="tns:getCurrentParticipation" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getCurrentParticipationResponse" message="tns:getCurrentParticipationResponse" />
+    </operation>
+    <operation name="setCurrentParticipation">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setCurrentParticipationRequest" message="tns:setCurrentParticipation" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setCurrentParticipationResponse" message="tns:setCurrentParticipationResponse" />
+    </operation>
+    <operation name="getInteractionActions">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getInteractionActionsRequest" message="tns:getInteractionActions" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getInteractionActionsResponse" message="tns:getInteractionActionsResponse" />
+    </operation>
+    <operation name="createFollowupTakenInteraction">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createFollowupTakenInteractionRequest" message="tns:createFollowupTakenInteraction" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createFollowupTakenInteractionResponse" message="tns:createFollowupTakenInteractionResponse" />
+    </operation>
+    <operation name="takeInteraction">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/takeInteractionRequest" message="tns:takeInteraction" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/takeInteractionResponse" message="tns:takeInteractionResponse" />
+    </operation>
+    <operation name="previewInteraction">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/previewInteractionRequest" message="tns:previewInteraction" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/previewInteractionResponse" message="tns:previewInteractionResponse" />
+    </operation>
+    <operation name="takePreview">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/takePreviewRequest" message="tns:takePreview" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/takePreviewResponse" message="tns:takePreviewResponse" />
+    </operation>
+    <operation name="cancelPreview">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/cancelPreviewRequest" message="tns:cancelPreview" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/cancelPreviewResponse" message="tns:cancelPreviewResponse" />
+    </operation>
+    <operation name="getWrapupCodes">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getWrapupCodesRequest" message="tns:getWrapupCodes" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getWrapupCodesResponse" message="tns:getWrapupCodesResponse" />
+    </operation>
+    <operation name="finishParticipation">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/finishParticipationRequest" message="tns:finishParticipation" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/finishParticipationResponse" message="tns:finishParticipationResponse" />
+    </operation>
+    <operation name="finishParticipationFromAuxSession">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/finishParticipationFromAuxSessionRequest" message="tns:finishParticipationFromAuxSession" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/finishParticipationFromAuxSessionResponse" message="tns:finishParticipationFromAuxSessionResponse" />
+    </operation>
+    <operation name="requeueInteraction">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/requeueInteractionRequest" message="tns:requeueInteraction" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/requeueInteractionResponse" message="tns:requeueInteractionResponse" />
+    </operation>
+    <operation name="overrideRequeueNode">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/overrideRequeueNodeRequest" message="tns:overrideRequeueNode" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/overrideRequeueNodeResponse" message="tns:overrideRequeueNodeResponse" />
+    </operation>
+    <operation name="getContactActions">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getContactActionsRequest" message="tns:getContactActions" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getContactActionsResponse" message="tns:getContactActionsResponse" />
+    </operation>
+    <operation name="getLinkStatus">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getLinkStatusRequest" message="tns:getLinkStatus" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getLinkStatusResponse" message="tns:getLinkStatusResponse" />
+    </operation>
+    <operation name="placeCallToNumber">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/placeCallToNumberRequest" message="tns:placeCallToNumber" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/placeCallToNumberResponse" message="tns:placeCallToNumberResponse" />
+    </operation>
+    <operation name="placeCallToContact">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/placeCallToContactRequest" message="tns:placeCallToContact" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/placeCallToContactResponse" message="tns:placeCallToContactResponse" />
+    </operation>
+    <operation name="answerCall">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/answerCallRequest" message="tns:answerCall" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/answerCallResponse" message="tns:answerCallResponse" />
+    </operation>
+    <operation name="disconnectCall">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/disconnectCallRequest" message="tns:disconnectCall" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/disconnectCallResponse" message="tns:disconnectCallResponse" />
+    </operation>
+    <operation name="holdCall">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/holdCallRequest" message="tns:holdCall" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/holdCallResponse" message="tns:holdCallResponse" />
+    </operation>
+    <operation name="retrieveCall">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/retrieveCallRequest" message="tns:retrieveCall" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/retrieveCallResponse" message="tns:retrieveCallResponse" />
+    </operation>
+    <operation name="startTransferToNumber">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/startTransferToNumberRequest" message="tns:startTransferToNumber" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/startTransferToNumberResponse" message="tns:startTransferToNumberResponse" />
+    </operation>
+    <operation name="startTransferToContact">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/startTransferToContactRequest" message="tns:startTransferToContact" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/startTransferToContactResponse" message="tns:startTransferToContactResponse" />
+    </operation>
+    <operation name="startConferenceWithNumber">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/startConferenceWithNumberRequest" message="tns:startConferenceWithNumber" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/startConferenceWithNumberResponse" message="tns:startConferenceWithNumberResponse" />
+    </operation>
+    <operation name="startConferenceWithContact">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/startConferenceWithContactRequest" message="tns:startConferenceWithContact" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/startConferenceWithContactResponse" message="tns:startConferenceWithContactResponse" />
+    </operation>
+    <operation name="solicitConsultation">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/solicitConsultationRequest" message="tns:solicitConsultation" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/solicitConsultationResponse" message="tns:solicitConsultationResponse" />
+    </operation>
+    <operation name="withdrawConsultationSolicitation">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/withdrawConsultationSolicitationRequest" message="tns:withdrawConsultationSolicitation" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/withdrawConsultationSolicitationResponse" message="tns:withdrawConsultationSolicitationResponse" />
+    </operation>
+    <operation name="acceptConsultationOffer">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/acceptConsultationOfferRequest" message="tns:acceptConsultationOffer" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/acceptConsultationOfferResponse" message="tns:acceptConsultationOfferResponse" />
+    </operation>
+    <operation name="cancelConsultation">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/cancelConsultationRequest" message="tns:cancelConsultation" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/cancelConsultationResponse" message="tns:cancelConsultationResponse" />
+    </operation>
+    <operation name="completeTransfer">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/completeTransferRequest" message="tns:completeTransfer" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/completeTransferResponse" message="tns:completeTransferResponse" />
+    </operation>
+    <operation name="completeConference">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/completeConferenceRequest" message="tns:completeConference" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/completeConferenceResponse" message="tns:completeConferenceResponse" />
+    </operation>
+    <operation name="sendDigits">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendDigitsRequest" message="tns:sendDigits" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendDigitsResponse" message="tns:sendDigitsResponse" />
+    </operation>
+    <operation name="swapCall">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/swapCallRequest" message="tns:swapCall" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/swapCallResponse" message="tns:swapCallResponse" />
+    </operation>
+    <operation name="redialCall">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/redialCallRequest" message="tns:redialCall" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/redialCallResponse" message="tns:redialCallResponse" />
+    </operation>
+    <operation name="flagCallForRecording">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/flagCallForRecordingRequest" message="tns:flagCallForRecording" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/flagCallForRecordingResponse" message="tns:flagCallForRecordingResponse" />
+    </operation>
+    <operation name="singleStepTransfer">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/singleStepTransferRequest" message="tns:singleStepTransfer" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/singleStepTransferResponse" message="tns:singleStepTransferResponse" />
+    </operation>
+    <operation name="getCallData">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getCallDataRequest" message="tns:getCallData" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getCallDataResponse" message="tns:getCallDataResponse" />
+    </operation>
+    <operation name="transferToSurveyPort">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/transferToSurveyPortRequest" message="tns:transferToSurveyPort" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/transferToSurveyPortResponse" message="tns:transferToSurveyPortResponse" />
+    </operation>
+    <operation name="getFileUploadReference">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getFileUploadReferenceRequest" message="tns:getFileUploadReference" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getFileUploadReferenceResponse" message="tns:getFileUploadReferenceResponse" />
+    </operation>
+    <operation name="getAllowedEmailFromAddresses">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAllowedEmailFromAddressesRequest" message="tns:getAllowedEmailFromAddresses" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAllowedEmailFromAddressesResponse" message="tns:getAllowedEmailFromAddressesResponse" />
+    </operation>
+    <operation name="validateEmailAddress">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/validateEmailAddressRequest" message="tns:validateEmailAddress" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/validateEmailAddressResponse" message="tns:validateEmailAddressResponse" />
+    </operation>
+    <operation name="attachFileToEmail">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/attachFileToEmailRequest" message="tns:attachFileToEmail" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/attachFileToEmailResponse" message="tns:attachFileToEmailResponse" />
+    </operation>
+    <operation name="detachFileFromEmail">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/detachFileFromEmailRequest" message="tns:detachFileFromEmail" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/detachFileFromEmailResponse" message="tns:detachFileFromEmailResponse" />
+    </operation>
+    <operation name="addEmailRecipient">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/addEmailRecipientRequest" message="tns:addEmailRecipient" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/addEmailRecipientResponse" message="tns:addEmailRecipientResponse" />
+    </operation>
+    <operation name="removeEmailRecipient">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/removeEmailRecipientRequest" message="tns:removeEmailRecipient" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/removeEmailRecipientResponse" message="tns:removeEmailRecipientResponse" />
+    </operation>
+    <operation name="setEmailSubject">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setEmailSubjectRequest" message="tns:setEmailSubject" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setEmailSubjectResponse" message="tns:setEmailSubjectResponse" />
+    </operation>
+    <operation name="setEmailSender">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setEmailSenderRequest" message="tns:setEmailSender" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setEmailSenderResponse" message="tns:setEmailSenderResponse" />
+    </operation>
+    <operation name="setEmailBody">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setEmailBodyRequest" message="tns:setEmailBody" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setEmailBodyResponse" message="tns:setEmailBodyResponse" />
+    </operation>
+    <operation name="sendEmail">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendEmailRequest" message="tns:sendEmail" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendEmailResponse" message="tns:sendEmailResponse" />
+    </operation>
+    <operation name="getEmailPrintURL">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getEmailPrintURLRequest" message="tns:getEmailPrintURL" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getEmailPrintURLResponse" message="tns:getEmailPrintURLResponse" />
+    </operation>
+    <operation name="sendWebChatCustomerMessage">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendWebChatCustomerMessageRequest" message="tns:sendWebChatCustomerMessage" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendWebChatCustomerMessageResponse" message="tns:sendWebChatCustomerMessageResponse" />
+    </operation>
+    <operation name="sendWebChatWhisperMessage">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendWebChatWhisperMessageRequest" message="tns:sendWebChatWhisperMessage" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendWebChatWhisperMessageResponse" message="tns:sendWebChatWhisperMessageResponse" />
+    </operation>
+    <operation name="sendWebChatAgentStartedTyping">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendWebChatAgentStartedTypingRequest" message="tns:sendWebChatAgentStartedTyping" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendWebChatAgentStartedTypingResponse" message="tns:sendWebChatAgentStartedTypingResponse" />
+    </operation>
+    <operation name="sendWebChatAgentStoppedTyping">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendWebChatAgentStoppedTypingRequest" message="tns:sendWebChatAgentStoppedTyping" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendWebChatAgentStoppedTypingResponse" message="tns:sendWebChatAgentStoppedTypingResponse" />
+    </operation>
+    <operation name="disconnectWebChat">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/disconnectWebChatRequest" message="tns:disconnectWebChat" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/disconnectWebChatResponse" message="tns:disconnectWebChatResponse" />
+    </operation>
+    <operation name="setListenedToVoicemail">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setListenedToVoicemailRequest" message="tns:setListenedToVoicemail" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setListenedToVoicemailResponse" message="tns:setListenedToVoicemailResponse" />
+    </operation>
+    <operation name="createPersonalResponseLibrary">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createPersonalResponseLibraryRequest" message="tns:createPersonalResponseLibrary" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createPersonalResponseLibraryResponse" message="tns:createPersonalResponseLibraryResponse" />
+    </operation>
+    <operation name="deletePersonalResponseLibrary">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deletePersonalResponseLibraryRequest" message="tns:deletePersonalResponseLibrary" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deletePersonalResponseLibraryResponse" message="tns:deletePersonalResponseLibraryResponse" />
+    </operation>
+    <operation name="createPersonalResponseItem">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createPersonalResponseItemRequest" message="tns:createPersonalResponseItem" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createPersonalResponseItemResponse" message="tns:createPersonalResponseItemResponse" />
+    </operation>
+    <operation name="deletePersonalResponseItem">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deletePersonalResponseItemRequest" message="tns:deletePersonalResponseItem" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deletePersonalResponseItemResponse" message="tns:deletePersonalResponseItemResponse" />
+    </operation>
+    <operation name="modifyPersonalResponseItem">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/modifyPersonalResponseItemRequest" message="tns:modifyPersonalResponseItem" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/modifyPersonalResponseItemResponse" message="tns:modifyPersonalResponseItemResponse" />
+    </operation>
+    <operation name="renamePersonalResponseLibrary">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/renamePersonalResponseLibraryRequest" message="tns:renamePersonalResponseLibrary" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/renamePersonalResponseLibraryResponse" message="tns:renamePersonalResponseLibraryResponse" />
+    </operation>
+    <operation name="createPersonalAddressBook">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createPersonalAddressBookRequest" message="tns:createPersonalAddressBook" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createPersonalAddressBookResponse" message="tns:createPersonalAddressBookResponse" />
+    </operation>
+    <operation name="renamePersonalAddressBook">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/renamePersonalAddressBookRequest" message="tns:renamePersonalAddressBook" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/renamePersonalAddressBookResponse" message="tns:renamePersonalAddressBookResponse" />
+    </operation>
+    <operation name="deletePersonalAddressBook">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deletePersonalAddressBookRequest" message="tns:deletePersonalAddressBook" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deletePersonalAddressBookResponse" message="tns:deletePersonalAddressBookResponse" />
+    </operation>
+    <operation name="createPersonalContact">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createPersonalContactRequest" message="tns:createPersonalContact" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createPersonalContactResponse" message="tns:createPersonalContactResponse" />
+    </operation>
+    <operation name="deletePersonalContact">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deletePersonalContactRequest" message="tns:deletePersonalContact" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deletePersonalContactResponse" message="tns:deletePersonalContactResponse" />
+    </operation>
+    <operation name="modifyPersonalContact">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/modifyPersonalContactRequest" message="tns:modifyPersonalContact" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/modifyPersonalContactResponse" message="tns:modifyPersonalContactResponse" />
+    </operation>
+    <operation name="addWordToPersonalSpellingDictionary">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/addWordToPersonalSpellingDictionaryRequest" message="tns:addWordToPersonalSpellingDictionary" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/addWordToPersonalSpellingDictionaryResponse" message="tns:addWordToPersonalSpellingDictionaryResponse" />
+    </operation>
+    <operation name="removeWordFromPersonalSpellingDictionary">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/removeWordFromPersonalSpellingDictionaryRequest" message="tns:removeWordFromPersonalSpellingDictionary" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/removeWordFromPersonalSpellingDictionaryResponse" message="tns:removeWordFromPersonalSpellingDictionaryResponse" />
+    </operation>
+    <operation name="getDictionaryReferences">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getDictionaryReferencesRequest" message="tns:getDictionaryReferences" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getDictionaryReferencesResponse" message="tns:getDictionaryReferencesResponse" />
+    </operation>
+    <operation name="getUserHelpMessages">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getUserHelpMessagesRequest" message="tns:getUserHelpMessages" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getUserHelpMessagesResponse" message="tns:getUserHelpMessagesResponse" />
+    </operation>
+    <operation name="createUserHelpMessage">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createUserHelpMessageRequest" message="tns:createUserHelpMessage" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/createUserHelpMessageResponse" message="tns:createUserHelpMessageResponse" />
+    </operation>
+    <operation name="getHelpProviders">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getHelpProvidersRequest" message="tns:getHelpProviders" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getHelpProvidersResponse" message="tns:getHelpProvidersResponse" />
+    </operation>
+    <operation name="postHelpRequest">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/postHelpRequestRequest" message="tns:postHelpRequest" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/postHelpRequestResponse" message="tns:postHelpRequestResponse" />
+    </operation>
+    <operation name="closeHelpRequestAsAgent">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/closeHelpRequestAsAgentRequest" message="tns:closeHelpRequestAsAgent" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/closeHelpRequestAsAgentResponse" message="tns:closeHelpRequestAsAgentResponse" />
+    </operation>
+    <operation name="deleteReceivedSupervisorMessage">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deleteReceivedSupervisorMessageRequest" message="tns:deleteReceivedSupervisorMessage" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/deleteReceivedSupervisorMessageResponse" message="tns:deleteReceivedSupervisorMessageResponse" />
+    </operation>
+    <operation name="getActiveCallParticipation">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getActiveCallParticipationRequest" message="tns:getActiveCallParticipation" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getActiveCallParticipationResponse" message="tns:getActiveCallParticipationResponse" />
+    </operation>
+    <operation name="sendResponderRequest">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendResponderRequestRequest" message="tns:sendResponderRequest" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendResponderRequestResponse" message="tns:sendResponderRequestResponse" />
+    </operation>
+    <operation name="sendResponderResponse">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendResponderResponseRequest" message="tns:sendResponderResponse" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/sendResponderResponseResponse" message="tns:sendResponderResponseResponse" />
+    </operation>
+    <operation name="getAPIVersion">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAPIVersionRequest" message="tns:getAPIVersion" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAPIVersionResponse" message="tns:getAPIVersionResponse" />
+    </operation>
+    <operation name="reportInactiveDuration">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/reportInactiveDurationRequest" message="tns:reportInactiveDuration" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/reportInactiveDurationResponse" message="tns:reportInactiveDurationResponse" />
+    </operation>
+    <operation name="getAuxiliarySessionId">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAuxiliarySessionIdRequest" message="tns:getAuxiliarySessionId" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAuxiliarySessionIdResponse" message="tns:getAuxiliarySessionIdResponse" />
+    </operation>
+    <operation name="attachToSession">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/attachToSessionRequest" message="tns:attachToSession" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/attachToSessionResponse" message="tns:attachToSessionResponse" />
+    </operation>
+    <operation name="detachFromSession">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/detachFromSessionRequest" message="tns:detachFromSession" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/detachFromSessionResponse" message="tns:detachFromSessionResponse" />
+    </operation>
+    <operation name="subscribeToEvents">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/subscribeToEventsRequest" message="tns:subscribeToEvents" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/subscribeToEventsResponse" message="tns:subscribeToEventsResponse" />
+    </operation>
+    <operation name="getAuxSessionEvents">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAuxSessionEventsRequest" message="tns:getAuxSessionEvents" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getAuxSessionEventsResponse" message="tns:getAuxSessionEventsResponse" />
+    </operation>
+    <operation name="reportAuxSessionError">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/reportAuxSessionErrorRequest" message="tns:reportAuxSessionError" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/reportAuxSessionErrorResponse" message="tns:reportAuxSessionErrorResponse" />
+    </operation>
+    <operation name="requestAuxSessionAction">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/requestAuxSessionActionRequest" message="tns:requestAuxSessionAction" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/requestAuxSessionActionResponse" message="tns:requestAuxSessionActionResponse" />
+    </operation>
+    <operation name="auxSessionActionCompleted">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/auxSessionActionCompletedRequest" message="tns:auxSessionActionCompleted" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/auxSessionActionCompletedResponse" message="tns:auxSessionActionCompletedResponse" />
+    </operation>
+    <operation name="changePrimarySessionState">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/changePrimarySessionStateRequest" message="tns:changePrimarySessionState" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/changePrimarySessionStateResponse" message="tns:changePrimarySessionStateResponse" />
+    </operation>
+    <operation name="getScriptingHostFiles">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getScriptingHostFilesRequest" message="tns:getScriptingHostFiles" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getScriptingHostFilesResponse" message="tns:getScriptingHostFilesResponse" />
+    </operation>
+    <operation name="attachWrapupCodes">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/attachWrapupCodesRequest" message="tns:attachWrapupCodes" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/attachWrapupCodesResponse" message="tns:attachWrapupCodesResponse" />
+    </operation>
+    <operation name="transferTargetValidated">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/transferTargetValidatedRequest" message="tns:transferTargetValidated" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/transferTargetValidatedResponse" message="tns:transferTargetValidatedResponse" />
+    </operation>
+    <operation name="phoneNumberValidated">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/phoneNumberValidatedRequest" message="tns:phoneNumberValidated" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/phoneNumberValidatedResponse" message="tns:phoneNumberValidatedResponse" />
+    </operation>
+    <operation name="phoneNumberModified">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/phoneNumberModifiedRequest" message="tns:phoneNumberModified" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/phoneNumberModifiedResponse" message="tns:phoneNumberModifiedResponse" />
+    </operation>
+    <operation name="wrapupCompleted">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/wrapupCompletedRequest" message="tns:wrapupCompleted" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/wrapupCompletedResponse" message="tns:wrapupCompletedResponse" />
+    </operation>
+    <operation name="propertyValidated">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/propertyValidatedRequest" message="tns:propertyValidated" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/propertyValidatedResponse" message="tns:propertyValidatedResponse" />
+    </operation>
+    <operation name="modalDialogPopped">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/modalDialogPoppedRequest" message="tns:modalDialogPopped" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/modalDialogPoppedResponse" message="tns:modalDialogPoppedResponse" />
+    </operation>
+    <operation name="registerCustomActions">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/registerCustomActionsRequest" message="tns:registerCustomActions" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/registerCustomActionsResponse" message="tns:registerCustomActionsResponse" />
+    </operation>
+    <operation name="customMainActionFired">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/customMainActionFiredRequest" message="tns:customMainActionFired" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/customMainActionFiredResponse" message="tns:customMainActionFiredResponse" />
+    </operation>
+    <operation name="customInteractionActionFired">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/customInteractionActionFiredRequest" message="tns:customInteractionActionFired" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/customInteractionActionFiredResponse" message="tns:customInteractionActionFiredResponse" />
+    </operation>
+    <operation name="customMediaActionFired">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/customMediaActionFiredRequest" message="tns:customMediaActionFired" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/customMediaActionFiredResponse" message="tns:customMediaActionFiredResponse" />
+    </operation>
+    <operation name="getInteractionVaultHostName">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getInteractionVaultHostNameRequest" message="tns:getInteractionVaultHostName" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getInteractionVaultHostNameResponse" message="tns:getInteractionVaultHostNameResponse" />
+    </operation>
+    <operation name="getSystemValueAsString">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getSystemValueAsStringRequest" message="tns:getSystemValueAsString" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/getSystemValueAsStringResponse" message="tns:getSystemValueAsStringResponse" />
+    </operation>
+    <operation name="addUserDefinedSound">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/addUserDefinedSoundRequest" message="tns:addUserDefinedSound" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/addUserDefinedSoundResponse" message="tns:addUserDefinedSoundResponse" />
+    </operation>
+    <operation name="playSoundOnClient">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/playSoundOnClientRequest" message="tns:playSoundOnClient" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/playSoundOnClientResponse" message="tns:playSoundOnClientResponse" />
+    </operation>
+    <operation name="setUnavailableReasons">
+      <input wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setUnavailableReasonsRequest" message="tns:setUnavailableReasons" />
+      <output wsam:Action="http://ws.soda.apropos.com/CIMSystemService/setUnavailableReasonsResponse" message="tns:setUnavailableReasonsResponse" />
+    </operation>
+  </portType>
+  <binding name="CIMSystemServicePortBinding" type="tns:CIMSystemService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="log">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSessionTimeout">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setSessionTimeout">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="loginAgent">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="logout">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="changePassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="auxLog">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="keepAlive">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addAlarm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="changeAlarm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAlarm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAlarms">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUserApplicationSettingValues">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setUserApplicationSettingValue">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMainActions">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getEvents">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAvailableColumnsForView">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="subscribeToView">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="subscribeToViewAux">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="scrollView">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="unsubscribeToView">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modifyViewMetaData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAgentState">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="changeAvailability">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPropertyPermissions">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPropertyValue">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPropertiesValue">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="takeNextInteraction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createTakenInteraction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="retryMediaTransfer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getActiveParticipations">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCurrentParticipation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setCurrentParticipation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getInteractionActions">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createFollowupTakenInteraction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="takeInteraction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="previewInteraction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="takePreview">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cancelPreview">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getWrapupCodes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="finishParticipation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="finishParticipationFromAuxSession">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="requeueInteraction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="overrideRequeueNode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getContactActions">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getLinkStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="placeCallToNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="placeCallToContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="answerCall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="disconnectCall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="holdCall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="retrieveCall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="startTransferToNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="startTransferToContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="startConferenceWithNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="startConferenceWithContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="solicitConsultation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="withdrawConsultationSolicitation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="acceptConsultationOffer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cancelConsultation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="completeTransfer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="completeConference">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendDigits">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="swapCall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="redialCall">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="flagCallForRecording">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="singleStepTransfer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCallData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="transferToSurveyPort">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getFileUploadReference">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllowedEmailFromAddresses">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validateEmailAddress">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="attachFileToEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="detachFileFromEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addEmailRecipient">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeEmailRecipient">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setEmailSubject">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setEmailSender">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setEmailBody">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getEmailPrintURL">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendWebChatCustomerMessage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendWebChatWhisperMessage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendWebChatAgentStartedTyping">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendWebChatAgentStoppedTyping">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="disconnectWebChat">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setListenedToVoicemail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createPersonalResponseLibrary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deletePersonalResponseLibrary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createPersonalResponseItem">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deletePersonalResponseItem">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modifyPersonalResponseItem">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="renamePersonalResponseLibrary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createPersonalAddressBook">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="renamePersonalAddressBook">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deletePersonalAddressBook">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createPersonalContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deletePersonalContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modifyPersonalContact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addWordToPersonalSpellingDictionary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeWordFromPersonalSpellingDictionary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDictionaryReferences">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUserHelpMessages">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createUserHelpMessage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getHelpProviders">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="postHelpRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="closeHelpRequestAsAgent">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteReceivedSupervisorMessage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getActiveCallParticipation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendResponderRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sendResponderResponse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAPIVersion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reportInactiveDuration">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAuxiliarySessionId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="attachToSession">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="detachFromSession">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="subscribeToEvents">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAuxSessionEvents">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reportAuxSessionError">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="requestAuxSessionAction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="auxSessionActionCompleted">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="changePrimarySessionState">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getScriptingHostFiles">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="attachWrapupCodes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="transferTargetValidated">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="phoneNumberValidated">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="phoneNumberModified">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="wrapupCompleted">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="propertyValidated">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modalDialogPopped">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registerCustomActions">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="customMainActionFired">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="customInteractionActionFired">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="customMediaActionFired">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getInteractionVaultHostName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSystemValueAsString">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addUserDefinedSound">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="playSoundOnClient">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setUnavailableReasons">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CIMSystemService">
+    <port name="CIMSystemServicePort" binding="tns:CIMSystemServicePortBinding">
+      <soap:address location="http://1279c748.ngrok.com:80/SODA/CIMSystemService" />
+    </port>
+  </service>
+</definitions>

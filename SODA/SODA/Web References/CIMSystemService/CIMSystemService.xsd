@@ -1,0 +1,3796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.soda.apropos.com/" targetNamespace="http://ws.soda.apropos.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="acceptConsultationOffer" type="tns:acceptConsultationOffer" />
+  <xs:element name="acceptConsultationOfferResponse" type="tns:acceptConsultationOfferResponse" />
+  <xs:element name="addAlarm" type="tns:addAlarm" />
+  <xs:element name="addAlarmResponse" type="tns:addAlarmResponse" />
+  <xs:element name="addEmailRecipient" type="tns:addEmailRecipient" />
+  <xs:element name="addEmailRecipientResponse" type="tns:addEmailRecipientResponse" />
+  <xs:element name="addUserDefinedSound" type="tns:addUserDefinedSound" />
+  <xs:element name="addUserDefinedSoundResponse" type="tns:addUserDefinedSoundResponse" />
+  <xs:element name="addWordToPersonalSpellingDictionary" type="tns:addWordToPersonalSpellingDictionary" />
+  <xs:element name="addWordToPersonalSpellingDictionaryResponse" type="tns:addWordToPersonalSpellingDictionaryResponse" />
+  <xs:element name="answerCall" type="tns:answerCall" />
+  <xs:element name="answerCallResponse" type="tns:answerCallResponse" />
+  <xs:element name="attachFileToEmail" type="tns:attachFileToEmail" />
+  <xs:element name="attachFileToEmailResponse" type="tns:attachFileToEmailResponse" />
+  <xs:element name="attachToSession" type="tns:attachToSession" />
+  <xs:element name="attachToSessionResponse" type="tns:attachToSessionResponse" />
+  <xs:element name="attachWrapupCodes" type="tns:attachWrapupCodes" />
+  <xs:element name="attachWrapupCodesResponse" type="tns:attachWrapupCodesResponse" />
+  <xs:element name="auxLog" type="tns:auxLog" />
+  <xs:element name="auxLogResponse" type="tns:auxLogResponse" />
+  <xs:element name="auxSessionActionCompleted" type="tns:auxSessionActionCompleted" />
+  <xs:element name="auxSessionActionCompletedResponse" type="tns:auxSessionActionCompletedResponse" />
+  <xs:element name="cancelConsultation" type="tns:cancelConsultation" />
+  <xs:element name="cancelConsultationResponse" type="tns:cancelConsultationResponse" />
+  <xs:element name="cancelPreview" type="tns:cancelPreview" />
+  <xs:element name="cancelPreviewResponse" type="tns:cancelPreviewResponse" />
+  <xs:element name="changeAlarm" type="tns:changeAlarm" />
+  <xs:element name="changeAlarmResponse" type="tns:changeAlarmResponse" />
+  <xs:element name="changeAvailability" type="tns:changeAvailability" />
+  <xs:element name="changeAvailabilityResponse" type="tns:changeAvailabilityResponse" />
+  <xs:element name="changePassword" type="tns:changePassword" />
+  <xs:element name="changePasswordResponse" type="tns:changePasswordResponse" />
+  <xs:element name="changePrimarySessionState" type="tns:changePrimarySessionState" />
+  <xs:element name="changePrimarySessionStateResponse" type="tns:changePrimarySessionStateResponse" />
+  <xs:element name="cimApplicationSettingValue" type="tns:CIMApplicationSettingValue" />
+  <xs:element name="cimViewMetaDataListSettingValue" type="tns:CIMViewMetaDataListSettingValue" />
+  <xs:element name="closeHelpRequestAsAgent" type="tns:closeHelpRequestAsAgent" />
+  <xs:element name="closeHelpRequestAsAgentResponse" type="tns:closeHelpRequestAsAgentResponse" />
+  <xs:element name="completeConference" type="tns:completeConference" />
+  <xs:element name="completeConferenceResponse" type="tns:completeConferenceResponse" />
+  <xs:element name="completeTransfer" type="tns:completeTransfer" />
+  <xs:element name="completeTransferResponse" type="tns:completeTransferResponse" />
+  <xs:element name="createFollowupTakenInteraction" type="tns:createFollowupTakenInteraction" />
+  <xs:element name="createFollowupTakenInteractionResponse" type="tns:createFollowupTakenInteractionResponse" />
+  <xs:element name="createPersonalAddressBook" type="tns:createPersonalAddressBook" />
+  <xs:element name="createPersonalAddressBookResponse" type="tns:createPersonalAddressBookResponse" />
+  <xs:element name="createPersonalContact" type="tns:createPersonalContact" />
+  <xs:element name="createPersonalContactResponse" type="tns:createPersonalContactResponse" />
+  <xs:element name="createPersonalResponseItem" type="tns:createPersonalResponseItem" />
+  <xs:element name="createPersonalResponseItemResponse" type="tns:createPersonalResponseItemResponse" />
+  <xs:element name="createPersonalResponseLibrary" type="tns:createPersonalResponseLibrary" />
+  <xs:element name="createPersonalResponseLibraryResponse" type="tns:createPersonalResponseLibraryResponse" />
+  <xs:element name="createTakenInteraction" type="tns:createTakenInteraction" />
+  <xs:element name="createTakenInteractionResponse" type="tns:createTakenInteractionResponse" />
+  <xs:element name="createUserHelpMessage" type="tns:createUserHelpMessage" />
+  <xs:element name="createUserHelpMessageResponse" type="tns:createUserHelpMessageResponse" />
+  <xs:element name="customInteractionActionFired" type="tns:customInteractionActionFired" />
+  <xs:element name="customInteractionActionFiredResponse" type="tns:customInteractionActionFiredResponse" />
+  <xs:element name="customMainActionFired" type="tns:customMainActionFired" />
+  <xs:element name="customMainActionFiredResponse" type="tns:customMainActionFiredResponse" />
+  <xs:element name="customMediaActionFired" type="tns:customMediaActionFired" />
+  <xs:element name="customMediaActionFiredResponse" type="tns:customMediaActionFiredResponse" />
+  <xs:element name="deleteAlarm" type="tns:deleteAlarm" />
+  <xs:element name="deleteAlarmResponse" type="tns:deleteAlarmResponse" />
+  <xs:element name="deletePersonalAddressBook" type="tns:deletePersonalAddressBook" />
+  <xs:element name="deletePersonalAddressBookResponse" type="tns:deletePersonalAddressBookResponse" />
+  <xs:element name="deletePersonalContact" type="tns:deletePersonalContact" />
+  <xs:element name="deletePersonalContactResponse" type="tns:deletePersonalContactResponse" />
+  <xs:element name="deletePersonalResponseItem" type="tns:deletePersonalResponseItem" />
+  <xs:element name="deletePersonalResponseItemResponse" type="tns:deletePersonalResponseItemResponse" />
+  <xs:element name="deletePersonalResponseLibrary" type="tns:deletePersonalResponseLibrary" />
+  <xs:element name="deletePersonalResponseLibraryResponse" type="tns:deletePersonalResponseLibraryResponse" />
+  <xs:element name="deleteReceivedSupervisorMessage" type="tns:deleteReceivedSupervisorMessage" />
+  <xs:element name="deleteReceivedSupervisorMessageResponse" type="tns:deleteReceivedSupervisorMessageResponse" />
+  <xs:element name="detachFileFromEmail" type="tns:detachFileFromEmail" />
+  <xs:element name="detachFileFromEmailResponse" type="tns:detachFileFromEmailResponse" />
+  <xs:element name="detachFromSession" type="tns:detachFromSession" />
+  <xs:element name="detachFromSessionResponse" type="tns:detachFromSessionResponse" />
+  <xs:element name="disconnectCall" type="tns:disconnectCall" />
+  <xs:element name="disconnectCallResponse" type="tns:disconnectCallResponse" />
+  <xs:element name="disconnectWebChat" type="tns:disconnectWebChat" />
+  <xs:element name="disconnectWebChatResponse" type="tns:disconnectWebChatResponse" />
+  <xs:element name="finishParticipation" type="tns:finishParticipation" />
+  <xs:element name="finishParticipationFromAuxSession" type="tns:finishParticipationFromAuxSession" />
+  <xs:element name="finishParticipationFromAuxSessionResponse" type="tns:finishParticipationFromAuxSessionResponse" />
+  <xs:element name="finishParticipationResponse" type="tns:finishParticipationResponse" />
+  <xs:element name="flagCallForRecording" type="tns:flagCallForRecording" />
+  <xs:element name="flagCallForRecordingResponse" type="tns:flagCallForRecordingResponse" />
+  <xs:element name="getAPIVersion" type="tns:getAPIVersion" />
+  <xs:element name="getAPIVersionResponse" type="tns:getAPIVersionResponse" />
+  <xs:element name="getActiveCallParticipation" type="tns:getActiveCallParticipation" />
+  <xs:element name="getActiveCallParticipationResponse" type="tns:getActiveCallParticipationResponse" />
+  <xs:element name="getActiveParticipations" type="tns:getActiveParticipations" />
+  <xs:element name="getActiveParticipationsResponse" type="tns:getActiveParticipationsResponse" />
+  <xs:element name="getAgentState" type="tns:getAgentState" />
+  <xs:element name="getAgentStateResponse" type="tns:getAgentStateResponse" />
+  <xs:element name="getAlarms" type="tns:getAlarms" />
+  <xs:element name="getAlarmsResponse" type="tns:getAlarmsResponse" />
+  <xs:element name="getAllowedEmailFromAddresses" type="tns:getAllowedEmailFromAddresses" />
+  <xs:element name="getAllowedEmailFromAddressesResponse" type="tns:getAllowedEmailFromAddressesResponse" />
+  <xs:element name="getAuxSessionEvents" type="tns:getAuxSessionEvents" />
+  <xs:element name="getAuxSessionEventsResponse" type="tns:getAuxSessionEventsResponse" />
+  <xs:element name="getAuxiliarySessionId" type="tns:getAuxiliarySessionId" />
+  <xs:element name="getAuxiliarySessionIdResponse" type="tns:getAuxiliarySessionIdResponse" />
+  <xs:element name="getAvailableColumnsForView" type="tns:getAvailableColumnsForView" />
+  <xs:element name="getAvailableColumnsForViewResponse" type="tns:getAvailableColumnsForViewResponse" />
+  <xs:element name="getCallData" type="tns:getCallData" />
+  <xs:element name="getCallDataResponse" type="tns:getCallDataResponse" />
+  <xs:element name="getContactActions" type="tns:getContactActions" />
+  <xs:element name="getContactActionsResponse" type="tns:getContactActionsResponse" />
+  <xs:element name="getCurrentParticipation" type="tns:getCurrentParticipation" />
+  <xs:element name="getCurrentParticipationResponse" type="tns:getCurrentParticipationResponse" />
+  <xs:element name="getDictionaryReferences" type="tns:getDictionaryReferences" />
+  <xs:element name="getDictionaryReferencesResponse" type="tns:getDictionaryReferencesResponse" />
+  <xs:element name="getEmailPrintURL" type="tns:getEmailPrintURL" />
+  <xs:element name="getEmailPrintURLResponse" type="tns:getEmailPrintURLResponse" />
+  <xs:element name="getEvents" type="tns:getEvents" />
+  <xs:element name="getEventsResponse" type="tns:getEventsResponse" />
+  <xs:element name="getFileUploadReference" type="tns:getFileUploadReference" />
+  <xs:element name="getFileUploadReferenceResponse" type="tns:getFileUploadReferenceResponse" />
+  <xs:element name="getHelpProviders" type="tns:getHelpProviders" />
+  <xs:element name="getHelpProvidersResponse" type="tns:getHelpProvidersResponse" />
+  <xs:element name="getInteractionActions" type="tns:getInteractionActions" />
+  <xs:element name="getInteractionActionsResponse" type="tns:getInteractionActionsResponse" />
+  <xs:element name="getInteractionVaultHostName" type="tns:getInteractionVaultHostName" />
+  <xs:element name="getInteractionVaultHostNameResponse" type="tns:getInteractionVaultHostNameResponse" />
+  <xs:element name="getLinkStatus" type="tns:getLinkStatus" />
+  <xs:element name="getLinkStatusResponse" type="tns:getLinkStatusResponse" />
+  <xs:element name="getMainActions" type="tns:getMainActions" />
+  <xs:element name="getMainActionsResponse" type="tns:getMainActionsResponse" />
+  <xs:element name="getPropertyPermissions" type="tns:getPropertyPermissions" />
+  <xs:element name="getPropertyPermissionsResponse" type="tns:getPropertyPermissionsResponse" />
+  <xs:element name="getScriptingHostFiles" type="tns:getScriptingHostFiles" />
+  <xs:element name="getScriptingHostFilesResponse" type="tns:getScriptingHostFilesResponse" />
+  <xs:element name="getSessionTimeout" type="tns:getSessionTimeout" />
+  <xs:element name="getSessionTimeoutResponse" type="tns:getSessionTimeoutResponse" />
+  <xs:element name="getSystemValueAsString" type="tns:getSystemValueAsString" />
+  <xs:element name="getSystemValueAsStringResponse" type="tns:getSystemValueAsStringResponse" />
+  <xs:element name="getUserApplicationSettingValues" type="tns:getUserApplicationSettingValues" />
+  <xs:element name="getUserApplicationSettingValuesResponse" type="tns:getUserApplicationSettingValuesResponse" />
+  <xs:element name="getUserHelpMessages" type="tns:getUserHelpMessages" />
+  <xs:element name="getUserHelpMessagesResponse" type="tns:getUserHelpMessagesResponse" />
+  <xs:element name="getWrapupCodes" type="tns:getWrapupCodes" />
+  <xs:element name="getWrapupCodesResponse" type="tns:getWrapupCodesResponse" />
+  <xs:element name="holdCall" type="tns:holdCall" />
+  <xs:element name="holdCallResponse" type="tns:holdCallResponse" />
+  <xs:element name="keepAlive" type="tns:keepAlive" />
+  <xs:element name="keepAliveResponse" type="tns:keepAliveResponse" />
+  <xs:element name="log" type="tns:log" />
+  <xs:element name="logResponse" type="tns:logResponse" />
+  <xs:element name="login" type="tns:login" />
+  <xs:element name="loginAgent" type="tns:loginAgent" />
+  <xs:element name="loginAgentResponse" type="tns:loginAgentResponse" />
+  <xs:element name="loginResponse" type="tns:loginResponse" />
+  <xs:element name="logout" type="tns:logout" />
+  <xs:element name="logoutResponse" type="tns:logoutResponse" />
+  <xs:element name="modalDialogPopped" type="tns:modalDialogPopped" />
+  <xs:element name="modalDialogPoppedResponse" type="tns:modalDialogPoppedResponse" />
+  <xs:element name="modifyPersonalContact" type="tns:modifyPersonalContact" />
+  <xs:element name="modifyPersonalContactResponse" type="tns:modifyPersonalContactResponse" />
+  <xs:element name="modifyPersonalResponseItem" type="tns:modifyPersonalResponseItem" />
+  <xs:element name="modifyPersonalResponseItemResponse" type="tns:modifyPersonalResponseItemResponse" />
+  <xs:element name="modifyViewMetaData" type="tns:modifyViewMetaData" />
+  <xs:element name="modifyViewMetaDataResponse" type="tns:modifyViewMetaDataResponse" />
+  <xs:element name="overrideRequeueNode" type="tns:overrideRequeueNode" />
+  <xs:element name="overrideRequeueNodeResponse" type="tns:overrideRequeueNodeResponse" />
+  <xs:element name="phoneNumberModified" type="tns:phoneNumberModified" />
+  <xs:element name="phoneNumberModifiedResponse" type="tns:phoneNumberModifiedResponse" />
+  <xs:element name="phoneNumberValidated" type="tns:phoneNumberValidated" />
+  <xs:element name="phoneNumberValidatedResponse" type="tns:phoneNumberValidatedResponse" />
+  <xs:element name="placeCallToContact" type="tns:placeCallToContact" />
+  <xs:element name="placeCallToContactResponse" type="tns:placeCallToContactResponse" />
+  <xs:element name="placeCallToNumber" type="tns:placeCallToNumber" />
+  <xs:element name="placeCallToNumberResponse" type="tns:placeCallToNumberResponse" />
+  <xs:element name="playSoundOnClient" type="tns:playSoundOnClient" />
+  <xs:element name="playSoundOnClientResponse" type="tns:playSoundOnClientResponse" />
+  <xs:element name="postHelpRequest" type="tns:postHelpRequest" />
+  <xs:element name="postHelpRequestResponse" type="tns:postHelpRequestResponse" />
+  <xs:element name="previewInteraction" type="tns:previewInteraction" />
+  <xs:element name="previewInteractionResponse" type="tns:previewInteractionResponse" />
+  <xs:element name="propertyValidated" type="tns:propertyValidated" />
+  <xs:element name="propertyValidatedResponse" type="tns:propertyValidatedResponse" />
+  <xs:element name="redialCall" type="tns:redialCall" />
+  <xs:element name="redialCallResponse" type="tns:redialCallResponse" />
+  <xs:element name="registerCustomActions" type="tns:registerCustomActions" />
+  <xs:element name="registerCustomActionsResponse" type="tns:registerCustomActionsResponse" />
+  <xs:element name="removeEmailRecipient" type="tns:removeEmailRecipient" />
+  <xs:element name="removeEmailRecipientResponse" type="tns:removeEmailRecipientResponse" />
+  <xs:element name="removeWordFromPersonalSpellingDictionary" type="tns:removeWordFromPersonalSpellingDictionary" />
+  <xs:element name="removeWordFromPersonalSpellingDictionaryResponse" type="tns:removeWordFromPersonalSpellingDictionaryResponse" />
+  <xs:element name="renamePersonalAddressBook" type="tns:renamePersonalAddressBook" />
+  <xs:element name="renamePersonalAddressBookResponse" type="tns:renamePersonalAddressBookResponse" />
+  <xs:element name="renamePersonalResponseLibrary" type="tns:renamePersonalResponseLibrary" />
+  <xs:element name="renamePersonalResponseLibraryResponse" type="tns:renamePersonalResponseLibraryResponse" />
+  <xs:element name="reportAuxSessionError" type="tns:reportAuxSessionError" />
+  <xs:element name="reportAuxSessionErrorResponse" type="tns:reportAuxSessionErrorResponse" />
+  <xs:element name="reportInactiveDuration" type="tns:reportInactiveDuration" />
+  <xs:element name="reportInactiveDurationResponse" type="tns:reportInactiveDurationResponse" />
+  <xs:element name="requestAuxSessionAction" type="tns:requestAuxSessionAction" />
+  <xs:element name="requestAuxSessionActionResponse" type="tns:requestAuxSessionActionResponse" />
+  <xs:element name="requeueInteraction" type="tns:requeueInteraction" />
+  <xs:element name="requeueInteractionResponse" type="tns:requeueInteractionResponse" />
+  <xs:element name="retrieveCall" type="tns:retrieveCall" />
+  <xs:element name="retrieveCallResponse" type="tns:retrieveCallResponse" />
+  <xs:element name="retryMediaTransfer" type="tns:retryMediaTransfer" />
+  <xs:element name="retryMediaTransferResponse" type="tns:retryMediaTransferResponse" />
+  <xs:element name="scrollView" type="tns:scrollView" />
+  <xs:element name="scrollViewResponse" type="tns:scrollViewResponse" />
+  <xs:element name="sendDigits" type="tns:sendDigits" />
+  <xs:element name="sendDigitsResponse" type="tns:sendDigitsResponse" />
+  <xs:element name="sendEmail" type="tns:sendEmail" />
+  <xs:element name="sendEmailResponse" type="tns:sendEmailResponse" />
+  <xs:element name="sendResponderRequest" type="tns:sendResponderRequest" />
+  <xs:element name="sendResponderRequestResponse" type="tns:sendResponderRequestResponse" />
+  <xs:element name="sendResponderResponse" type="tns:sendResponderResponse" />
+  <xs:element name="sendResponderResponseResponse" type="tns:sendResponderResponseResponse" />
+  <xs:element name="sendWebChatAgentStartedTyping" type="tns:sendWebChatAgentStartedTyping" />
+  <xs:element name="sendWebChatAgentStartedTypingResponse" type="tns:sendWebChatAgentStartedTypingResponse" />
+  <xs:element name="sendWebChatAgentStoppedTyping" type="tns:sendWebChatAgentStoppedTyping" />
+  <xs:element name="sendWebChatAgentStoppedTypingResponse" type="tns:sendWebChatAgentStoppedTypingResponse" />
+  <xs:element name="sendWebChatCustomerMessage" type="tns:sendWebChatCustomerMessage" />
+  <xs:element name="sendWebChatCustomerMessageResponse" type="tns:sendWebChatCustomerMessageResponse" />
+  <xs:element name="sendWebChatWhisperMessage" type="tns:sendWebChatWhisperMessage" />
+  <xs:element name="sendWebChatWhisperMessageResponse" type="tns:sendWebChatWhisperMessageResponse" />
+  <xs:element name="setCurrentParticipation" type="tns:setCurrentParticipation" />
+  <xs:element name="setCurrentParticipationResponse" type="tns:setCurrentParticipationResponse" />
+  <xs:element name="setEmailBody" type="tns:setEmailBody" />
+  <xs:element name="setEmailBodyResponse" type="tns:setEmailBodyResponse" />
+  <xs:element name="setEmailSender" type="tns:setEmailSender" />
+  <xs:element name="setEmailSenderResponse" type="tns:setEmailSenderResponse" />
+  <xs:element name="setEmailSubject" type="tns:setEmailSubject" />
+  <xs:element name="setEmailSubjectResponse" type="tns:setEmailSubjectResponse" />
+  <xs:element name="setListenedToVoicemail" type="tns:setListenedToVoicemail" />
+  <xs:element name="setListenedToVoicemailResponse" type="tns:setListenedToVoicemailResponse" />
+  <xs:element name="setPropertiesValue" type="tns:setPropertiesValue" />
+  <xs:element name="setPropertiesValueResponse" type="tns:setPropertiesValueResponse" />
+  <xs:element name="setPropertyValue" type="tns:setPropertyValue" />
+  <xs:element name="setPropertyValueResponse" type="tns:setPropertyValueResponse" />
+  <xs:element name="setSessionTimeout" type="tns:setSessionTimeout" />
+  <xs:element name="setSessionTimeoutResponse" type="tns:setSessionTimeoutResponse" />
+  <xs:element name="setUnavailableReasons" type="tns:setUnavailableReasons" />
+  <xs:element name="setUnavailableReasonsResponse" type="tns:setUnavailableReasonsResponse" />
+  <xs:element name="setUserApplicationSettingValue" type="tns:setUserApplicationSettingValue" />
+  <xs:element name="setUserApplicationSettingValueResponse" type="tns:setUserApplicationSettingValueResponse" />
+  <xs:element name="singleStepTransfer" type="tns:singleStepTransfer" />
+  <xs:element name="singleStepTransferResponse" type="tns:singleStepTransferResponse" />
+  <xs:element name="solicitConsultation" type="tns:solicitConsultation" />
+  <xs:element name="solicitConsultationResponse" type="tns:solicitConsultationResponse" />
+  <xs:element name="startConferenceWithContact" type="tns:startConferenceWithContact" />
+  <xs:element name="startConferenceWithContactResponse" type="tns:startConferenceWithContactResponse" />
+  <xs:element name="startConferenceWithNumber" type="tns:startConferenceWithNumber" />
+  <xs:element name="startConferenceWithNumberResponse" type="tns:startConferenceWithNumberResponse" />
+  <xs:element name="startTransferToContact" type="tns:startTransferToContact" />
+  <xs:element name="startTransferToContactResponse" type="tns:startTransferToContactResponse" />
+  <xs:element name="startTransferToNumber" type="tns:startTransferToNumber" />
+  <xs:element name="startTransferToNumberResponse" type="tns:startTransferToNumberResponse" />
+  <xs:element name="subscribeToEvents" type="tns:subscribeToEvents" />
+  <xs:element name="subscribeToEventsResponse" type="tns:subscribeToEventsResponse" />
+  <xs:element name="subscribeToView" type="tns:subscribeToView" />
+  <xs:element name="subscribeToViewAux" type="tns:subscribeToViewAux" />
+  <xs:element name="subscribeToViewAuxResponse" type="tns:subscribeToViewAuxResponse" />
+  <xs:element name="subscribeToViewResponse" type="tns:subscribeToViewResponse" />
+  <xs:element name="swapCall" type="tns:swapCall" />
+  <xs:element name="swapCallResponse" type="tns:swapCallResponse" />
+  <xs:element name="takeInteraction" type="tns:takeInteraction" />
+  <xs:element name="takeInteractionResponse" type="tns:takeInteractionResponse" />
+  <xs:element name="takeNextInteraction" type="tns:takeNextInteraction" />
+  <xs:element name="takeNextInteractionResponse" type="tns:takeNextInteractionResponse" />
+  <xs:element name="takePreview" type="tns:takePreview" />
+  <xs:element name="takePreviewResponse" type="tns:takePreviewResponse" />
+  <xs:element name="transferTargetValidated" type="tns:transferTargetValidated" />
+  <xs:element name="transferTargetValidatedResponse" type="tns:transferTargetValidatedResponse" />
+  <xs:element name="transferToSurveyPort" type="tns:transferToSurveyPort" />
+  <xs:element name="transferToSurveyPortResponse" type="tns:transferToSurveyPortResponse" />
+  <xs:element name="unsubscribeToView" type="tns:unsubscribeToView" />
+  <xs:element name="unsubscribeToViewResponse" type="tns:unsubscribeToViewResponse" />
+  <xs:element name="validateEmailAddress" type="tns:validateEmailAddress" />
+  <xs:element name="validateEmailAddressResponse" type="tns:validateEmailAddressResponse" />
+  <xs:element name="withdrawConsultationSolicitation" type="tns:withdrawConsultationSolicitation" />
+  <xs:element name="withdrawConsultationSolicitationResponse" type="tns:withdrawConsultationSolicitationResponse" />
+  <xs:element name="wrapupCompleted" type="tns:wrapupCompleted" />
+  <xs:element name="wrapupCompletedResponse" type="tns:wrapupCompletedResponse" />
+  <xs:complexType name="CIMAgentInteractionActionListEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="interactionId" type="xs:string" />
+          <xs:element minOccurs="0" name="reason" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="actionList" nillable="true" type="tns:CIMAgentInteractionAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eventType" type="tns:CIMEventType" />
+      <xs:element minOccurs="0" name="className" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAgentInteractionAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actionType" type="tns:CIMAgentInteractionActionType" />
+      <xs:element name="isSupported" type="xs:boolean" />
+      <xs:element name="isEnabled" type="xs:boolean" />
+      <xs:element name="isServiceAvailable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAgentTraceLevelSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="levels" nillable="true" type="tns:CIMTraceLevel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMApplicationSettingValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="applicationName" type="tns:CIMApplicationType" />
+      <xs:element minOccurs="0" name="level" type="tns:CIMConfigurationLevel" />
+      <xs:element minOccurs="0" name="type" type="tns:CIMApplicationSettingType" />
+      <xs:element minOccurs="0" name="stringValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAgentStateEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="state" type="tns:CIMAgentState" />
+          <xs:element minOccurs="0" name="reason" type="tns:CIMAgentStateChangeReason" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMAgentState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contactId" type="xs:string" />
+      <xs:element minOccurs="0" name="availability" type="tns:CIMAvailabilityState" />
+      <xs:element minOccurs="0" name="availabilitySubState" type="xs:string" />
+      <xs:element minOccurs="0" name="resourceState" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAuxiliarySessionErrorEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="severity" type="tns:CIMErrorSeverity" />
+          <xs:element minOccurs="0" name="source" type="xs:string" />
+          <xs:element minOccurs="0" name="details" type="xs:string" />
+          <xs:element name="lineNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="errorType" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMAvailabilityCodeListSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="unavailableReasons" nillable="true" type="tns:CIMAvailabilityCode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMAvailabilityCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reason" type="xs:string" />
+      <xs:element minOccurs="0" name="displayName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMBooleanSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element name="boolValue" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMCallMediaEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="media" type="tns:CIMCallMedia" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMCallMedia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMMedia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="callType" type="tns:CIMCallType" />
+          <xs:element minOccurs="0" name="primaryStartTime" type="xs:string" />
+          <xs:element minOccurs="0" name="primaryLastStateTime" type="xs:string" />
+          <xs:element minOccurs="0" name="primaryCallState" type="tns:CIMCallState" />
+          <xs:element minOccurs="0" name="primaryPartyName" type="xs:string" />
+          <xs:element minOccurs="0" name="primaryPartyPhoneNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="consultStartTime" type="xs:string" />
+          <xs:element minOccurs="0" name="consultLastStateTime" type="xs:string" />
+          <xs:element minOccurs="0" name="consultCallState" type="tns:CIMCallState" />
+          <xs:element minOccurs="0" name="consultPartyName" type="xs:string" />
+          <xs:element minOccurs="0" name="consultPartyPhoneNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="callActions" nillable="true" type="tns:CIMCallAction" />
+          <xs:element name="isCallOwner" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMMedia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="mediaType" type="tns:CIMMediaType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMCallAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actionType" type="tns:CIMCallActionType" />
+      <xs:element name="isSupported" type="xs:boolean" />
+      <xs:element name="isEnabled" type="xs:boolean" />
+      <xs:element name="isServiceAvailable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMConsultationEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="iid" type="xs:string" />
+          <xs:element minOccurs="0" name="userData" type="tns:CIMUserData" />
+          <xs:element minOccurs="0" name="timeStamp" type="xs:string" />
+          <xs:element minOccurs="0" name="offerDuration" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMUserData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="firstname" type="xs:string" />
+      <xs:element minOccurs="0" name="lastname" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddress" type="xs:string" />
+      <xs:element minOccurs="0" name="coverageExtension" type="xs:string" />
+      <xs:element minOccurs="0" name="primaryLinkName" type="xs:string" />
+      <xs:element minOccurs="0" name="acdExtension" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneType" type="tns:CIMPhoneType" />
+      <xs:element minOccurs="0" name="configurationGroupName" type="xs:string" />
+      <xs:element minOccurs="0" name="configurationGroupId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="properties" nillable="true" type="tns:CIMProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMCustomActionListEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="actions" nillable="true" type="tns:CIMCustomAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMCustomAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actionType" type="tns:CIMCustomActionType" />
+      <xs:element minOccurs="0" name="actionName" type="xs:string" />
+      <xs:element minOccurs="0" name="displayName" type="xs:string" />
+      <xs:element minOccurs="0" name="mediaData" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMCustomInteractionActionFiredEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actionName" type="xs:string" />
+          <xs:element minOccurs="0" name="participation" type="tns:CIMParticipation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMParticipation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMInteraction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="participantId" type="xs:string" />
+          <xs:element minOccurs="0" name="participantType" type="xs:string" />
+          <xs:element minOccurs="0" name="takenTimeStr" type="xs:string" />
+          <xs:element minOccurs="0" name="disposition" type="tns:CIMParticipationDisposition" />
+          <xs:element minOccurs="0" name="participationState" type="tns:CIMParticipationState" />
+          <xs:element minOccurs="0" name="previewType" type="tns:CIMPreviewType" />
+          <xs:element name="previewDuration" type="xs:int" />
+          <xs:element name="isReminder" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="interactionActions" nillable="true" type="tns:CIMAgentInteractionAction" />
+          <xs:element minOccurs="0" name="media" type="tns:CIMMedia" />
+          <xs:element name="takenTime" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMInteraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="parentId" type="xs:string" />
+      <xs:element minOccurs="0" name="originatingId" type="xs:string" />
+      <xs:element minOccurs="0" name="interactionType" type="tns:CIMInteractionType" />
+      <xs:element minOccurs="0" name="mediaType" type="tns:CIMMediaType" />
+      <xs:element name="priority" type="xs:int" />
+      <xs:element minOccurs="0" name="queueId" type="xs:string" />
+      <xs:element minOccurs="0" name="queueName" type="xs:string" />
+      <xs:element name="originalQueueId" type="xs:int" />
+      <xs:element minOccurs="0" name="customerName" type="xs:string" />
+      <xs:element minOccurs="0" name="displayInfo" type="xs:string" />
+      <xs:element minOccurs="0" name="queingService" type="xs:string" />
+      <xs:element minOccurs="0" name="announceTime" type="xs:string" />
+      <xs:element minOccurs="0" name="routingState" type="tns:CIMRoutingState" />
+      <xs:element name="secondsInContiguousQueues" type="xs:int" />
+      <xs:element name="secondsInCurrentQueue" type="xs:int" />
+      <xs:element name="secondsInAllQueues" type="xs:int" />
+      <xs:element name="secondsInServiceLevelQueues" type="xs:int" />
+      <xs:element name="interactionViolationThreshold" type="xs:int" />
+      <xs:element name="queueViolationThreshold" type="xs:int" />
+      <xs:element minOccurs="0" name="sourceProcess" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="customProperties" nillable="true" type="tns:CIMProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMCustomMainActionFiredEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actionName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMCustomMediaActionFiredEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actionName" type="xs:string" />
+          <xs:element minOccurs="0" name="participation" type="tns:CIMParticipation" />
+          <xs:element minOccurs="0" name="mediaData" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMDataSet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResponderData">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="rows" nillable="true" type="tns:CIMDataSetRow" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMResponderData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dataType" type="tns:CIMResponderDataType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMDataSetRow">
+    <xs:sequence>
+      <xs:element name="unused" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailMediaEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="media" type="tns:CIMEmailMedia" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailMedia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMMedia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="emailId" type="xs:string" />
+          <xs:element minOccurs="0" name="state" type="tns:CIMEmailMediaState" />
+          <xs:element minOccurs="0" name="message" type="tns:CIMEmailMessage" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="actions" nillable="true" type="tns:CIMEmailAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" type="tns:CIMEmailMessageType" />
+      <xs:element name="maxAttachmentUploadSpaceKB" type="xs:int" />
+      <xs:element name="remainingAttachmentUploadSpaceKB" type="xs:int" />
+      <xs:element minOccurs="0" name="sentTime" type="xs:string" />
+      <xs:element minOccurs="0" name="sender" type="tns:CIMEmailAddress" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="toRecipients" nillable="true" type="tns:CIMEmailAddress" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ccRecipients" nillable="true" type="tns:CIMEmailAddress" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="bccRecipients" nillable="true" type="tns:CIMEmailAddress" />
+      <xs:element minOccurs="0" name="subject" type="xs:string" />
+      <xs:element name="hasHTMLBody" type="xs:boolean" />
+      <xs:element minOccurs="0" name="plainTextBodyRef" type="xs:string" />
+      <xs:element minOccurs="0" name="htmlBodyRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="attachments" nillable="true" type="tns:CIMEmailAttachment" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="auxiliaryMessages" nillable="true" type="tns:CIMEmailMessage" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="otherHeaders" nillable="true" type="tns:CIMProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fullAddress" type="xs:string" />
+      <xs:element minOccurs="0" name="machineReadableAddress" type="xs:string" />
+      <xs:element minOccurs="0" name="displayName" type="xs:string" />
+      <xs:element minOccurs="0" name="contactId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" type="tns:CIMEmailAttachmentType" />
+      <xs:element minOccurs="0" name="state" type="tns:CIMEmailAttachmentState" />
+      <xs:element minOccurs="0" name="originalName" type="xs:string" />
+      <xs:element minOccurs="0" name="fileReference" type="xs:string" />
+      <xs:element name="size" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actionType" type="tns:CIMEmailActionType" />
+      <xs:element name="isSupported" type="xs:boolean" />
+      <xs:element name="isEnabled" type="xs:boolean" />
+      <xs:element name="isServiceAvailable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMFieldArray">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResponderData">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="values" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMGetWrapupCodesEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMParticipationEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="requestId" type="xs:string" />
+          <xs:element name="transactionId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMParticipationEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="participation" type="tns:CIMParticipation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMHelpProviderEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="helpProvider" type="tns:CIMHelpProvider" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMHelpProvider">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+      <xs:element minOccurs="0" name="registrationName" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMHelpRequestEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="helpRequest" type="tns:CIMHelpRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMHelpRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="state" type="tns:CIMHelpRequestState" />
+      <xs:element minOccurs="0" name="requestId" type="xs:string" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="assistingProvider" type="tns:CIMHelpProvider" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMIntegerSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element name="intValue" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMInteractionIdEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="interactionId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMKeyValueSet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResponderData">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="values" nillable="true" type="tns:CIMProperty" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMLinkStatusEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element name="isUserConfiguredForLink" type="xs:boolean" />
+          <xs:element name="isLinkInService" type="xs:boolean" />
+          <xs:element name="isCurrentCallLinkCapable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="currentLinkServer" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMMainActionListEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="actionList" nillable="true" type="tns:CIMMainAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMMainAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actionType" type="tns:CIMMainActionType" />
+      <xs:element name="isSupported" type="xs:boolean" />
+      <xs:element name="isEnabled" type="xs:boolean" />
+      <xs:element name="isServiceAvailable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMParticipationIdentityEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMParticipationEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="originalId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMParticipationStateChangedEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="interactionId" type="xs:string" />
+          <xs:element minOccurs="0" name="state" type="tns:CIMParticipationState" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="interactionActions" nillable="true" type="tns:CIMAgentInteractionAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMParticipationStoppedEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="interactionId" type="xs:string" />
+          <xs:element minOccurs="0" name="disposition" type="tns:CIMParticipationDisposition" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMPlaySoundEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+          <xs:element name="soundIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMPropertyValidationEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="propertyName" type="xs:string" />
+          <xs:element minOccurs="0" name="proposedValue" type="xs:string" />
+          <xs:element minOccurs="0" name="participation" type="tns:CIMParticipation" />
+          <xs:element name="transactionId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMQueueSoundsSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="queueSounds" nillable="true" type="tns:CIMQueueSound" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMQueueSound">
+    <xs:sequence>
+      <xs:element name="soundIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="queueId" type="xs:string" />
+      <xs:element minOccurs="0" name="fileURL" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tones" nillable="true" type="tns:CIMTone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMTone">
+    <xs:sequence>
+      <xs:element name="frequency" type="xs:int" />
+      <xs:element name="duration" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMResponderRequestEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:string" />
+          <xs:element minOccurs="0" name="source" type="tns:CIMResponderSource" />
+          <xs:element minOccurs="0" name="data" type="tns:CIMResponderData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMResponderSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="group" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMResponderResponseEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:string" />
+          <xs:element minOccurs="0" name="source" type="tns:CIMResponderSource" />
+          <xs:element minOccurs="0" name="resultCode" type="xs:string" />
+          <xs:element minOccurs="0" name="resultReason" type="xs:string" />
+          <xs:element minOccurs="0" name="data" type="tns:CIMResponderData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMScriptFileListSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="primaryScriptFile" type="tns:CIMAuxiliaryFile" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="files" nillable="true" type="tns:CIMAuxiliaryFile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMAuxiliaryFile">
+    <xs:sequence>
+      <xs:element name="downloadCompleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="lastModifiedTime" type="xs:string" />
+      <xs:element name="isCompressedFile" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fileName" type="xs:string" />
+      <xs:element minOccurs="0" name="downloadURL" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMSessionStateChangedEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="sessionState" type="tns:CIMSessionState" />
+          <xs:element minOccurs="0" name="iid" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMSessionTerminatedEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="reason" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMSoundEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+          <xs:element name="soundIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="wavURL" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="toneSequence" nillable="true" type="tns:CIMTone" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMSoundFileSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element name="soundIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="fileURL" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMSpellingCheckerDictionariesValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="defaultLocale" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="dictionaryLocalesMap" nillable="true" type="tns:CIMProperty" />
+          <xs:element minOccurs="0" name="localeDictionaryReference" type="xs:string" />
+          <xs:element minOccurs="0" name="personalDictionaryReference" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMStringListSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="stringList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMToneSequenceSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element name="soundIndex" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="tones" nillable="true" type="tns:CIMTone" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMTransferTargetValidationEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMParticipationEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actionType" type="tns:CIMTransferActionType" />
+          <xs:element minOccurs="0" name="destinationType" type="tns:CIMObjectType" />
+          <xs:element name="transferId" type="xs:int" />
+          <xs:element name="transactionId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMViewMetaDataListSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element name="unused" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="items" type="tns:CIMViewMetaData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMViewMetaData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="viewType" type="tns:CIMViewType" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="columns" nillable="true" type="tns:CIMViewColumn" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="filters" nillable="true" type="tns:CIMViewFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMViewColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element name="displayed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="dataType" type="tns:CIMViewDataType" />
+      <xs:element name="minWidth" type="xs:int" />
+      <xs:element name="columnSortOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="sortTreatment" type="tns:CIMViewColumnSortType" />
+      <xs:element name="width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMViewFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="operation" type="tns:CIMViewFilterOperation" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="values" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMViewMetaDataSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="metaData" type="tns:CIMViewMetaData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMViewUpdateEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="subscriptionId" type="xs:string" />
+          <xs:element name="maxRows" type="xs:int" />
+          <xs:element name="totalRows" type="xs:int" />
+          <xs:element minOccurs="0" name="configuredMetaData" type="tns:CIMViewMetaData" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="rows" nillable="true" type="tns:CIMViewData" />
+          <xs:element name="rowNumOfFirstRow" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMViewData">
+    <xs:sequence>
+      <xs:element name="unused" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="values" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMVitalStatsSettingValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMApplicationSettingValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="tns:CIMVitalStatsItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMVitalStatsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="displayName" type="xs:string" />
+      <xs:element minOccurs="0" name="imageRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="filters" nillable="true" type="tns:CIMViewFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMVoicemailMediaEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="media" type="tns:CIMVoicemailMedia" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMVoicemailMedia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMMedia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="state" type="tns:CIMVoicemailMediaState" />
+          <xs:element minOccurs="0" name="fileReference" type="xs:string" />
+          <xs:element minOccurs="0" name="contentType" type="xs:string" />
+          <xs:element name="fileSize" type="xs:int" />
+          <xs:element name="playbackDuration" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWebChatMediaEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="media" type="tns:CIMWebChatMedia" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWebChatMedia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMMedia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="state" type="tns:CIMWebChatMediaState" />
+          <xs:element minOccurs="0" name="reason" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="transcript" nillable="true" type="tns:CIMWebChatTranscriptItem" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="actions" nillable="true" type="tns:CIMWebChatAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWebChatTranscriptItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="event" type="tns:CIMWebChatTranscriptEventType" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+      <xs:element minOccurs="0" name="displayName" type="xs:string" />
+      <xs:element minOccurs="0" name="data" type="xs:string" />
+      <xs:element minOccurs="0" name="timestamp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMWebChatAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actionType" type="tns:CIMWebChatActionType" />
+      <xs:element name="isSupported" type="xs:boolean" />
+      <xs:element name="isEnabled" type="xs:boolean" />
+      <xs:element name="isServiceAvailable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMWebChatDataEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="transcriptEvent" type="tns:CIMWebChatTranscriptEventType" />
+          <xs:element minOccurs="0" name="userId" type="xs:string" />
+          <xs:element minOccurs="0" name="regName" type="xs:string" />
+          <xs:element minOccurs="0" name="displayName" type="xs:string" />
+          <xs:element minOccurs="0" name="data" type="xs:string" />
+          <xs:element minOccurs="0" name="timestamp" type="xs:string" />
+          <xs:element minOccurs="0" name="interactionId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWebChatStatusEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="statusEvent" type="tns:CIMWebChatStatusEventType" />
+          <xs:element minOccurs="0" name="userId" type="xs:string" />
+          <xs:element minOccurs="0" name="regName" type="xs:string" />
+          <xs:element minOccurs="0" name="displayName" type="xs:string" />
+          <xs:element minOccurs="0" name="timestamp" type="xs:string" />
+          <xs:element minOccurs="0" name="interactionId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWebRequestMediaEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="media" type="tns:CIMWebRequestMedia" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWebRequestMedia">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMMedia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="state" type="tns:CIMWebRequestMediaState" />
+          <xs:element minOccurs="0" name="request" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWrapupCodeListEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="interactionId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="wrapupCodeList" nillable="true" type="tns:CIMWrapupCode" />
+          <xs:element name="isSingleSelect" type="xs:boolean" />
+          <xs:element name="requireSelection" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWrapupCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="displayName" type="xs:string" />
+      <xs:element minOccurs="0" name="locale" type="xs:string" />
+      <xs:element name="checked" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMSessionEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sessionType" type="tns:CIMSessionType" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMWrapupCodeSelectedEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMParticipationEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="requestId" type="xs:string" />
+          <xs:element name="transactionId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="wrapupCodeList" nillable="true" type="tns:CIMWrapupCode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMPhoneNumberModificationEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+          <xs:element name="transactionId" type="xs:int" />
+          <xs:element minOccurs="0" name="id" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMPhoneNumberValidationEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+          <xs:element name="transactionId" type="xs:int" />
+          <xs:element minOccurs="0" name="id" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMSessionActionEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actionName" type="xs:string" />
+          <xs:element minOccurs="0" name="requestId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="sendResponderRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="requestId" type="xs:string" />
+      <xs:element minOccurs="0" name="destinationType" type="tns:CIMResponderDestinationType" />
+      <xs:element minOccurs="0" name="destinationName" type="xs:string" />
+      <xs:element minOccurs="0" name="data" type="tns:CIMResponderData" />
+      <xs:element minOccurs="0" name="groupName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendResponderRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="tns:CIMResultType" />
+      <xs:element minOccurs="0" name="reason" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelConsultation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelConsultationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="closeHelpRequestAsAgent">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="closeHelpRequestAsAgentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMHelpRequestResult" type="tns:CIMHelpRequestResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMHelpRequestResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="helpRequest" type="tns:CIMHelpRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getWrapupCodes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getWrapupCodesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMWrapupCodeListResult" type="tns:CIMWrapupCodeListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMWrapupCodeListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="wrapupCodeList" nillable="true" type="tns:CIMWrapupCode" />
+          <xs:element name="isSingleSelect" type="xs:boolean" />
+          <xs:element name="requireSelection" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getAPIVersion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAPIVersionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMStringResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="value" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getSystemValueAsString">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sysvalName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSystemValueAsStringResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="startTransferToContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="contactId" type="xs:string" />
+      <xs:element minOccurs="0" name="objectType" type="tns:CIMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="startTransferToContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeEmailRecipient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="field" type="tns:CIMEmailRecipientType" />
+      <xs:element minOccurs="0" name="address" type="tns:CIMEmailAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeEmailRecipientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailMediaResult" type="tns:CIMEmailMediaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailMediaResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="media" type="tns:CIMEmailMedia" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="redialCall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="redialCallResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSessionTimeout">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getSessionTimeoutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMIntegerResult" type="tns:CIMIntegerResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMIntegerResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element name="value" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getUserApplicationSettingValues">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="application" type="tns:CIMApplicationType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="settingNames" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserApplicationSettingValuesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMApplicationSettingValueListResult" type="tns:CIMApplicationSettingValueListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMApplicationSettingValueListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="valueList" nillable="true" type="tns:CIMApplicationSettingValue" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="subscribeToEvents">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eventTypes" nillable="true" type="tns:CIMEventType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscribeToEventsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachToSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachToSessionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMLoginResult" type="tns:CIMAuxiliarySessionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAuxiliarySessionResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="systemName" type="xs:string" />
+          <xs:element minOccurs="0" name="primaryLocale" type="xs:string" />
+          <xs:element minOccurs="0" name="primaryTimeZoneOffset" type="xs:string" />
+          <xs:element minOccurs="0" name="userData" type="tns:CIMUserData" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="privileges" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="takeNextInteraction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="takeNextInteractionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyViewMetaData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subscriptionId" type="xs:string" />
+      <xs:element name="maxRows" type="xs:int" />
+      <xs:element minOccurs="0" name="metaData" type="tns:CIMViewMetaData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyViewMetaDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMViewSubscriptionResult" type="tns:CIMViewSubscriptionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMViewSubscriptionResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="subscriptionId" type="xs:string" />
+          <xs:element name="maxRows" type="xs:int" />
+          <xs:element name="totalRows" type="xs:int" />
+          <xs:element minOccurs="0" name="configuredMetaData" type="tns:CIMViewMetaData" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="rows" nillable="true" type="tns:CIMViewData" />
+          <xs:element name="rowNumOfFirstRow" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="detachFromSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detachFromSessionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="takePreview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="takePreviewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flagCallForRecording">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flagCallForRecordingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachFileToEmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="type" type="tns:CIMEmailAttachmentType" />
+      <xs:element minOccurs="0" name="originalName" type="xs:string" />
+      <xs:element minOccurs="0" name="fileUploadReference" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachFileToEmailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailMediaResult" type="tns:CIMEmailMediaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="answerCall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="answerCallResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getHelpProviders">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getHelpProvidersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMHelpProviderListResult" type="tns:CIMHelpProviderListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMHelpProviderListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="tns:CIMHelpProvider" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="sendWebChatAgentStoppedTyping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendWebChatAgentStoppedTypingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="overrideRequeueNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element name="newNode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="overrideRequeueNodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="completeTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="completeTransferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendDigits">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="digits" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendDigitsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="startConferenceWithContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="contactId" type="xs:string" />
+      <xs:element minOccurs="0" name="objectType" type="tns:CIMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="startConferenceWithContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="retrieveCall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="retrieveCallResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="propertyValidated">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element name="transactionID" type="xs:int" />
+      <xs:element minOccurs="0" name="propertyName" type="xs:string" />
+      <xs:element name="isValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="userMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="propertyValidatedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAlarm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alarm" type="tns:CIMAlarm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAlarm">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="alarmType" type="tns:CIMAlarmType" />
+      <xs:element name="ownerID" type="xs:int" />
+      <xs:element name="compareToValue" type="xs:int" />
+      <xs:element minOccurs="0" name="compareToOperator" type="tns:CIMAlarmPredicate" />
+      <xs:element minOccurs="0" name="onTriggerAction" type="tns:CIMAlarmAction" />
+      <xs:element minOccurs="0" name="onWhileActiveAction" type="tns:CIMAlarmAction" />
+      <xs:element minOccurs="0" name="onClearAction" type="tns:CIMAlarmAction" />
+      <xs:element minOccurs="0" name="onTriggerActionParm" type="xs:string" />
+      <xs:element minOccurs="0" name="onWhileActiveActionParm" type="xs:string" />
+      <xs:element minOccurs="0" name="onClearActionParm" type="xs:string" />
+      <xs:element name="workgroupID" type="xs:int" />
+      <xs:element name="queuegroupID" type="xs:int" />
+      <xs:element name="clearAlarmAutomatically" type="xs:boolean" />
+      <xs:element name="isEnabled" type="xs:boolean" />
+      <xs:element name="isTriggered" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAlarmResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="solicitConsultation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="contactId" type="xs:string" />
+      <xs:element minOccurs="0" name="objectType" type="tns:CIMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="solicitConsultationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEmailSubject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="subjectText" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEmailSubjectResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailMediaResult" type="tns:CIMEmailMediaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelPreview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelPreviewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setListenedToVoicemail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setListenedToVoicemailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendEmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendEmailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailMediaResult" type="tns:CIMEmailMediaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportInactiveDuration">
+    <xs:sequence>
+      <xs:element name="idleTimeInSeconds" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportInactiveDurationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="postHelpRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="postHelpRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMHelpRequestResult" type="tns:CIMHelpRequestResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeAvailability">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="state" type="tns:CIMAvailabilityState" />
+      <xs:element minOccurs="0" name="reason" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeAvailabilityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEmailBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="htmlBodyRef" type="xs:string" />
+      <xs:element minOccurs="0" name="plainTextBodyRef" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEmailBodyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailMediaResult" type="tns:CIMEmailMediaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportAuxSessionError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="severity" type="tns:CIMErrorSeverity" />
+      <xs:element minOccurs="0" name="errorType" type="xs:string" />
+      <xs:element minOccurs="0" name="errorSource" type="xs:string" />
+      <xs:element minOccurs="0" name="errorText" type="xs:string" />
+      <xs:element name="lineNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportAuxSessionErrorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="withdrawConsultationSolicitation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="withdrawConsultationSolicitationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="finishParticipationFromAuxSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="wrapupCodeNames" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="finishParticipationFromAuxSessionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="keepAlive">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="keepAliveResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeWordFromPersonalSpellingDictionary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locale" type="xs:string" />
+      <xs:element minOccurs="0" name="word" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeWordFromPersonalSpellingDictionaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addEmailRecipient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="field" type="tns:CIMEmailRecipientType" />
+      <xs:element minOccurs="0" name="address" type="tns:CIMEmailAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addEmailRecipientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailMediaResult" type="tns:CIMEmailMediaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="retryMediaTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="retryMediaTransferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFileUploadReference">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getFileUploadReferenceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auxSessionActionCompleted">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="requestId" type="xs:string" />
+      <xs:element minOccurs="0" name="action" type="xs:string" />
+      <xs:element minOccurs="0" name="resultCode" type="tns:CIMResultType" />
+      <xs:element minOccurs="0" name="reason" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auxSessionActionCompletedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletePersonalResponseItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseItemID" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletePersonalResponseItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPropertyValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="propertyName" type="xs:string" />
+      <xs:element minOccurs="0" name="propertyValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPropertyValueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="setPropertyValue" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="placeCallToContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="contactId" type="xs:string" />
+      <xs:element minOccurs="0" name="objectType" type="tns:CIMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="placeCallToContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customMainActionFired">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="actionName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customMainActionFiredResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transferTargetValidated">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element name="cancelTransfer" type="xs:boolean" />
+      <xs:element name="transactionId" type="xs:int" />
+      <xs:element name="transferId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transferTargetValidatedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createFollowupTakenInteraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" type="tns:CIMInteractionType" />
+      <xs:element minOccurs="0" name="parentIID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="properties" nillable="true" type="tns:CIMProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createFollowupTakenInteractionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMIIDResult" type="tns:CIMIIDResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMIIDResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="iid" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="completeConference">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="completeConferenceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="role" type="xs:string" />
+      <xs:element minOccurs="0" name="locale" type="xs:string" />
+      <xs:element minOccurs="0" name="tzOffset" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMLoginResult" type="tns:CIMLoginResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMLoginResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="userData" type="tns:CIMUserData" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="privileges" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="customMediaActionFired">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="actionName" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customMediaActionFiredResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendWebChatCustomerMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendWebChatCustomerMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachWrapupCodes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element name="transactionId" type="xs:int" />
+      <xs:element name="singleSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="wrapupCodeList" nillable="true" type="tns:CIMWrapupCode" />
+      <xs:element name="requiredSelection" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="attachWrapupCodesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateEmailAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateEmailAddressResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailAddressResult" type="tns:CIMEmailAddressResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailAddressResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="tns:CIMEmailAddress" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="createUserHelpMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createUserHelpMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMUserHelpMessageListResult" type="tns:CIMUserHelpMessageListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMUserHelpMessageListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="items" nillable="true" type="tns:CIMUserHelpMessage" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMUserHelpMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element name="isDefault" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDictionaryReferences">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locale" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDictionaryReferencesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMDictionaryReferencesResult" type="tns:CIMDictionaryReferencesResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMDictionaryReferencesResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="locale" type="xs:string" />
+          <xs:element minOccurs="0" name="localeDictionaryReference" type="xs:string" />
+          <xs:element minOccurs="0" name="personalDictionaryReference" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="createPersonalResponseLibrary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="libraryName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createPersonalResponseLibraryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAlarms">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAlarmsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getContactActions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="contactId" type="xs:string" />
+      <xs:element minOccurs="0" name="objectType" type="tns:CIMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getContactActionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMContactActionListResult" type="tns:CIMContactActionListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMContactActionListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="actionList" nillable="true" type="tns:CIMContactAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMContactAction">
+    <xs:sequence>
+      <xs:element name="isSupported" type="xs:boolean" />
+      <xs:element name="isEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPropertyPermissions">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getPropertyPermissionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMPropertyPermissionsListResult" type="tns:CIMPropertyPermissionsListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMPropertyPermissionsListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="permissionsList" nillable="true" type="tns:CIMPropertyPermissions" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CIMPropertyPermissions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="propertyName" type="xs:string" />
+      <xs:element minOccurs="0" name="displayName" type="xs:string" />
+      <xs:element minOccurs="0" name="propertyType" type="tns:CIMPropertyType" />
+      <xs:element name="isDisplayableByUser" type="xs:boolean" />
+      <xs:element name="isEditableByUser" type="xs:boolean" />
+      <xs:element name="isRecordedInDatabase" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="choiceList" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLinkStatus">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getLinkStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMLinkStatusResult" type="tns:CIMLinkStatusResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMLinkStatusResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element name="isUserConfiguredForLink" type="xs:boolean" />
+          <xs:element name="isLinkInService" type="xs:boolean" />
+          <xs:element name="isCurrentCallLinkCapable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="currentLinkServer" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="startConferenceWithNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="startConferenceWithNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAgentState">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAgentStateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMAgentStateResult" type="tns:CIMAgentStateResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAgentStateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="agentState" type="tns:CIMAgentState" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="setCurrentParticipation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCurrentParticipationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="holdCall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="holdCallResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addUserDefinedSound">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="wavURL" type="xs:string" />
+      <xs:element minOccurs="0" name="toneSequence" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addUserDefinedSoundResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMIntegerResult" type="tns:CIMIntegerResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modalDialogPopped">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="isPopped" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modalDialogPoppedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendWebChatWhisperMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendWebChatWhisperMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCallData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCallDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMPropertyListResult" type="tns:CIMPropertyListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMPropertyListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="properties" nillable="true" type="tns:CIMProperty" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="setEmailSender">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="address" type="tns:CIMEmailAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEmailSenderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailMediaResult" type="tns:CIMEmailMediaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletePersonalResponseLibrary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="libraryID" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletePersonalResponseLibraryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="finishParticipation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="wrapupCodeNames" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="finishParticipationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="unsubscribeToView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subscriptionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="unsubscribeToViewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEmailPrintURL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="emailId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEmailPrintURLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="previewInteraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="previewInteractionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="disconnectCall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="disconnectCallResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="logout">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="logoutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletePersonalContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contactID" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletePersonalContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginAgent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="role" type="xs:string" />
+      <xs:element minOccurs="0" name="locale" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneType" type="tns:CIMPhoneType" />
+      <xs:element minOccurs="0" name="extension" type="xs:string" />
+      <xs:element minOccurs="0" name="tzOffset" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="agentcapabilities" nillable="true" type="tns:CIMClientCapability" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginAgentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMLoginResult" type="tns:CIMLoginResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableColumnsForView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="viewName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableColumnsForViewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMViewColumnListResult" type="tns:CIMViewColumnListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMViewColumnListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="columns" nillable="true" type="tns:CIMViewColumn" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="subscribeToViewAux">
+    <xs:sequence>
+      <xs:element name="maxRows" type="xs:int" />
+      <xs:element minOccurs="0" name="metaData" type="tns:CIMViewMetaData" />
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="distType" type="tns:CIMViewDistributionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscribeToViewAuxResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMViewSubscriptionResult" type="tns:CIMViewSubscriptionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getInteractionActions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getInteractionActionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMAgentInteractionActionListResult" type="tns:CIMAgentInteractionActionListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAgentInteractionActionListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="actionList" nillable="true" type="tns:CIMAgentInteractionAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="phoneNumberValidated">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element name="transactionId" type="xs:int" />
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+      <xs:element name="isValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="invalidReason" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="phoneNumberValidatedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyPersonalResponseItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseItemID" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="shortcut" type="xs:string" />
+      <xs:element minOccurs="0" name="format" type="tns:CIMResponseItemFormat" />
+      <xs:element minOccurs="0" name="content" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyPersonalResponseItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscribeToView">
+    <xs:sequence>
+      <xs:element name="maxRows" type="xs:int" />
+      <xs:element minOccurs="0" name="metaData" type="tns:CIMViewMetaData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscribeToViewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMViewSubscriptionResult" type="tns:CIMViewSubscriptionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllowedEmailFromAddresses">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllowedEmailFromAddressesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailAddressListResult" type="tns:CIMEmailAddressListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMEmailAddressListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="addressList" nillable="true" type="tns:CIMEmailAddress" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="deletePersonalAddressBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressBookID" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deletePersonalAddressBookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addAlarm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alarm" type="tns:CIMAlarm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addAlarmResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="scrollView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subscriptionId" type="xs:string" />
+      <xs:element name="maxRows" type="xs:int" />
+      <xs:element minOccurs="0" name="scrollType" type="tns:CIMViewScrollType" />
+      <xs:element name="rowNum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="scrollViewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMViewSubscriptionResult" type="tns:CIMViewSubscriptionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getInteractionVaultHostName">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getInteractionVaultHostNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auxLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="level" type="tns:CIMTraceLevel" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auxLogResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="phoneNumberModified">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element name="transactionId" type="xs:int" />
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="phoneNumberModifiedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserHelpMessages">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getUserHelpMessagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMUserHelpMessageListResult" type="tns:CIMUserHelpMessageListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="placeCallToNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="placeCallToNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createPersonalContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressBookID" type="xs:string" />
+      <xs:element minOccurs="0" name="firstname" type="xs:string" />
+      <xs:element minOccurs="0" name="lastname" type="xs:string" />
+      <xs:element minOccurs="0" name="sortkey" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddress" type="tns:CIMEmailAddress" />
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="extension" type="xs:string" />
+      <xs:element minOccurs="0" name="dialType" type="tns:CIMDialingTreatmentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createPersonalContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="takeInteraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="takeInteractionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPropertiesValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="properties" nillable="true" type="tns:CIMProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPropertiesValueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="setPropertiesValue" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCurrentParticipation">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getCurrentParticipationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMParticipationResult" type="tns:CIMParticipationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMParticipationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="participation" type="tns:CIMParticipation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="setSessionTimeout">
+    <xs:sequence>
+      <xs:element name="seconds" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setSessionTimeoutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wrapupCompleted">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element name="transactionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wrapupCompletedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="requeueInteraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="contactId" type="xs:string" />
+      <xs:element minOccurs="0" name="objectType" type="tns:CIMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="requeueInteractionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerCustomActions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="actions" nillable="true" type="tns:CIMCustomAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerCustomActionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getScriptingHostFiles">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getScriptingHostFilesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMAuxiliaryFileListResult" type="tns:CIMAuxiliaryFileListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMAuxiliaryFileListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="files" nillable="true" type="tns:CIMAuxiliaryFile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="changeAlarm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alarm" type="tns:CIMAlarm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeAlarmResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="renamePersonalAddressBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressBookID" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="renamePersonalAddressBookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="currentPassword" type="xs:string" />
+      <xs:element minOccurs="0" name="newPassword" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendResponderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="requestId" type="xs:string" />
+      <xs:element minOccurs="0" name="destination" type="tns:CIMResponderSource" />
+      <xs:element minOccurs="0" name="resultCode" type="xs:string" />
+      <xs:element minOccurs="0" name="resultReason" type="xs:string" />
+      <xs:element minOccurs="0" name="data" type="tns:CIMResponderData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendResponderResponseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActiveCallParticipation">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getActiveCallParticipationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMParticipationResult" type="tns:CIMParticipationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEvents">
+    <xs:sequence>
+      <xs:element name="maxWaitDuration" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEventsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEventListResult" type="tns:CIMEventListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMEventListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eventList" nillable="true" type="tns:CIMEvent" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="customInteractionActionFired">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="actionName" type="xs:string" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customInteractionActionFiredResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMainActions">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getMainActionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMMainActionListResult" type="tns:CIMMainActionListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMMainActionListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="actionList" nillable="true" type="tns:CIMMainAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="sendWebChatAgentStartedTyping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendWebChatAgentStartedTypingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addWordToPersonalSpellingDictionary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locale" type="xs:string" />
+      <xs:element minOccurs="0" name="word" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addWordToPersonalSpellingDictionaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="renamePersonalResponseLibrary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseLibraryID" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="renamePersonalResponseLibraryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="log">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="level" type="tns:CIMTraceLevel" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="logResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="singleStepTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="extension" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="singleStepTransferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="playSoundOnClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element name="soundIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="playSoundOnClientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyPersonalContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contactID" type="xs:string" />
+      <xs:element minOccurs="0" name="firstname" type="xs:string" />
+      <xs:element minOccurs="0" name="lastname" type="xs:string" />
+      <xs:element minOccurs="0" name="sortkey" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddress" type="tns:CIMEmailAddress" />
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="extension" type="xs:string" />
+      <xs:element minOccurs="0" name="dialType" type="tns:CIMDialingTreatmentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyPersonalContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createTakenInteraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" type="tns:CIMInteractionType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="properties" nillable="true" type="tns:CIMProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createTakenInteractionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMIIDResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePrimarySessionState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionState" type="tns:CIMSessionState" />
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePrimarySessionStateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="disconnectWebChat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="disconnectWebChatResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createPersonalAddressBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="adressBookName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createPersonalAddressBookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detachFileFromEmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="attachmentReference" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detachFileFromEmailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEmailMediaResult" type="tns:CIMEmailMediaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAuxSessionEvents">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element name="maxWaitDuration" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAuxSessionEventsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMEventListResult" type="tns:CIMEventListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAuxiliarySessionId">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAuxiliarySessionIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUnavailableReasons">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="availabilityCodes" nillable="true" type="tns:CIMAvailabilityCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUnavailableReasonsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="acceptConsultationOffer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="acceptConsultationOfferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="startTransferToNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="startTransferToNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="swapCall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="swapCallResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getActiveParticipations">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getActiveParticipationsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMParticipationListResult" type="tns:CIMParticipationListResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CIMParticipationListResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CIMResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="participations" nillable="true" type="tns:CIMParticipation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="requestAuxSessionAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxSessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="requestId" type="xs:string" />
+      <xs:element minOccurs="0" name="action" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="requestAuxSessionActionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createPersonalResponseItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="libraryID" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="shortcut" type="xs:string" />
+      <xs:element minOccurs="0" name="format" type="tns:CIMResponseItemFormat" />
+      <xs:element minOccurs="0" name="content" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createPersonalResponseItemResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMStringResult" type="tns:CIMStringResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteReceivedSupervisorMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="messageId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteReceivedSupervisorMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUserApplicationSettingValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="application" type="tns:CIMApplicationType" />
+      <xs:element minOccurs="0" name="settingValue" type="tns:CIMApplicationSettingValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUserApplicationSettingValueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transferToSurveyPort">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transferToSurveyPortResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CIMResult" type="tns:CIMResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CIMAgentInteractionActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CANCEL_PREVIEW" />
+      <xs:enumeration value="CREATE_FORWARD_EMAIL" />
+      <xs:enumeration value="CREATE_REPLY_ALL_EMAIL" />
+      <xs:enumeration value="CREATE_REPLY_CALL" />
+      <xs:enumeration value="CREATE_REPLY_EMAIL" />
+      <xs:enumeration value="FINISH" />
+      <xs:enumeration value="GET_WRAPUP_CODES" />
+      <xs:enumeration value="REQUEUE" />
+      <xs:enumeration value="SET_PROPERTY_VALUE" />
+      <xs:enumeration value="TAKE_PREVIEW" />
+      <xs:enumeration value="RETRY_MEDIA_TRANSFER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMEventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CIMSystemService_ALARM_VIOLATION" />
+      <xs:enumeration value="CIMSystemService_AUXILIARY_SESSION_ACTION_RESPONSE" />
+      <xs:enumeration value="CIMSystemService_AUXILIARY_SESSION_ERROR" />
+      <xs:enumeration value="CIMSystemService_AUXILIARY_SESSION_DETACHED" />
+      <xs:enumeration value="CIMSystemService_AUXILIARY_SESSION_EXPIRED" />
+      <xs:enumeration value="CIMSystemService_AUXILIARY_SESSION_FAILED" />
+      <xs:enumeration value="CIMSystemService_AUXILIARY_SESSION_INITIALIZED" />
+      <xs:enumeration value="CIMSystemService_CUSTOM_MAIN_ACTION_FIRED" />
+      <xs:enumeration value="CIMSystemService_CUSTOM_ACTIONS_REGISTERED" />
+      <xs:enumeration value="CIMSystemService_MAIN_ACTIONS_CHANGED" />
+      <xs:enumeration value="CIMSystemService_PRIMARY_SESSION_ACTION_REQUEST" />
+      <xs:enumeration value="CIMSystemService_PRIMARY_SESSION_ENDING" />
+      <xs:enumeration value="CIMSystemService_PRIMARY_SESSION_INITIALIZED" />
+      <xs:enumeration value="CIMSystemService_SESSION_TERMINATED" />
+      <xs:enumeration value="CIMSystemService_VIEW_UPDATE" />
+      <xs:enumeration value="CIMInteractionHandlingService_ALL_EVENTS" />
+      <xs:enumeration value="CIMInteractionHandlingService_AGENT_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_CALL_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_CONSULTATION_OFFERED" />
+      <xs:enumeration value="CIMInteractionHandlingService_CONSULTATION_OFFER_EXPIRED" />
+      <xs:enumeration value="CIMInteractionHandlingService_CONSULTATION_OFFER_TERMINATED" />
+      <xs:enumeration value="CIMInteractionHandlingService_CURRENT_PARTICIPATION_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_CUSTOM_INTERACTION_ACTION_FIRED" />
+      <xs:enumeration value="CIMInteractionHandlingService_CUSTOM_MEDIA_ACTION_FIRED" />
+      <xs:enumeration value="CIMInteractionHandlingService_EMAIL_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_HELP_REQUEST_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_HELP_PROVIDER_ADDED" />
+      <xs:enumeration value="CIMInteractionHandlingService_HELP_PROVIDER_REMOVED" />
+      <xs:enumeration value="CIMInteractionHandlingService_INTERACTION_ACTIONS_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_LINK_STATUS_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_PARTICIPATION_DATA_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_PARTICIPATION_IDENTITY_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_PARTICIPATION_STARTED" />
+      <xs:enumeration value="CIMInteractionHandlingService_PARTICIPATION_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_PARTICIPATION_STOPPED" />
+      <xs:enumeration value="CIMInteractionHandlingService_PHONENUMBER_VALIDATION_REQUESTED" />
+      <xs:enumeration value="CIMInteractionHandlingService_PHONENUMBER_MODIFICATION_REQUESTED" />
+      <xs:enumeration value="CIMInteractionHandlingService_PROPERTY_VALIDATION_REQUESTED" />
+      <xs:enumeration value="CIMInteractionHandlingService_SESSION_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_TRANSFER_TARGET_VALIDATION_REQUESTED" />
+      <xs:enumeration value="CIMInteractionHandlingService_USER_DEFINED_SOUND_ADDED" />
+      <xs:enumeration value="CIMInteractionHandlingService_VOICEMAIL_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_WEBCHAT_DATA_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_WEBCHAT_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_WEBCHAT_STATUS_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_WEBREQUEST_STATE_CHANGED" />
+      <xs:enumeration value="CIMInteractionHandlingService_WRAPUP_CODES_REQUESTED" />
+      <xs:enumeration value="CIMInteractionHandlingService_WRAPUP_CODES_SELECTED" />
+      <xs:enumeration value="CIMInteractionHandlingService_WRAPUP_TIMEOUT" />
+      <xs:enumeration value="CIMResponderQuery_RESPONDER_RESPONSE" />
+      <xs:enumeration value="CIMResponder_RESPONDER_REQUEST" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMTraceLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALWAYS" />
+      <xs:enumeration value="AUX_DEBUG" />
+      <xs:enumeration value="DEBUG" />
+      <xs:enumeration value="USER_ACTION" />
+      <xs:enumeration value="USER_EXPERIENCE" />
+      <xs:enumeration value="USER_SCRIPT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMApplicationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AGENT" />
+      <xs:enumeration value="RESOURCE_MANAGER" />
+      <xs:enumeration value="INTERACTION_VAULT" />
+      <xs:enumeration value="SURVEY_MANAGER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMConfigurationLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNKNOWN" />
+      <xs:enumeration value="SYSTEM" />
+      <xs:enumeration value="GROUP" />
+      <xs:enumeration value="USER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMApplicationSettingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BOOLEAN" />
+      <xs:enumeration value="CHART_VALUES" />
+      <xs:enumeration value="CHARTS" />
+      <xs:enumeration value="CHOICE" />
+      <xs:enumeration value="CHOICE_LIST" />
+      <xs:enumeration value="DIAL_STRING" />
+      <xs:enumeration value="DICTIONARIES" />
+      <xs:enumeration value="DURATION_IN_MILLISEC" />
+      <xs:enumeration value="DURATION_IN_SEC" />
+      <xs:enumeration value="FILE_AGENT_SCRIPT" />
+      <xs:enumeration value="FILE_EMAIL_TEMPLATE" />
+      <xs:enumeration value="FILE_RESMAN_SCRIPT" />
+      <xs:enumeration value="FILE_SOUND_EFFECT" />
+      <xs:enumeration value="FILE_TOOLBAR_BUTTON" />
+      <xs:enumeration value="INTEGER" />
+      <xs:enumeration value="QUEUE_GROUPS" />
+      <xs:enumeration value="QUEUE_SOUNDS" />
+      <xs:enumeration value="STRING" />
+      <xs:enumeration value="STRING_LIST" />
+      <xs:enumeration value="TIME" />
+      <xs:enumeration value="TONE_SEQUENCE" />
+      <xs:enumeration value="TRACE_LEVEL_LIST" />
+      <xs:enumeration value="UNKNOWN" />
+      <xs:enumeration value="VIEW_META_DATA_LIST" />
+      <xs:enumeration value="VITAL_STATS" />
+      <xs:enumeration value="VOLUME_CONTROLS" />
+      <xs:enumeration value="WORKGROUPS" />
+      <xs:enumeration value="AVAILABILITY_CODES" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMAvailabilityState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AVAILABLE" />
+      <xs:enumeration value="UNAVAILABLE" />
+      <xs:enumeration value="OFFLINE" />
+      <xs:enumeration value="UNKNOWN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMAgentStateChangeReason">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AVAILABILITY_CHANGED_BY_USER" />
+      <xs:enumeration value="AVAILABILITY_CHANGED_BY_SUPERVISOR" />
+      <xs:enumeration value="AVAILABILITY_CHANGED_BY_MIP" />
+      <xs:enumeration value="AVAILABILITY_CHANGED_BY_SYSTEM" />
+      <xs:enumeration value="RESOURCE_STATE_CHANGED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMErrorSeverity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WARNING" />
+      <xs:enumeration value="ERROR" />
+      <xs:enumeration value="FATAL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMCallType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CALL" />
+      <xs:enumeration value="CONSULTANT" />
+      <xs:enumeration value="CONSULTATION" />
+      <xs:enumeration value="TRANSFER" />
+      <xs:enumeration value="CONFERENCE" />
+      <xs:enumeration value="SECOND_CALL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMCallState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IDLE" />
+      <xs:enumeration value="IDLE_DISABLED" />
+      <xs:enumeration value="IDLE_REDIAL" />
+      <xs:enumeration value="RINGING" />
+      <xs:enumeration value="ANSWERING" />
+      <xs:enumeration value="CONNECTED" />
+      <xs:enumeration value="CONSULTING" />
+      <xs:enumeration value="HOLDING" />
+      <xs:enumeration value="PLACING" />
+      <xs:enumeration value="BUSY" />
+      <xs:enumeration value="INVALID" />
+      <xs:enumeration value="PENDING" />
+      <xs:enumeration value="DISCONNECTED" />
+      <xs:enumeration value="VALIDATING" />
+      <xs:enumeration value="VALIDATING_CONSULT_CALL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMCallActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ACCEPT_CONSULTATION_OFFER" />
+      <xs:enumeration value="ANSWER_CALL" />
+      <xs:enumeration value="CANCEL_CONSULTATION" />
+      <xs:enumeration value="COMPLETE_CONFERENCE" />
+      <xs:enumeration value="COMPLETE_TRANSFER" />
+      <xs:enumeration value="DISCONNECT_CALL" />
+      <xs:enumeration value="FLAG_CALL_FOR_RECORDING" />
+      <xs:enumeration value="HOLD_CALL" />
+      <xs:enumeration value="PLACE_CALL_TO_CONTACT" />
+      <xs:enumeration value="PLACE_CALL_TO_NUMBER" />
+      <xs:enumeration value="REDIAL_CALL" />
+      <xs:enumeration value="RETRIEVE_CALL" />
+      <xs:enumeration value="SEND_DIGITS" />
+      <xs:enumeration value="SOLICIT_CONSULTATION" />
+      <xs:enumeration value="START_CONFERENCE_WITH_CONTACT" />
+      <xs:enumeration value="START_CONFERENCE_WITH_NUMBER" />
+      <xs:enumeration value="START_TRANSFER_TO_CONTACT" />
+      <xs:enumeration value="START_TRANSFER_TO_NUMBER" />
+      <xs:enumeration value="SWAP_CALL" />
+      <xs:enumeration value="TRANSFER_TO_SURVEY_PORT" />
+      <xs:enumeration value="WITHDRAW_CONSULTATION_SOLICITATION" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMMediaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CALL" />
+      <xs:enumeration value="CALL_BACK" />
+      <xs:enumeration value="EMAIL" />
+      <xs:enumeration value="FAX" />
+      <xs:enumeration value="INTEGRATED_EMAIL" />
+      <xs:enumeration value="OUTBOUND_BLENDED_CALL" />
+      <xs:enumeration value="TASK" />
+      <xs:enumeration value="VOICE_MAIL" />
+      <xs:enumeration value="WEB_CHAT" />
+      <xs:enumeration value="WEB_REQUEST" />
+      <xs:enumeration value="UNKNOWN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMPhoneType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="STANDARD" />
+      <xs:enumeration value="SWITCHLINK" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMCustomActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MAIN_ACTION" />
+      <xs:enumeration value="INTERACTION_ACTION" />
+      <xs:enumeration value="CALL_MEDIA_ACTION" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMParticipationDisposition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNKNOWN" />
+      <xs:enumeration value="COMPLETED" />
+      <xs:enumeration value="HANGUP_COMPLETED" />
+      <xs:enumeration value="HANGUP_ABANDONED_CALLBACK" />
+      <xs:enumeration value="HANGUP_VOICEMAIL" />
+      <xs:enumeration value="HANGUP_UNCOMPLETED" />
+      <xs:enumeration value="EXPIRED" />
+      <xs:enumeration value="DELETED" />
+      <xs:enumeration value="REQUEUED" />
+      <xs:enumeration value="TRANSFERRED" />
+      <xs:enumeration value="TRANSFERRED_EXTERNAL" />
+      <xs:enumeration value="TRANSFERRED_AGENT" />
+      <xs:enumeration value="SYSTEM_ERROR" />
+      <xs:enumeration value="ESCALATED" />
+      <xs:enumeration value="ANSWERED_FAILED" />
+      <xs:enumeration value="DISCONNECTED" />
+      <xs:enumeration value="EMAIL_SEND_FAILED" />
+      <xs:enumeration value="EMAIL_SEND_OK" />
+      <xs:enumeration value="EMAIL_SEND_CANCEL" />
+      <xs:enumeration value="AGENT_SAVE_DRAFT" />
+      <xs:enumeration value="AGENT_SENT" />
+      <xs:enumeration value="AGENT_NEVER_MIND" />
+      <xs:enumeration value="AUTO_REPLIED" />
+      <xs:enumeration value="USER_DELETED" />
+      <xs:enumeration value="UNANNOUNCED_NO_AGENTS_IN_QUEUE" />
+      <xs:enumeration value="UNANNOUNCED_NO_AGENTS_LOGGED_IN" />
+      <xs:enumeration value="UNANNOUNCED_SCRIPT_CANCEL" />
+      <xs:enumeration value="UNANNOUNCED_SHUTDOWN_REQUEST" />
+      <xs:enumeration value="PREVIEW_CANCELED" />
+      <xs:enumeration value="PREVIEW_EXPIRED" />
+      <xs:enumeration value="NO_ANSWER" />
+      <xs:enumeration value="CHATTING" />
+      <xs:enumeration value="TERMINATED" />
+      <xs:enumeration value="TRANSFERRING" />
+      <xs:enumeration value="CONSULTED" />
+      <xs:enumeration value="CONFERENCE_COMPLETED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMParticipationState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNKNOWN" />
+      <xs:enumeration value="CONSULTING" />
+      <xs:enumeration value="HOLDING" />
+      <xs:enumeration value="INTERACTING" />
+      <xs:enumeration value="MONITORED_QUEUING" />
+      <xs:enumeration value="MONITORING" />
+      <xs:enumeration value="OFFLINE" />
+      <xs:enumeration value="PENDING" />
+      <xs:enumeration value="PREVIEWING" />
+      <xs:enumeration value="PROMPTING" />
+      <xs:enumeration value="QUEUING" />
+      <xs:enumeration value="TALKING" />
+      <xs:enumeration value="TRANSFERRING" />
+      <xs:enumeration value="WRAPUP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMPreviewType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="DELAYED_TAKE" />
+      <xs:enumeration value="FORCED_PREVIEW" />
+      <xs:enumeration value="MANUAL_PREVIEW" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMInteractionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INBOUND_QUEUED_CALL" />
+      <xs:enumeration value="INBOUND_DIRECT_CALL" />
+      <xs:enumeration value="OUTBOUND_DIRECT_CALL" />
+      <xs:enumeration value="OUTBOUND_BLENDED_CALL" />
+      <xs:enumeration value="EMAIL" />
+      <xs:enumeration value="FAX" />
+      <xs:enumeration value="CALL_BACK" />
+      <xs:enumeration value="VOICE_MAIL" />
+      <xs:enumeration value="WEB_CALL_BACK" />
+      <xs:enumeration value="WEB_CHAT" />
+      <xs:enumeration value="REPLY_CALL" />
+      <xs:enumeration value="TASK" />
+      <xs:enumeration value="OUTBOUND_EMAIL" />
+      <xs:enumeration value="REPLY_EMAIL" />
+      <xs:enumeration value="FORWARD_EMAIL" />
+      <xs:enumeration value="INTEGRATED_EMAIL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMRoutingState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CURRENTLY_QUEUED" />
+      <xs:enumeration value="NEVER_QUEUED" />
+      <xs:enumeration value="PENDING" />
+      <xs:enumeration value="PERSONAL_QUEUED" />
+      <xs:enumeration value="PREVIOUSLY_QUEUED" />
+      <xs:enumeration value="RESERVED" />
+      <xs:enumeration value="UNKNOWN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMResponderDataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DATA_SET" />
+      <xs:enumeration value="KEY_VALUE_SET" />
+      <xs:enumeration value="FIELD_ARRAY" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMEmailMediaState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INITIALIZING" />
+      <xs:enumeration value="TRANSFER_FAILED" />
+      <xs:enumeration value="INBOUND_STATE" />
+      <xs:enumeration value="DRAFT_STATE" />
+      <xs:enumeration value="SENT_STATE" />
+      <xs:enumeration value="REQUEUED_STATE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMEmailMessageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INBOUND_EMAIL" />
+      <xs:enumeration value="INBOUND_NESTED_EMAIL" />
+      <xs:enumeration value="AGENT_EMAIL" />
+      <xs:enumeration value="AGENT_REPLY_EMAIL" />
+      <xs:enumeration value="AGENT_FORWARD_EMAIL" />
+      <xs:enumeration value="AUTO_ACK_EMAIL" />
+      <xs:enumeration value="AUTO_REPLY_EMAIL" />
+      <xs:enumeration value="SEND_FAILED_EMAIL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMEmailAttachmentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FILE" />
+      <xs:enumeration value="EMBEDDED_IMAGE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMEmailAttachmentState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNKNOWN" />
+      <xs:enumeration value="NOT_UPLOADED" />
+      <xs:enumeration value="ON_SERVER" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMEmailActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ADD_RECIPIENT" />
+      <xs:enumeration value="ATTACH_FILE" />
+      <xs:enumeration value="DETACH_FILE" />
+      <xs:enumeration value="GET_PRINT_URL" />
+      <xs:enumeration value="REMOVE_RECIPIENT" />
+      <xs:enumeration value="SEND" />
+      <xs:enumeration value="SET_BODY" />
+      <xs:enumeration value="SET_SENDER" />
+      <xs:enumeration value="SET_SUBJECT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMHelpRequestState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NO_REQUEST" />
+      <xs:enumeration value="PENDING" />
+      <xs:enumeration value="ASSISTING" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMMainActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CHANGE_PASSWORD" />
+      <xs:enumeration value="CHANGE_AVAILABILITY" />
+      <xs:enumeration value="CLOSE_HELP_REQUEST_AS_AGENT" />
+      <xs:enumeration value="CREATE_OUTBOUND_CALL" />
+      <xs:enumeration value="CREATE_OUTBOUND_EMAIL" />
+      <xs:enumeration value="CREATE_USER_HELP_MESSAGE" />
+      <xs:enumeration value="LOGOUT" />
+      <xs:enumeration value="POST_HELP_REQUEST" />
+      <xs:enumeration value="SUBSCRIBE_TO_VIEW" />
+      <xs:enumeration value="TAKE_NEXT_INTERACTION" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMResponseItemFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TEXT" />
+      <xs:enumeration value="HTML" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMResponseLibType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SYSTEM" />
+      <xs:enumeration value="GROUP" />
+      <xs:enumeration value="PERSONAL" />
+      <xs:enumeration value="AUTO_SUGGESTION" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMSessionState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="APPLICATION_MODAL" />
+      <xs:enumeration value="APPLICATION_NORMAL" />
+      <xs:enumeration value="INTERACTION_MODAL" />
+      <xs:enumeration value="INTERACTION_NORMAL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMTransferActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TRANSFER" />
+      <xs:enumeration value="REQUEUE" />
+      <xs:enumeration value="CONFERENCE" />
+      <xs:enumeration value="DIAL" />
+      <xs:enumeration value="SECONDCALL" />
+      <xs:enumeration value="QUEUECONFERENCE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMObjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AGENT" />
+      <xs:enumeration value="QUEUE" />
+      <xs:enumeration value="CONTACT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMViewType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AgentQueueView" />
+      <xs:enumeration value="VitalStatsView" />
+      <xs:enumeration value="RequeueCombinedView" />
+      <xs:enumeration value="OutboundContactCombinedView" />
+      <xs:enumeration value="ConferenceCombinedView" />
+      <xs:enumeration value="InteractionResponsesView" />
+      <xs:enumeration value="Alarms" />
+      <xs:enumeration value="QueueListSummaryView" />
+      <xs:enumeration value="AgentAddRequestView" />
+      <xs:enumeration value="ProcessStatisticsView" />
+      <xs:enumeration value="AgentHandleTimeChartsView" />
+      <xs:enumeration value="AgentStateTimeChartsView" />
+      <xs:enumeration value="AgentParticipationCountChartsView" />
+      <xs:enumeration value="PersonalAddressBookView" />
+      <xs:enumeration value="ReceivedSupervisorMessagesView" />
+      <xs:enumeration value="TakeNextEnablingView" />
+      <xs:enumeration value="ViewServerStats" />
+      <xs:enumeration value="IntMdl_Interactions" />
+      <xs:enumeration value="IntMdl_Agents" />
+      <xs:enumeration value="IntMdl_Queues" />
+      <xs:enumeration value="IntMdl_QueueGroups" />
+      <xs:enumeration value="IntMdl_Ports" />
+      <xs:enumeration value="TestView" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMViewDataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="STRING" />
+      <xs:enumeration value="INTEGER" />
+      <xs:enumeration value="PORT" />
+      <xs:enumeration value="DATETIME" />
+      <xs:enumeration value="ENUM" />
+      <xs:enumeration value="BOOLEAN" />
+      <xs:enumeration value="DURATION" />
+      <xs:enumeration value="INTERACTION_PROPERTY_STRING" />
+      <xs:enumeration value="VITAL_STAT_INT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMViewColumnSortType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="ASCENDING" />
+      <xs:enumeration value="DESCENDING" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMViewFilterOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EQUAL" />
+      <xs:enumeration value="NOT_EQUAL" />
+      <xs:enumeration value="BEGINS_WITH" />
+      <xs:enumeration value="CONTAINS" />
+      <xs:enumeration value="MEMBER_OF_QUEUE_GROUP" />
+      <xs:enumeration value="MEMBER_OF_WORK_GROUP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMVoicemailMediaState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INITIALIZING" />
+      <xs:enumeration value="TRANSFER_FAILED" />
+      <xs:enumeration value="UNPLAYED" />
+      <xs:enumeration value="PLAYED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMWebChatMediaState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INITIALIZING" />
+      <xs:enumeration value="CONNECTED" />
+      <xs:enumeration value="DISCONNECTED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMWebChatTranscriptEventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AGENT_TEXT" />
+      <xs:enumeration value="AGENT_URL" />
+      <xs:enumeration value="BARGE_TEXT" />
+      <xs:enumeration value="CUSTOMER_TEXT" />
+      <xs:enumeration value="TAKE" />
+      <xs:enumeration value="WHISPER_TEXT" />
+      <xs:enumeration value="REQUEUE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMWebChatActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DISCONNECT" />
+      <xs:enumeration value="SEND_CUSTOMER_MESSAGE" />
+      <xs:enumeration value="SEND_WHISPER_MESSAGE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMWebChatStatusEventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MONITORING_STARTED" />
+      <xs:enumeration value="MONITORING_STOPPED" />
+      <xs:enumeration value="TYPING_STARTED" />
+      <xs:enumeration value="TYPING_STOPPED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMWebRequestMediaState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INITIALIZING" />
+      <xs:enumeration value="TRANSFERRED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMSessionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRIMARY" />
+      <xs:enumeration value="AUXILIARY" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMResponderDestinationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SINGLE_PROCESS" />
+      <xs:enumeration value="PROCESS_CLASS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMResultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FAILED_NOT_IMPLEMENTED" />
+      <xs:enumeration value="SUCCEEDED" />
+      <xs:enumeration value="FAILED_ACTION_NOT_ENABLED" />
+      <xs:enumeration value="FAILED_ACTION_NOT_REGISTERED" />
+      <xs:enumeration value="FAILED_DUPLICATE_LOGIN" />
+      <xs:enumeration value="FAILED_EXTENSION_IN_USE" />
+      <xs:enumeration value="FAILED_FILE_NOT_UPLOADED" />
+      <xs:enumeration value="FAILED_FINISH_NOT_ALLOWED" />
+      <xs:enumeration value="FAILED_INCORRECT_PASSWORD" />
+      <xs:enumeration value="FAILED_INTERACTION_NOT_FOUND" />
+      <xs:enumeration value="FAILED_INTERACTION_NOT_QUEUED" />
+      <xs:enumeration value="FAILED_INVALID_LOGIN" />
+      <xs:enumeration value="FAILED_INVALID_NODEID" />
+      <xs:enumeration value="FAILED_INVALID_PARAMETER" />
+      <xs:enumeration value="FAILED_INVALID_SESSION" />
+      <xs:enumeration value="FAILED_NO_INTERACTIONS" />
+      <xs:enumeration value="FAILED_NO_LICENSE" />
+      <xs:enumeration value="FAILED_NO_LINK_CONTROL" />
+      <xs:enumeration value="FAILED_NO_PORTS_AVAILABLE" />
+      <xs:enumeration value="FAILED_NO_USER_STATE" />
+      <xs:enumeration value="FAILED_NO_WEB_SESSION" />
+      <xs:enumeration value="FAILED_NOT_AUTHORIZED" />
+      <xs:enumeration value="FAILED_NOT_CONFIGURED" />
+      <xs:enumeration value="FAILED_NOT_EMPTY" />
+      <xs:enumeration value="FAILED_NOT_INITIALIZED" />
+      <xs:enumeration value="FAILED_OBJECT_NOT_FOUND" />
+      <xs:enumeration value="FAILED_OPERATION_FAILED" />
+      <xs:enumeration value="FAILED_OPERATION_TIMED_OUT" />
+      <xs:enumeration value="FAILED_SERVICE_UNAVAILABLE" />
+      <xs:enumeration value="FAILED_SESSION_IN_USE" />
+      <xs:enumeration value="FAILED_SESSION_TERMINATED_BY_SUPERVISOR" />
+      <xs:enumeration value="FAILED_SESSION_TERMINATED_DUE_TO_INACTIVITY" />
+      <xs:enumeration value="FAILED_SET_PROPERTY_VALUE_REASON_NOT_EDITABLE" />
+      <xs:enumeration value="FAILED_SYSTEM_ERROR" />
+      <xs:enumeration value="FAILED_UNKNOWN_SETTING" />
+      <xs:enumeration value="FAILED_VALIDATION_FAILED" />
+      <xs:enumeration value="FAILED_VALIDATION_SERVER_UNAVAILABLE" />
+      <xs:enumeration value="FAILED_ADDRESS_BOOK_ENTRY_NOT_FOUND" />
+      <xs:enumeration value="FAILED_VALUE_NOT_ALLOWED" />
+      <xs:enumeration value="FAILED_MAX_ATTACHMENT_SIZE_LIMIT_EXCEEDED" />
+      <xs:enumeration value="FAILED_NO_CAPABILITY" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMEmailRecipientType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TO" />
+      <xs:enumeration value="CC" />
+      <xs:enumeration value="BCC" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMAlarmType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AgentAverageTimeInteracting" />
+      <xs:enumeration value="AgentAverageTimePreviewing" />
+      <xs:enumeration value="AgentAverageTimeReady" />
+      <xs:enumeration value="AgentAverageTimeTalking" />
+      <xs:enumeration value="AgentAverageTimeUnavailable" />
+      <xs:enumeration value="AgentAverageTimeWrappingUp" />
+      <xs:enumeration value="AgentMaxTimeInteracting" />
+      <xs:enumeration value="AgentMaxTimePreviewing" />
+      <xs:enumeration value="AgentMaxTimeReady" />
+      <xs:enumeration value="AgentMaxTimeTalking" />
+      <xs:enumeration value="AgentMaxTimeUnavailable" />
+      <xs:enumeration value="AgentMaxTimeWrappingUp" />
+      <xs:enumeration value="AgentUtilization" />
+      <xs:enumeration value="InteractingAgentCount" />
+      <xs:enumeration value="InteractingAgentPercent" />
+      <xs:enumeration value="NumberOfAgents" />
+      <xs:enumeration value="PreviewingAgentCount" />
+      <xs:enumeration value="PreviewingAgentPercent" />
+      <xs:enumeration value="ReadyAgentCount" />
+      <xs:enumeration value="ReadyAgentPercent" />
+      <xs:enumeration value="TalkingAgentCount" />
+      <xs:enumeration value="TalkingAgentPercent" />
+      <xs:enumeration value="UnavailableAgentCount" />
+      <xs:enumeration value="UnavailableAgentPercent" />
+      <xs:enumeration value="WrappingUpAgentCount" />
+      <xs:enumeration value="WrappingUpAgentPercent" />
+      <xs:enumeration value="InteractingInteractionCount" />
+      <xs:enumeration value="InteractingInteractionPercent" />
+      <xs:enumeration value="InteractionAverageTimeInteracting" />
+      <xs:enumeration value="InteractionAverageTimePreviewing" />
+      <xs:enumeration value="InteractionAverageTimeQueued" />
+      <xs:enumeration value="InteractionAverageTimeTalking" />
+      <xs:enumeration value="InteractionAverageTimeWrappingUp" />
+      <xs:enumeration value="InteractionMaxTimeInteracting" />
+      <xs:enumeration value="InteractionMaxTimePreviewing" />
+      <xs:enumeration value="InteractionMaxTimeQueued" />
+      <xs:enumeration value="InteractionMaxTimeTalking" />
+      <xs:enumeration value="InteractionMaxTimeWrappingUp" />
+      <xs:enumeration value="InteractionTimeViolationCount" />
+      <xs:enumeration value="MisQueuedInteractionCount" />
+      <xs:enumeration value="NumberOfInteractions" />
+      <xs:enumeration value="PendingInteractionCount" />
+      <xs:enumeration value="PreviewingInteractionCount" />
+      <xs:enumeration value="PreviewingInteractionPercent" />
+      <xs:enumeration value="QueueTimeViolationCount" />
+      <xs:enumeration value="QueuedInteractionCount" />
+      <xs:enumeration value="QueuedInteractionPercent" />
+      <xs:enumeration value="TalkingInteractionCount" />
+      <xs:enumeration value="TalkingInteractionPercent" />
+      <xs:enumeration value="WrappingUpInteractionCount" />
+      <xs:enumeration value="WrappingUpInteractionPercent" />
+      <xs:enumeration value="IdlePortCount" />
+      <xs:enumeration value="IdlePortPercent" />
+      <xs:enumeration value="NumberOfPorts" />
+      <xs:enumeration value="PortAverageTimeIdle" />
+      <xs:enumeration value="PortAverageTimePrompting" />
+      <xs:enumeration value="PortAverageTimeQueued" />
+      <xs:enumeration value="PortMaxTimeIdle" />
+      <xs:enumeration value="PortMaxTimePrompting" />
+      <xs:enumeration value="PortMaxTimeQueued" />
+      <xs:enumeration value="PortUtilization" />
+      <xs:enumeration value="PromptingPortCount" />
+      <xs:enumeration value="PromptingPortPercent" />
+      <xs:enumeration value="QueuedPortCount" />
+      <xs:enumeration value="QueuedPortPercent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMAlarmPredicate">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LessThan" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="Equal" />
+      <xs:enumeration value="LessThanOrEqualTo" />
+      <xs:enumeration value="GreaterThanOrEqualTo" />
+      <xs:enumeration value="NotEqual" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMAlarmAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Beep" />
+      <xs:enumeration value="PlaySound" />
+      <xs:enumeration value="PlayMacro" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMPropertyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="STRING" />
+      <xs:enumeration value="INTEGER" />
+      <xs:enumeration value="CHOICE" />
+      <xs:enumeration value="DATETIME" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMClientCapability">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CLIENT_SIDE_SCRIPTING" />
+      <xs:enumeration value="MONITOR_ACTIVITY" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMViewDistributionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PUSH" />
+      <xs:enumeration value="PULL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMViewScrollType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NEXT" />
+      <xs:enumeration value="PREV" />
+      <xs:enumeration value="FIRST" />
+      <xs:enumeration value="LAST" />
+      <xs:enumeration value="ROWNUM" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CIMDialingTreatmentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INTERNAL" />
+      <xs:enumeration value="LOCAL" />
+      <xs:enumeration value="LONG_DISTANCE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
