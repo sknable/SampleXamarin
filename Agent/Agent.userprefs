@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\steve\Documents\GitHub\Xamarin\SODA\SODA\SODA.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Agent\MainWindow.cs">
     <Files>
-      <File FileName="Agent\Program.cs" Line="15" Column="13" />
-      <File FileName="c:\Users\steve\Documents\GitHub\Xamarin\SODA\SODA\SODA.cs" Line="53" Column="1" />
-      <File FileName="c:\Users\steve\Documents\GitHub\Xamarin\SODA\SODA\Web References\CIMSystemService\Reference.cs" Line="32" Column="32" />
+      <File FileName="Agent\MainWindow.cs" Line="3" Column="1" />
+      <File FileName="Agent\Program.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
