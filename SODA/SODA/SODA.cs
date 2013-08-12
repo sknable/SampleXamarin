@@ -30,14 +30,31 @@ namespace SODA
         /// <summary>
         /// Initializes a new instance of the <see cref="SODA.SODAClient"/> class.
         /// </summary>
+		public SODAClient ()
+		{
+			_webService = new CIMSystemService.CIMSystemService();
+		}
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SODA.SODAClient"/> class.
+        /// </summary>
         /// <param name="url">URL.</param>
         /// <param name="user">User.</param>
         /// <param name="password">Password.</param>
         /// <param name="extension">Extension.</param>
-		public SODAClient (String url,String user,String password,String extension)
-		{
-			_webService = new CIMSystemService.CIMSystemService();
-		}
+        public Boolean LoginAgent(String url,String user,String password,String extension)
+        {
+
+            if (Login())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
 
         /// <summary>
         /// Run this instance.
@@ -45,13 +62,9 @@ namespace SODA
 		public void Run()
 		{
 
-            if (Login())
-            {
-                _eventThread = new Thread(EventGetter);
-                _eventThread.IsBackground = true;
-                _eventThread.Start();
-
-            }
+            _eventThread = new Thread(EventGetter);
+            _eventThread.IsBackground = true;
+            _eventThread.Start();
 
 		}
 
