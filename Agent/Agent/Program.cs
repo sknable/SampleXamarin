@@ -11,11 +11,10 @@ namespace Agent
 		{
 			Application.Init ();
 
-           // SODAClient agent = new SODAClient("", "", "", "");
-           // agent.Run();
+           SODAClient agent = new SODAClient();
 
-			MainWindow win = new MainWindow ();
-			win.Show ();
+            Login winLogin = new Login (agent);
+            winLogin.Show ();
 			Application.Run ();
 
 

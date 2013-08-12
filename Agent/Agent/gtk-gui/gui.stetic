@@ -7,6 +7,13 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/Agent.exe" internal="true" />
   </import>
+  <icon-factory>
+    <icon-set id="star">
+      <source>
+        <property name="Image">stock:gtk-about Menu</property>
+      </source>
+    </icon-set>
+  </icon-factory>
   <widget class="Gtk.Window" id="Agent.MainWindow" design-size="400 300">
     <action-group name="Default">
       <action id="FileAction">
@@ -14,19 +21,43 @@
         <property name="Label" translatable="yes">File</property>
         <property name="ShortLabel" translatable="yes">File</property>
       </action>
+      <action id="redoAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Take Next</property>
+        <property name="ShortLabel" translatable="yes">Take Next</property>
+        <property name="StockId">gtk-redo</property>
+        <signal name="Activated" handler="TakeNextPressHandler" />
+      </action>
+      <action id="changeState">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Change State</property>
+        <property name="ShortLabel" translatable="yes">Change State</property>
+        <property name="StockId">gtk-yes</property>
+        <signal name="Activated" handler="StateChangePressHandler" />
+      </action>
+      <action id="logout">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes" />
+        <property name="StockId">gtk-stop</property>
+        <signal name="Activated" handler="LogoutPressHandler" />
+      </action>
     </action-group>
     <property name="MemberName" />
     <property name="Title" translatable="yes">Mono Agent</property>
+    <property name="Icon">stock:gtk-about Menu</property>
     <property name="WindowPosition">CenterOnParent</property>
     <child>
       <widget class="Gtk.VBox" id="vbox1">
         <property name="MemberName" />
         <property name="Spacing">6</property>
         <child>
-          <widget class="Gtk.MenuBar" id="menubar1">
+          <widget class="Gtk.Toolbar" id="agenttoolbar">
             <property name="MemberName" />
-            <node name="__gtksharp_114_Stetic_Editor_ActionMenuBar" type="Menubar">
-              <node type="Menu" action="FileAction" />
+            <property name="ShowArrow">False</property>
+            <node name="agenttoolbar" type="Toolbar">
+              <node type="Toolitem" action="redoAction" />
+              <node type="Toolitem" action="logout" />
+              <node type="Toolitem" action="changeState" />
             </node>
           </widget>
           <packing>
@@ -69,6 +100,78 @@
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="Agent.Login" design-size="367 222">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Mono Agent Login</property>
+    <property name="Icon">stock:gtk-about Menu</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Entry" id="entry1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">107</property>
+            <property name="Y">51</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="entry2">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="Visibility">False</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">107</property>
+            <property name="Y">105</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label1">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Name</property>
+          </widget>
+          <packing>
+            <property name="X">58</property>
+            <property name="Y">56</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label2">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Password</property>
+          </widget>
+          <packing>
+            <property name="X">41</property>
+            <property name="Y">109</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="LoginButton">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Events">ButtonPressMask</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Login</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonPressHandler" />
+          </widget>
+          <packing>
+            <property name="X">160</property>
+            <property name="Y">147</property>
           </packing>
         </child>
       </widget>

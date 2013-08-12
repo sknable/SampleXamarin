@@ -74,6 +74,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\Agent.MainWindow.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="gtk-gui\Agent.Login.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

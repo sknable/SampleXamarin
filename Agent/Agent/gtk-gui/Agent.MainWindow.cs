@@ -6,8 +6,11 @@ namespace Agent
 	{
 		private global::Gtk.UIManager UIManager;
 		private global::Gtk.Action FileAction;
+		private global::Gtk.Action redoAction;
+		private global::Gtk.Action changeState;
+		private global::Gtk.Action logout;
 		private global::Gtk.VBox vbox1;
-		private global::Gtk.MenuBar menubar1;
+		private global::Gtk.Toolbar agenttoolbar;
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
 		private global::Gtk.TreeView treeview1;
 		private global::Gtk.Statusbar statusbar1;
@@ -21,22 +24,33 @@ namespace Agent
 			this.FileAction = new global::Gtk.Action ("FileAction", global::Mono.Unix.Catalog.GetString ("File"), null, null);
 			this.FileAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("File");
 			w1.Add (this.FileAction, null);
+			this.redoAction = new global::Gtk.Action ("redoAction", global::Mono.Unix.Catalog.GetString ("Take Next"), null, "gtk-redo");
+			this.redoAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Take Next");
+			w1.Add (this.redoAction, null);
+			this.changeState = new global::Gtk.Action ("changeState", global::Mono.Unix.Catalog.GetString ("Change State"), null, "gtk-yes");
+			this.changeState.ShortLabel = global::Mono.Unix.Catalog.GetString ("Change State");
+			w1.Add (this.changeState, null);
+			this.logout = new global::Gtk.Action ("logout", null, null, "gtk-stop");
+			w1.Add (this.logout, null);
 			this.UIManager.InsertActionGroup (w1, 0);
 			this.AddAccelGroup (this.UIManager.AccelGroup);
 			this.Name = "Agent.MainWindow";
 			this.Title = global::Mono.Unix.Catalog.GetString ("Mono Agent");
+			this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-about", global::Gtk.IconSize.Menu);
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child Agent.MainWindow.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox ();
 			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><menubar name=\'menubar1\'><menu name=\'FileAction\' action=\'FileAction\'/></menub" +
-				"ar></ui>");
-			this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar1")));
-			this.menubar1.Name = "menubar1";
-			this.vbox1.Add (this.menubar1);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.menubar1]));
+			this.UIManager.AddUiFromString ("<ui><toolbar name=\'agenttoolbar\'><toolitem name=\'redoAction\' action=\'redoAction\'/" +
+				"><toolitem name=\'logout\' action=\'logout\'/><toolitem name=\'changeState\' action=\'c" +
+				"hangeState\'/></toolbar></ui>");
+			this.agenttoolbar = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/agenttoolbar")));
+			this.agenttoolbar.Name = "agenttoolbar";
+			this.agenttoolbar.ShowArrow = false;
+			this.vbox1.Add (this.agenttoolbar);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.agenttoolbar]));
 			w2.Position = 0;
 			w2.Expand = false;
 			w2.Fill = false;
@@ -68,6 +82,9 @@ namespace Agent
 			this.DefaultWidth = 400;
 			this.DefaultHeight = 300;
 			this.Show ();
+			this.redoAction.Activated += new global::System.EventHandler (this.TakeNextPressHandler);
+			this.changeState.Activated += new global::System.EventHandler (this.StateChangePressHandler);
+			this.logout.Activated += new global::System.EventHandler (this.LogoutPressHandler);
 		}
 	}
 }
