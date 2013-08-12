@@ -2,6 +2,7 @@ using System;
 using Gtk;
 using SODA;
 
+
 namespace Agent
 {
 	class MainClass
@@ -10,8 +11,8 @@ namespace Agent
 		{
 			Application.Init ();
 
-            SODAClient agent = new SODAClient("", "", "", "");
-            agent.Run();
+           // SODAClient agent = new SODAClient("", "", "", "");
+           // agent.Run();
 
 			MainWindow win = new MainWindow ();
 			win.Show ();
