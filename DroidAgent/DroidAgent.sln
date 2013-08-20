@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroidAgent", "DroidAgent\DroidAgent.csproj", "{35A0FEE4-9CAD-45F1-ADB9-174B5B1AC7D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SODA", "SODA\SODA.csproj", "{E1EF85DA-7B0F-4B22-8109-C470BDA1F168}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35A0FEE4-9CAD-45F1-ADB9-174B5B1AC7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A0FEE4-9CAD-45F1-ADB9-174B5B1AC7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A0FEE4-9CAD-45F1-ADB9-174B5B1AC7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A0FEE4-9CAD-45F1-ADB9-174B5B1AC7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1EF85DA-7B0F-4B22-8109-C470BDA1F168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1EF85DA-7B0F-4B22-8109-C470BDA1F168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1EF85DA-7B0F-4B22-8109-C470BDA1F168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1EF85DA-7B0F-4B22-8109-C470BDA1F168}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = DroidAgent\DroidAgent.csproj
+	EndGlobalSection
+EndGlobal
