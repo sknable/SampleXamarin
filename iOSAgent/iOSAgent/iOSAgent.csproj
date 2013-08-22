@@ -107,8 +107,8 @@
     <BundleResource Include="Resources\second%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SODA\SODA\SODA.csproj">
-      <Project>{0ba12e81-b576-45b8-9c34-a073c9ac36be}</Project>
+    <ProjectReference Include="..\SODA\SODA.csproj">
+      <Project>{68b646cc-1f07-483a-8ad5-14821590d3ae}</Project>
       <Name>SODA</Name>
     </ProjectReference>
   </ItemGroup>

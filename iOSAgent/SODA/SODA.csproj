@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0BA12E81-B576-45B8-9C34-A073C9AC36BE}</ProjectGuid>
+    <ProjectGuid>{68B646CC-1F07-483A-8AD5-14821590D3AE}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>SODA</RootNamespace>
@@ -34,10 +34,10 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\SODA\SODA\SODA.cs">
+    <Compile Include="..\..\SODA\SODA\SODA.cs">
       <Link>SODA.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\SODA\SODA\Web References\CIMSystemService\Reference.cs">
+    <Compile Include="..\..\SODA\SODA\Web References\CIMSystemService\Reference.cs">
       <Link>Reference.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
