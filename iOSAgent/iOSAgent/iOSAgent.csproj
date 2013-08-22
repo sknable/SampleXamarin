@@ -106,5 +106,11 @@
     <BundleResource Include="Resources\second.png" />
     <BundleResource Include="Resources\second%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SODA\SODA\SODA.csproj">
+      <Project>{0ba12e81-b576-45b8-9c34-a073c9ac36be}</Project>
+      <Name>SODA</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>
