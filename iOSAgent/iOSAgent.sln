@@ -42,6 +42,7 @@ Global
 		{64A355A0-E46A-41DD-BADC-AE13A6434CB1}.AppStore|Mixed Platforms.ActiveCfg = AppStore|iPhoneSimulator
 		{64A355A0-E46A-41DD-BADC-AE13A6434CB1}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhoneSimulator
 		{64A355A0-E46A-41DD-BADC-AE13A6434CB1}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{64A355A0-E46A-41DD-BADC-AE13A6434CB1}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{64A355A0-E46A-41DD-BADC-AE13A6434CB1}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{64A355A0-E46A-41DD-BADC-AE13A6434CB1}.Debug|iPhone.Build.0 = Debug|iPhone
 		{64A355A0-E46A-41DD-BADC-AE13A6434CB1}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -80,10 +81,10 @@ Global
 		{68B646CC-1F07-483A-8AD5-14821590D3AE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{68B646CC-1F07-483A-8AD5-14821590D3AE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = iOSAgent\iOSAgent.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

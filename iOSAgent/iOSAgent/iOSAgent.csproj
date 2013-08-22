@@ -108,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SODA\SODA.csproj">
-      <Project>{68b646cc-1f07-483a-8ad5-14821590d3ae}</Project>
+      <Project>{68B646CC-1F07-483A-8AD5-14821590D3AE}</Project>
       <Name>SODA</Name>
     </ProjectReference>
   </ItemGroup>
