@@ -116,7 +116,7 @@ namespace SODA
         /// 
         /// </summary>
         /// <param name="e"></param>
-        protected void ParticipationStateChagne(ParticitionEventArgs e)
+        protected void OnParticipationStateChange(ParticitionEventArgs e)
         {
             ParticipationEventHandler MyEvent = ParticipationStateChange;
 
@@ -130,7 +130,7 @@ namespace SODA
         /// 
         /// </summary>
         /// <param name="e"></param>
-        protected void ParticpationStop(ParticitionEventArgs e)
+        protected void OnParticpationStop(ParticitionEventArgs e)
         {
             ParticipationEventHandler MyEvent = ParticipationStop;
 
@@ -190,6 +190,22 @@ namespace SODA
                 foreach(CIMEvent cimEvent in cimEvents)
                 {
 
+                    switch (cimEvent.eventType)
+                    {
+
+                        case CIMEventType.CIMInteractionHandlingService_PARTICIPATION_STARTED:
+
+                            CIMParticipationEvent interactionEvent = (CIMParticipationEvent)cimEvent;
+
+                            ParticitionEventArgs e = new ParticitionEventArgs(interactionEvent.participation);
+
+                            OnParticpationStart(e);
+
+                        break;
+
+
+
+                    }
 
                 }
 
@@ -209,7 +225,7 @@ namespace SODA
 
         public CIMParticipation Interaction { get { return _Interaction; } }
 
-        ParticitionEventArgs(CIMParticipation Interaction)
+        public ParticitionEventArgs(CIMParticipation Interaction)
         {
             _Interaction = Interaction;
         }

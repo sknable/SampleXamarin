@@ -25,7 +25,7 @@ namespace Agent
 
                 this.Visible = false;
                 _agent.Run();
-                _mainWindow = new MainWindow(_agent);
+                _mainWindow = new MainWindow(_agent,this);
 
 
             }
