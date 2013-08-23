@@ -27,6 +27,7 @@ namespace Agent
 			this.AddAccelGroup (this.UIManager.AccelGroup);
 			this.Name = "Agent.Interaction";
 			this.Title = global::Mono.Unix.Catalog.GetString ("Interaction");
+			this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-paste", global::Gtk.IconSize.Menu);
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child Agent.Interaction.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox ();

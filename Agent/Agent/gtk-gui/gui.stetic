@@ -46,6 +46,7 @@
     <property name="Title" translatable="yes">Mono Agent</property>
     <property name="Icon">stock:gtk-execute Menu</property>
     <property name="WindowPosition">CenterOnParent</property>
+    <signal name="Hidden" handler="OnHidden" after="yes" />
     <child>
       <widget class="Gtk.VBox" id="vbox1">
         <property name="MemberName" />
@@ -192,6 +193,7 @@
     </action-group>
     <property name="MemberName" />
     <property name="Title" translatable="yes">Interaction</property>
+    <property name="Icon">stock:gtk-paste Menu</property>
     <property name="WindowPosition">CenterOnParent</property>
     <child>
       <widget class="Gtk.VBox" id="vbox1">

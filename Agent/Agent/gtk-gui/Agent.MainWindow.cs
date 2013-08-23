@@ -36,7 +36,7 @@ namespace Agent
 			this.AddAccelGroup (this.UIManager.AccelGroup);
 			this.Name = "Agent.MainWindow";
 			this.Title = global::Mono.Unix.Catalog.GetString ("Mono Agent");
-			this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-about", global::Gtk.IconSize.Menu);
+			this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-execute", global::Gtk.IconSize.Menu);
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child Agent.MainWindow.Gtk.Container+ContainerChild
 			this.vbox1 = new global::Gtk.VBox ();
@@ -82,6 +82,7 @@ namespace Agent
 			this.DefaultWidth = 400;
 			this.DefaultHeight = 300;
 			this.Show ();
+			this.Hidden += new global::System.EventHandler (this.OnHidden);
 			this.redoAction.Activated += new global::System.EventHandler (this.TakeNextPressHandler);
 			this.changeState.Activated += new global::System.EventHandler (this.StateChangePressHandler);
 			this.logout.Activated += new global::System.EventHandler (this.LogoutPressHandler);

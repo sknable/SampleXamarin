@@ -8,14 +8,12 @@ namespace Agent
     {
         private SODAClient _agent;
         private Interaction _window;
-        private Login _loginwindow;
 
-        public MainWindow(SODAClient agent,Login loginWindow) : base(Gtk.WindowType.Toplevel)
+
+        public MainWindow(SODAClient agent) : base(Gtk.WindowType.Toplevel)
         {
             this.Build();
-            _agent = agent;
-            _loginwindow = loginWindow;
-
+            _agent = agent;          
             _agent.ParticpationStart += new SODAClient.ParticipationEventHandler(OnParticpationStart);
             _agent.ParticipationStop += new SODAClient.ParticipationEventHandler(OnParticpationStop);
 
@@ -23,22 +21,24 @@ namespace Agent
 
 
         #region ButtonHanlders
+
         private void LogoutPressHandler(object obj, EventArgs args)
         {
 
             try
             {
                 _agent.CIM.logout();
+                _agent = null;
             }
             catch
             {
 
             }
+
             this.Destroy();
-            _loginwindow.Show();
+           
 
         }
-
 
         private void TakeNextPressHandler(object obj, EventArgs args)
         {
@@ -90,26 +90,44 @@ namespace Agent
 
         private void OnParticpationStart (object sender, ParticitionEventArgs e)
         {
-            Gtk.Application.Invoke(delegate{ParticpationStarted();});
+            Gtk.Application.Invoke(delegate{ParticpationStarted(e);});
         }
 
         private void OnParticpationStop (object sender, ParticitionEventArgs e)
         {
-            Gtk.Application.Invoke(delegate{ParticpationStopped();});
+            Gtk.Application.Invoke(delegate{ParticpationStopped(e);});
         }
 
-        private void ParticpationStarted()
+        private void ParticpationStarted(ParticitionEventArgs e)
         {
-            _window = new Interaction();
-            _window.Show();
+          _window = new Interaction(e);
+          this.Hidden += new EventHandler(_window.OnParentHidden);
+          _window.Show();
+
         }
 
-        private void ParticpationStopped()
+        private void ParticpationStopped(ParticitionEventArgs e)
         {
             _window.Visible = false; 
+
             _window.Destroy();
         }
 
+        private void OnHidden(object obj,EventArgs args)
+        {
+
+            if (_agent != null)
+            {
+                try
+                {
+                    _agent.CIM.logout();
+                }
+                catch
+                {
+
+                }
+            }
+        }
 
         #endregion 
     }

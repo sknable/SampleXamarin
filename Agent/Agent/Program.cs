@@ -14,10 +14,16 @@ namespace Agent
            SODAClient agent = new SODAClient();
 
             Login winLogin = new Login (agent);
+            winLogin.DeleteEvent += new DeleteEventHandler(OnDelete);
             winLogin.Show ();
 			Application.Run ();
 
 
 		}
+
+        static void OnDelete(object obj,DeleteEventArgs args)
+        {
+            Application.Quit();
+        }
 	}
 }

@@ -25,17 +25,27 @@ namespace Agent
 
                 this.Visible = false;
                 _agent.Run();
-                _mainWindow = new MainWindow(_agent,this);
-
+                _mainWindow = new MainWindow(_agent);
+                _mainWindow.Hidden += new EventHandler(OnHidden);
+                _mainWindow.Show();
+                        
 
             }
             else
             {
 
                 LoginButton.Sensitive = true;
+
             }
 
         }
+
+        private void OnHidden(object obj,EventArgs args)
+        {
+            LoginButton.Sensitive = true;
+            this.Show();
+        }
+
     }
 }
 
