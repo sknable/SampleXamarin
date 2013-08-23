@@ -13,8 +13,13 @@ namespace Agent
             this.Build();
             _agent = agent;
 
+            _agent += new SODAClient.ParticipationEventHandler(OnParticpationStart);
+           
+
         }
 
+
+        #region ButtonHanlders
         private void LogoutPressHandler(object obj, EventArgs args)
         {
 
@@ -44,7 +49,19 @@ namespace Agent
                 changeState.StockId = "gtk-yes";
             }
 
-        }
+        }
+
+        #endregion
+
+        #region SODA Handlers
+
+        private void OnParticpationStart (object sender, ParticitionEventArgs e)
+        {
+
+        }
+
+
+        #endregion 
     }
 }
 

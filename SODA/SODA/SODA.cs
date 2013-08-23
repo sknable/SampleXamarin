@@ -36,27 +36,6 @@ namespace SODA
 		}
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SODA.SODAClient"/> class.
-        /// </summary>
-        /// <param name="url">URL.</param>
-        /// <param name="user">User.</param>
-        /// <param name="password">Password.</param>
-        /// <param name="extension">Extension.</param>
-        public Boolean LoginAgent(String url,String user,String password,String extension)
-        {
-
-            if (Login())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-        }
-
-        /// <summary>
         /// Run this instance.
         /// </summary>
 		public void Run()
@@ -87,11 +66,83 @@ namespace SODA
 			}
 
 		}
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SODA.SODAClient"/> class.
+        /// </summary>
+        /// <param name="url">URL.</param>
+        /// <param name="user">User.</param>
+        /// <param name="password">Password.</param>
+        /// <param name="extension">Extension.</param>
+        public Boolean LoginAgent(String url, String user, String password, String extension)
+        {
+
+            if (Login())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         #endregion
 
 
+        #region Participation EventHanlders
 
-        #region EventHanlders
+        public delegate void ParticipationEventHandler(object sender, ParticitionEventArgs e);
+
+        public event ParticipationEventHandler ParticpationStart;
+        public event ParticipationEventHandler ParticipationStateChange;
+        public event ParticipationEventHandler ParticipationStop;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        protected void OnParticpationStart(ParticitionEventArgs e)
+        {
+            ParticipationEventHandler MyEvent = ParticpationStart;
+
+            if (MyEvent != null)
+            {
+                MyEvent(this, e);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        protected void ParticipationStateChagne(ParticitionEventArgs e)
+        {
+            ParticipationEventHandler MyEvent = ParticipationStateChange;
+
+            if (MyEvent != null)
+            {
+                MyEvent(this, e);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        protected void ParticpationStop(ParticitionEventArgs e)
+        {
+            ParticipationEventHandler MyEvent = ParticipationStop;
+
+            if (MyEvent != null)
+            {
+                MyEvent(this, e);
+            }
+        }
+
+        #endregion
+
+        #region SODA EventHanlder
 
         /// <summary>
         /// Events the getter.
@@ -148,5 +199,20 @@ namespace SODA
 
         #endregion
 	}
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class ParticitionEventArgs : System.EventArgs
+    {
+        private CIMParticipation _Interaction;
+
+        public CIMParticipation Interaction { get { return _Interaction; } }
+
+        ParticitionEventArgs(CIMParticipation Interaction)
+        {
+            _Interaction = Interaction;
+        }
+    }
 }
 
