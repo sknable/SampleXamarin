@@ -55,20 +55,19 @@ namespace SODA
 		private bool Login()
 		{
 
-            #if __ANDRIOD__
-                CIMLoginResult loginResult = _webService.loginAgent ("agentDriod", "", "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2001", "+00:00", null);
+            #if __ANDROID__
+                CIMLoginResult loginResult = _webService.loginAgent ("agentDroid", "", "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2001", "+00:00", null);
 
             #elif __IOS__
-                CIMLoginResult loginResult = _webService.loginAgent ("agentIOS", "", "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2001", "+00:00", null);
+                CIMLoginResult loginResult = _webService.loginAgent ("agentIOS", "", "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2002", "+00:00", null);
             #else
-                CIMLoginResult loginResult = _webService.loginAgent("agent1", "", "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2001", "+00:00", null);
+                CIMLoginResult loginResult = _webService.loginAgent("agent1", "", "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2003", "+00:00", null);
             #endif
 
 
             if (loginResult.code == CIMResultType.SUCCEEDED) 
 			{
 
-                _webService.changeAvailability(CIMAvailabilityState.UNAVAILABLE, true, "Start Of Day");
                 return true;
 
 			} else {
