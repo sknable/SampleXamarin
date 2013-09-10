@@ -3,6 +3,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using SODA;
+using SODA.CIMSystemService;
 namespace iOSAgent
 {
 	public partial class FirstViewController : UIViewController
@@ -12,7 +13,7 @@ namespace iOSAgent
 
         public FirstViewController(SODAClient agent) : base("FirstViewController", null)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("Login", "Login");
+			Title = NSBundle.MainBundle.LocalizedString ("Agent", "Agent");
 			TabBarItem.Image = UIImage.FromBundle ("first");
 
             _agent = agent;
@@ -67,9 +68,6 @@ namespace iOSAgent
 					textUser.Hidden = true;
 					lblUser.Hidden = true;
 					lblPassword.Hidden = true;
-
-
-			
 				}
 				else
 				{
