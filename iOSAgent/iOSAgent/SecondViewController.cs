@@ -3,11 +3,13 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using SODA;
+using SODA.CIMSystemService;
 namespace iOSAgent
 {
 	public partial class SecondViewController : UIViewController
 	{
         private SODAClient _agent;
+		private Boolean _state = false;
 
 		public SecondViewController (SODAClient agent) : base ("SecondViewController", null)
 		{
@@ -15,6 +17,8 @@ namespace iOSAgent
 
 			Title = NSBundle.MainBundle.LocalizedString ("Actions", "Actions");
 			TabBarItem.Image = UIImage.FromBundle ("second");
+
+
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -37,6 +41,34 @@ namespace iOSAgent
 			// Return true for supported orientations
 			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
 		}
+
+		partial void OnState (MonoTouch.Foundation.NSObject sender)
+		{
+
+			if(_state)
+			{
+				_state = false;
+				btnState.SetTitle("Go Available",UIControlState.Normal);
+				_agent.CIM.changeAvailability(CIMAvailabilityState.UNAVAILABLE,true,"Lunch");
+			}
+			else
+			{
+				_state = true;				
+				btnState.SetTitle("Go To Lunch",UIControlState.Normal);
+				_agent.CIM.changeAvailability(CIMAvailabilityState.AVAILABLE,true,"Ready");
+			}
+
+
+
+		}
+
+
+		partial void OnTakeNext (MonoTouch.Foundation.NSObject sender)
+		{
+			_agent.CIM.takeNextInteraction();
+		}
+
+
 	}
 }
 

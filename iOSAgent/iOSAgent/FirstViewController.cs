@@ -3,6 +3,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using SODA;
+using SODA.CIMSystemService;
 namespace iOSAgent
 {
 	public partial class FirstViewController : UIViewController
@@ -12,15 +13,11 @@ namespace iOSAgent
 
         public FirstViewController(SODAClient agent) : base("FirstViewController", null)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("Login", "Login");
+			Title = NSBundle.MainBundle.LocalizedString ("Agent", "Agent");
 			TabBarItem.Image = UIImage.FromBundle ("first");
 
             _agent = agent;
-
-            //_agent.LoginAgent("", "", "", "");
-
-            //_agent.Run();
-
+				
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -43,6 +40,43 @@ namespace iOSAgent
 			// Return true for supported orientations
 			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
 		}
+
+		/// <summary>
+		/// Buttons the login.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		partial void OnLogin (MonoTouch.Foundation.NSObject sender)
+		{
+			if(_agent.isRunning)
+			{
+				btnLogin.SetTitle("Login",UIControlState.Disabled);
+				_agent.CIM.logout();
+				btnLogin.SetTitle("Login",UIControlState.Normal);
+				textPassword.Hidden = false;
+				textUser.Hidden = false;
+				lblUser.Hidden = false;
+				lblPassword.Hidden = false;
+			}
+			else
+			{
+				btnLogin.SetTitle("Login",UIControlState.Disabled);
+				if(_agent.LoginAgent("","","",""))
+				{
+					_agent.Run();
+					btnLogin.SetTitle("Logout",UIControlState.Normal);
+					textPassword.Hidden = true;
+					textUser.Hidden = true;
+					lblUser.Hidden = true;
+					lblPassword.Hidden = true;
+				}
+				else
+				{
+					btnLogin.SetTitle("Login",UIControlState.Normal);
+				}
+			}
+
+		}
+
 	}
 }
 
