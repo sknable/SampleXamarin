@@ -2,15 +2,25 @@ using System;
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-
+using SODA;
 namespace iOSAgent
 {
 	public partial class FirstViewController : UIViewController
 	{
-		public FirstViewController () : base ("FirstViewController", null)
+
+        private SODAClient _agent;
+
+        public FirstViewController(SODAClient agent) : base("FirstViewController", null)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("Login", "Login");
 			TabBarItem.Image = UIImage.FromBundle ("first");
+
+            _agent = agent;
+
+            //_agent.LoginAgent("", "", "", "");
+
+            //_agent.Run();
+
 		}
 
 		public override void DidReceiveMemoryWarning ()

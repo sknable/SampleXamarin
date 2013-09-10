@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using SODA;
 
 namespace iOSAgent
 {
@@ -24,11 +25,14 @@ namespace iOSAgent
 		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
+
+            SODAClient _agent = new SODAClient();
+
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			var viewController1 = new FirstViewController ();
-			var viewController2 = new SecondViewController ();
+
+            var viewController1 = new FirstViewController(_agent);
+            var viewController2 = new SecondViewController(_agent);
 			tabBarController = new UITabBarController ();
 			tabBarController.ViewControllers = new UIViewController [] {
 				viewController1,

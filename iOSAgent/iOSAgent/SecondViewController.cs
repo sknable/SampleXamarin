@@ -2,13 +2,17 @@ using System;
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-
+using SODA;
 namespace iOSAgent
 {
 	public partial class SecondViewController : UIViewController
 	{
-		public SecondViewController () : base ("SecondViewController", null)
+        private SODAClient _agent;
+
+		public SecondViewController (SODAClient agent) : base ("SecondViewController", null)
 		{
+            _agent = agent;
+
 			Title = NSBundle.MainBundle.LocalizedString ("Actions", "Actions");
 			TabBarItem.Image = UIImage.FromBundle ("second");
 		}
