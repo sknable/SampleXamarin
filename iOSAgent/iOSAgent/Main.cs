@@ -15,9 +15,9 @@ namespace iOSAgent
 
             SODAClient _agent = new SODAClient();
 
-            _agent.LoginAgent("", "", "", "");
+            //_agent.LoginAgent("", "", "", "");
 
-            _agent.Run();
+            //_agent.Run();
 
 			// if you want to use a different Application Delegate class from "AppDelegate"
 			// you can specify it here.

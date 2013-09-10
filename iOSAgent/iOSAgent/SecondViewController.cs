@@ -9,7 +9,7 @@ namespace iOSAgent
 	{
 		public SecondViewController () : base ("SecondViewController", null)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("Second", "Second");
+			Title = NSBundle.MainBundle.LocalizedString ("Actions", "Actions");
 			TabBarItem.Image = UIImage.FromBundle ("second");
 		}
 

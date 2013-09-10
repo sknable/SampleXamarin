@@ -9,7 +9,7 @@ namespace iOSAgent
 	{
 		public FirstViewController () : base ("FirstViewController", null)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("First", "First");
+			Title = NSBundle.MainBundle.LocalizedString ("Login", "Login");
 			TabBarItem.Image = UIImage.FromBundle ("first");
 		}
 
