@@ -1,7 +1,7 @@
 using System;
 using SODA.CIMSystemService;
 using System.Threading;
-
+using System.Collections.Generic;
 namespace SODA
 {
 	public class SODAClient
@@ -12,6 +12,8 @@ namespace SODA
         private Boolean _isRunning = false;
         private const int MAX_DURATION = 2;
         private Thread _eventThread;
+        private Dictionary<String, String> _interactions = new Dictionary<String, String>();
+
         #endregion
 
 
@@ -139,7 +141,58 @@ namespace SODA
             }
 
         }
+
+        public Boolean  SubscribeToAgentQueueView()
+        {
+            CIMViewMetaData metaData = new CIMViewMetaData();
+            metaData.viewType = CIMViewType.AgentQueueView;
+            metaData.viewTypeSpecified = true;
+
+            CIMViewFilter filter = new CIMViewFilter();
+            CIMViewFilter filter2 = new CIMViewFilter();
+            filter.name = CIMViewFilterOperation.EQUAL.ToString();
+            filter.operation = CIMViewFilterOperation.EQUAL;
+            filter.operationSpecified = true;
+            filter.id = "ITYPE";
+            filter.values = new String[4] { "EMAIL", "INBOUND_QUEUED_CALL", "TASK", "WEB_CHAT" };
+
+
+            metaData.filters = new CIMViewFilter[1] { filter };
+
+            CIMViewSubscriptionResult result = _webService.subscribeToView(-1, metaData);
+
+            if (result.code != CIMResultType.SUCCEEDED)
+            {
+                return false;
+            }
+            else
+            {
+                return true; 
+            }
+
+
+
+        }
         #endregion
+
+
+        #region View EventHandlers
+
+        public delegate void AgentViewEventHandler(object sender, AgentViewEventArgs e);
+
+        public event AgentViewEventHandler AgentViewUpdate;
+
+        protected void OnAgentViewUpdate(AgentViewEventArgs e)
+        {
+            AgentViewEventHandler MyEvent = AgentViewUpdate;
+
+            if (MyEvent != null)
+            {
+                MyEvent(this, e);
+            }
+        }
+
+        #endregion 
 
 
         #region Participation EventHanlders
@@ -204,6 +257,9 @@ namespace SODA
             CIMEventListResult eventGetterResult = null;
             _isRunning = true;
 
+            eventGetterResult = _webService.getEvents(MAX_DURATION);
+            _webService.changeAvailability(SODA.CIMSystemService.CIMAvailabilityState.AVAILABLE, true, "Ready");
+           
             while (_isRunning)
             {
                 try
@@ -255,6 +311,69 @@ namespace SODA
 
                         break;
 
+                        case CIMEventType.CIMInteractionHandlingService_PARTICIPATION_STOPPED:
+
+                            CIMParticipationStoppedEvent interactionStopEvent = (CIMParticipationStoppedEvent)cimEvent;
+
+                            CIMParticipation participation = new CIMParticipation();
+
+                            participation.id = interactionStopEvent.interactionId;
+
+                            ParticitionEventArgs eStopped = new ParticitionEventArgs(participation);
+
+                            OnParticpationStop(eStopped);
+
+                            //cheap way of doing this
+                            if (_interactions.ContainsKey(interactionStopEvent.interactionId))
+                            {
+                                _interactions.Clear();
+                            }
+
+                        break;
+                        
+
+                        case CIMEventType.CIMSystemService_VIEW_UPDATE:
+
+                             CIMViewUpdateEvent viewEvent = (CIMViewUpdateEvent)cimEvent;
+
+                             if (viewEvent.rows != null)
+                             {
+                                 if (viewEvent.configuredMetaData.viewType == CIMViewType.AgentQueueView)
+                                 {
+
+                                    Boolean update = false;
+                                     foreach (CIMViewData cimData in viewEvent.rows)
+                                     {
+                                         if (_interactions.ContainsKey(cimData.values[0]))
+                                         {
+                                              // Do Nothing      
+                                         }
+                                         else
+                                         {
+                                            _interactions[cimData.values[0]] = cimData.values[2];
+                                            update = true;
+             
+
+                                           // AgentViewEventArgs eAgentView = new AgentViewEventArgs(cimData.values[0], cimData.values[2],cimData.values[1]);
+                                           // OnAgentViewUpdate(eAgentView);
+                                         }
+
+                                     }
+
+
+                                    if (update)
+                                    {
+                                        AgentViewEventArgs eAgentView = new AgentViewEventArgs(viewEvent.rows);
+                                        OnAgentViewUpdate(eAgentView);
+                                    }
+
+                                 }
+
+                             }
+
+
+                        break;
+
 
 
                     }
@@ -280,6 +399,21 @@ namespace SODA
         public ParticitionEventArgs(CIMParticipation Interaction)
         {
             _Interaction = Interaction;
+        }
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class AgentViewEventArgs : System.EventArgs
+    {
+        public CIMViewData[] _data;
+
+
+        public AgentViewEventArgs(CIMViewData[] data)
+        {
+            _data = data;
         }
     }
 }

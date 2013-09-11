@@ -72,6 +72,8 @@ namespace Agent
 			this.DefaultWidth = 400;
 			this.DefaultHeight = 300;
 			this.Show ();
+			this.applyAction.Activated += new global::System.EventHandler (this.OnFinishPress);
+			this.toolbar1.ButtonPressEvent += new global::Gtk.ButtonPressEventHandler (this.OnFinishPress);
 		}
 	}
 }

@@ -73,7 +73,7 @@
             <property name="MemberName" />
             <property name="ShadowType">In</property>
             <child>
-              <widget class="Gtk.TreeView" id="treeview1">
+              <widget class="Gtk.TreeView" id="viewInteractions">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="ShowScrollbars">True</property>
@@ -184,6 +184,7 @@
         <property name="Type">Action</property>
         <property name="Label" translatable="yes" />
         <property name="StockId">gtk-apply</property>
+        <signal name="Activated" handler="OnFinishPress" />
       </action>
       <action id="okAction">
         <property name="Type">Action</property>
@@ -203,6 +204,7 @@
           <widget class="Gtk.Toolbar" id="toolbar1">
             <property name="MemberName" />
             <property name="ShowArrow">False</property>
+            <signal name="ButtonPressEvent" handler="OnFinishPress" />
             <node name="toolbar1" type="Toolbar">
               <node type="Toolitem" action="applyAction" />
               <node type="Toolitem" action="okAction" />

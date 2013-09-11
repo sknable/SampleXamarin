@@ -12,7 +12,7 @@ namespace Agent
 		private global::Gtk.VBox vbox1;
 		private global::Gtk.Toolbar agenttoolbar;
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
-		private global::Gtk.TreeView treeview1;
+		private global::Gtk.TreeView viewInteractions;
 		private global::Gtk.Statusbar statusbar1;
 
 		protected virtual void Build ()
@@ -59,10 +59,10 @@ namespace Agent
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
-			this.treeview1 = new global::Gtk.TreeView ();
-			this.treeview1.CanFocus = true;
-			this.treeview1.Name = "treeview1";
-			this.GtkScrolledWindow.Add (this.treeview1);
+			this.viewInteractions = new global::Gtk.TreeView ();
+			this.viewInteractions.CanFocus = true;
+			this.viewInteractions.Name = "viewInteractions";
+			this.GtkScrolledWindow.Add (this.viewInteractions);
 			this.vbox1.Add (this.GtkScrolledWindow);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.GtkScrolledWindow]));
 			w4.Position = 1;

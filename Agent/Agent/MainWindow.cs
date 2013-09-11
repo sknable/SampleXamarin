@@ -1,5 +1,6 @@
 using System;
 using SODA;
+using SODA.CIMSystemService;
 using Gtk;
 
 namespace Agent
@@ -16,6 +17,43 @@ namespace Agent
             _agent = agent;          
             _agent.ParticpationStart += new SODAClient.ParticipationEventHandler(OnParticpationStart);
             _agent.ParticipationStop += new SODAClient.ParticipationEventHandler(OnParticpationStop);
+            _agent.AgentViewUpdate += new SODAClient.AgentViewEventHandler(OnAgentViewUpdate);
+
+      
+
+            TreeViewColumn iid = new TreeViewColumn();
+            iid.Title = "\tIID\t";
+            CellRendererText iidCell = new CellRendererText();
+            iid.PackStart(iidCell,true);
+
+            TreeViewColumn name = new TreeViewColumn();
+            name.Title = "\tCustomer Name\t";
+            CellRendererText nameCell = new CellRendererText();
+            name.PackStart(nameCell, true);
+
+            TreeViewColumn itype = new TreeViewColumn();
+            itype.Title = "\tIType\t";
+            CellRendererText itypeCell = new CellRendererText();
+            itype.PackStart(itypeCell, true);
+
+            iid.AddAttribute(iidCell, "text", 0);
+            name.AddAttribute(nameCell, "text", 1);
+            itype.AddAttribute(itypeCell, "text", 2);
+
+            viewInteractions.AppendColumn(iid); 
+            viewInteractions.AppendColumn(name); 
+            viewInteractions.AppendColumn(itype); 
+
+            ListStore interactionList = new ListStore(typeof (string),typeof (string),typeof(string));
+
+            viewInteractions.Model = interactionList;
+
+
+            //First one is too quick
+            if (! _agent.SubscribeToAgentQueueView())
+            {
+                _agent.SubscribeToAgentQueueView();
+            }
 
         }
 
@@ -61,7 +99,7 @@ namespace Agent
                 changeState.StockId = "gtk-no";
                 try
                 {
-                    _agent.CIM.changeAvailability(SODA.CIMSystemService.CIMAvailabilityState.UNAVAILABLE,true,"MONO");
+                    _agent.CIM.changeAvailability(CIMAvailabilityState.UNAVAILABLE,true,"MONO");
                 }
                 catch
                 {
@@ -74,7 +112,7 @@ namespace Agent
                 changeState.StockId = "gtk-yes";
                 try
                 {
-                    _agent.CIM.changeAvailability(SODA.CIMSystemService.CIMAvailabilityState.AVAILABLE,true,"MONO");
+                    _agent.CIM.changeAvailability(CIMAvailabilityState.AVAILABLE,true,"MONO");
                 }
                 catch
                 {
@@ -88,6 +126,11 @@ namespace Agent
 
         #region SODA Handlers
 
+        private void OnAgentViewUpdate (object sender, AgentViewEventArgs e)
+        {
+            Gtk.Application.Invoke(delegate{AgentViewUpdate(e);});
+        }
+
         private void OnParticpationStart (object sender, ParticitionEventArgs e)
         {
             Gtk.Application.Invoke(delegate{ParticpationStarted(e);});
@@ -100,9 +143,25 @@ namespace Agent
 
         private void ParticpationStarted(ParticitionEventArgs e)
         {
-          _window = new Interaction(e);
+            //Only works for one window
+          _window = new Interaction(e,_agent);
           this.Hidden += new EventHandler(_window.OnParentHidden);
           _window.Show();
+
+        }
+
+        private void AgentViewUpdate(AgentViewEventArgs e)
+        {
+            ListStore interactionsList = (ListStore)viewInteractions.Model;
+
+            interactionsList.Clear();
+
+            foreach (CIMViewData cimData in e._data)
+            {
+                interactionsList.AppendValues(cimData.values[0], cimData.values[2],cimData.values[1]);             
+            }
+
+
 
         }
 
