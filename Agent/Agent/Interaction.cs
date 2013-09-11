@@ -17,8 +17,6 @@ namespace Agent
             _interactionEvent = interactionEvent;         
             this.Title = interactionEvent.Interaction.id + " - " + _interactionEvent.Interaction.customerName;
            
-
-
         }
 
 

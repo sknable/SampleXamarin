@@ -13,7 +13,7 @@ namespace DroidAgent
 	[Activity (Label = "Droid Agent", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
-        ServiceConnection apiService = new ServiceConnection();
+        ServiceConnection _apiService = new ServiceConnection();
 
         /// <summary>
         /// 
@@ -41,7 +41,7 @@ namespace DroidAgent
         {
             base.OnStart();
 
-            bool result = BindService(new Intent(this, typeof(APIService)), apiService, Bind.AutoCreate);
+            bool result = BindService(new Intent(this, typeof(APIService)), _apiService, Bind.AutoCreate);
 
 
         }
@@ -54,12 +54,12 @@ namespace DroidAgent
         public void OnLoginClick(object sender, EventArgs e)
         {
 
-            if (apiService.Binder != null)
+            if (_apiService.Binder != null)
             {
-                SODAClient agent = apiService.Binder.Service._agent;
+                SODAClient agent = _apiService.Binder.Service._agent;
                 if(agent.LoginAgent("", "", "", ""))
                 {
-                    apiService.Binder.Service.StartUpdating();
+                    _apiService.Binder.Service.StartUpdating();
                     StartActivity(typeof(Agent));
                 }
 

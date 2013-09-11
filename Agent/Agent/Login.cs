@@ -20,7 +20,7 @@ namespace Agent
         {
             LoginButton.Sensitive = false;
 
-            if (_agent.LoginAgent("", "", "", ""))
+            if (_agent.LoginAgent("",entryName.Text , entryPassword.Text, ""))
             {
 
                 this.Visible = false;

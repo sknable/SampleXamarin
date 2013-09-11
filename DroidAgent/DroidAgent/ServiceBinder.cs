@@ -22,6 +22,7 @@ namespace DroidAgent
         {
             get { return this.service; }
         }
+
         protected T service;
 
         /// <summary>

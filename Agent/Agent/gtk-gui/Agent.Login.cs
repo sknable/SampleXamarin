@@ -5,8 +5,8 @@ namespace Agent
 	public partial class Login
 	{
 		private global::Gtk.Fixed fixed1;
-		private global::Gtk.Entry entry1;
-		private global::Gtk.Entry entry2;
+		private global::Gtk.Entry entryName;
+		private global::Gtk.Entry entryPassword;
 		private global::Gtk.Label label1;
 		private global::Gtk.Label label2;
 		private global::Gtk.Button LoginButton;
@@ -24,24 +24,24 @@ namespace Agent
 			this.fixed1.Name = "fixed1";
 			this.fixed1.HasWindow = false;
 			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.entry1 = new global::Gtk.Entry ();
-			this.entry1.CanFocus = true;
-			this.entry1.Name = "entry1";
-			this.entry1.IsEditable = true;
-			this.entry1.InvisibleChar = '●';
-			this.fixed1.Add (this.entry1);
-			global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.entry1]));
+			this.entryName = new global::Gtk.Entry ();
+			this.entryName.CanFocus = true;
+			this.entryName.Name = "entryName";
+			this.entryName.IsEditable = true;
+			this.entryName.InvisibleChar = '●';
+			this.fixed1.Add (this.entryName);
+			global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.entryName]));
 			w1.X = 107;
 			w1.Y = 51;
 			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.entry2 = new global::Gtk.Entry ();
-			this.entry2.CanFocus = true;
-			this.entry2.Name = "entry2";
-			this.entry2.IsEditable = true;
-			this.entry2.Visibility = false;
-			this.entry2.InvisibleChar = '●';
-			this.fixed1.Add (this.entry2);
-			global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.entry2]));
+			this.entryPassword = new global::Gtk.Entry ();
+			this.entryPassword.CanFocus = true;
+			this.entryPassword.Name = "entryPassword";
+			this.entryPassword.IsEditable = true;
+			this.entryPassword.Visibility = false;
+			this.entryPassword.InvisibleChar = '●';
+			this.fixed1.Add (this.entryPassword);
+			global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.entryPassword]));
 			w2.X = 107;
 			w2.Y = 105;
 			// Container child fixed1.Gtk.Fixed+FixedChild

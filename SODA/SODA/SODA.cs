@@ -55,6 +55,8 @@ namespace SODA
 		private bool Login()
 		{
 
+
+            //Sample to show pre-processor defs
             #if __ANDROID__
                 CIMLoginResult loginResult = _webService.loginAgent ("agentDroid", "", "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2001", "+00:00", null);
 
@@ -78,6 +80,31 @@ namespace SODA
 		}
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        private bool Login(String user, String password)
+        {
+
+            CIMLoginResult loginResult = _webService.loginAgent(user, password, "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2003", "+00:00", null);
+
+            if (loginResult.code == CIMResultType.SUCCEEDED)
+            {
+
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+            }
+
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="SODA.SODAClient"/> class.
         /// </summary>
         /// <param name="url">URL.</param>
@@ -87,13 +114,28 @@ namespace SODA
         public Boolean LoginAgent(String url, String user, String password, String extension)
         {
 
-            if (Login())
+            if (user.Length > 0)
             {
-                return true;
+                if (Login(user,password))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                return false;
+
+                if (Login())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
 
         }
