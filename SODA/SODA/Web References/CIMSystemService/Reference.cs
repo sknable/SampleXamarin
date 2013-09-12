@@ -28,7 +28,7 @@ namespace SODA.CIMSystemService {
         
         /// <remarks/>
         public CIMSystemService() {
-            this.Url = "http://1279c748.ngrok.com:80/SODA/CIMSystemService";
+            this.Url = "http://sknable.ngrok.com:80/SODA/CIMSystemService";
 			this.CookieContainer  = new CookieContainer();
         }
         

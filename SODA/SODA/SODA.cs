@@ -13,6 +13,7 @@ namespace SODA
         private const int MAX_DURATION = 2;
         private Thread _eventThread;
         private Dictionary<String, String> _interactions = new Dictionary<String, String>();
+        private int _agentQViewSize = 0;
 
         #endregion
 
@@ -26,6 +27,8 @@ namespace SODA
         public Boolean isRunning {
             get { return _isRunning;}
         }
+
+
 
         #endregion 
 
@@ -51,6 +54,13 @@ namespace SODA
 
 
         #region Operations
+        /// <summary>
+        /// Shutdown this instance.
+        /// </summary>
+        public void Shutdown() { 
+            _isRunning = false;
+        }
+
         /// <summary>
         /// Login this instance.
         /// </summary>
@@ -90,7 +100,11 @@ namespace SODA
         private bool Login(String user, String password)
         {
 
-            CIMLoginResult loginResult = _webService.loginAgent(user, password, "AGENT", "en_us", CIMPhoneType.STANDARD, true, "2003", "+00:00", null);
+            String extension = "200";
+
+            String number = user.Substring(user.Length - 1);
+
+            CIMLoginResult loginResult = _webService.loginAgent(user, password, "AGENT", "en_us", CIMPhoneType.STANDARD, true,extension + number, "+00:00", null);
 
             if (loginResult.code == CIMResultType.SUCCEEDED)
             {
@@ -211,7 +225,7 @@ namespace SODA
         {
             ParticipationEventHandler MyEvent = ParticpationStart;
 
-            if (MyEvent != null)
+            if (MyEvent != null && _isRunning)
             {
                 MyEvent(this, e);
             }
@@ -225,7 +239,7 @@ namespace SODA
         {
             ParticipationEventHandler MyEvent = ParticipationStateChange;
 
-            if (MyEvent != null)
+            if (MyEvent != null && _isRunning)
             {
                 MyEvent(this, e);
             }
@@ -239,7 +253,8 @@ namespace SODA
         {
             ParticipationEventHandler MyEvent = ParticipationStop;
 
-            if (MyEvent != null)
+            //Dont send out a event if we are logging out
+            if (MyEvent != null && _isRunning)
             {
                 MyEvent(this, e);
             }
@@ -323,17 +338,13 @@ namespace SODA
 
                             OnParticpationStop(eStopped);
 
-                            //cheap way of doing this
-                            if (_interactions.ContainsKey(interactionStopEvent.interactionId))
-                            {
-                                _interactions.Clear();
-                            }
 
                         break;
                         
 
                         case CIMEventType.CIMSystemService_VIEW_UPDATE:
 
+                             int agentQViewSize = 0;
                              CIMViewUpdateEvent viewEvent = (CIMViewUpdateEvent)cimEvent;
 
                              if (viewEvent.rows != null)
@@ -341,9 +352,9 @@ namespace SODA
                                  if (viewEvent.configuredMetaData.viewType == CIMViewType.AgentQueueView)
                                  {
 
-                                    Boolean update = false;
-                                     foreach (CIMViewData cimData in viewEvent.rows)
-                                     {
+                                    _interactions.Clear();
+                                    foreach (CIMViewData cimData in viewEvent.rows)
+                                    {
                                          if (_interactions.ContainsKey(cimData.values[0]))
                                          {
                                               // Do Nothing      
@@ -351,21 +362,17 @@ namespace SODA
                                          else
                                          {
                                             _interactions[cimData.values[0]] = cimData.values[2];
-                                            update = true;
-             
-
-                                           // AgentViewEventArgs eAgentView = new AgentViewEventArgs(cimData.values[0], cimData.values[2],cimData.values[1]);
-                                           // OnAgentViewUpdate(eAgentView);
                                          }
 
-                                     }
-
-
-                                    if (update)
-                                    {
-                                        AgentViewEventArgs eAgentView = new AgentViewEventArgs(viewEvent.rows);
-                                        OnAgentViewUpdate(eAgentView);
                                     }
+
+
+                                    if (_agentQViewSize != _interactions.Count)
+                                    {
+                                        OnAgentViewUpdate(new AgentViewEventArgs(viewEvent.rows));
+                                    }
+
+                                    agentQViewSize = _interactions.Count;
 
                                  }
 
